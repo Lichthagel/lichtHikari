@@ -1,0 +1,74 @@
+.lichtContainer .lichtTheme {
+    background: rgb(var(--color-foreground));
+    border-radius: 3px;
+    padding: 8px 10px;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.lichtContainer .lichtTheme .lichtThemeHeading {
+    font-size: 1.8rem;
+    margin: 10px 0;
+}
+
+.lichtContainer .lichtTheme .lichtThemeHeading .lichtThemeSlug {
+    border-radius: 3px;
+    padding: 3px 5px;
+    background-color: rgb(var(--color-blue));
+    color: rgb(var(--color-white));
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.lichtContainer .lichtTheme .lichtThemeEntry {
+    border-radius: 3px;
+    padding: 3px 5px;
+    background-color: rgb(var(--color-background));
+    margin: 10px 0;
+}
+
+.lichtContainer .video-box {
+    cursor: pointer;
+    color: rgb(var(--color-text));
+}
+
+.lichtContainer .video-box:hover {
+    transition: .15s;
+    color: rgb(var(--color-blue));
+}
+
+.lichtContainer .lichtTheme video {
+    cursor: auto;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.lichtContainer .lichtTheme .lichtTag {
+    background-color: rgb(var(--color-foreground));
+    color: rgb(var(--color-text));
+    border-radius: 3px;
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 5px;
+    padding: 8px 10px;
+}
+
+.lichtContainer .lichtTheme .lichtButton {
+    background-color: rgb(var(--color-blue));
+    border-radius: 3px;
+    color: rgb(var(--color-white));
+    display: inline-block;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 5px;
+    padding: 7px;
+    text-align: center;
+}
+
+.lichtContainer .lichtTheme .lichtButton:hover {
+    cursor: pointer;
+}
+
+.lichtContainer .lichtTheme .lichtButton.active {
+    background-color: rgb(var(--color-red));
+}

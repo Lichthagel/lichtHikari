@@ -1,0 +1,13 @@
+{
+    "name": "lichtHikari",
+    "namespace": "Lichthagel",
+    "version": "1.0",
+    "author": "Lichthagel",
+    "description": "Adds Anisongs to anime entries on Anilist",
+    "homepageURL": "https://github.com/Lichthagel/lichtHikari",
+    "supportURL": "https://github.com/Lichthagel/lichtHikari/issues",
+    "license": "GPL-3.0-or-later",
+    "match": "https://anilist.co/*",
+    "connect": "staging.animetheme.moe",
+    "require": "https://unpkg.com/localforage@1.10/dist/localforage.min.js"
+}
