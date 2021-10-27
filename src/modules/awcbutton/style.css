@@ -1,0 +1,16 @@
+.lichtAWCButton, .lichtAWCButton:visited {
+    background-color: rgba(var(--color-blue), .8);
+    border-radius: 4px;
+    color: rgb(var(--color-white));
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 10px;
+    padding: 10px 12px;
+    text-align: center;
+    transition: .4s;
+}
+
+.lichtAWCButton:hover, .lichtAWCButton:visited:hover {
+    background-color: rgba(var(--color-blue), 1);
+    color: rgb(var(--color-white));
+}
