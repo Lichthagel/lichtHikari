@@ -1,9 +1,5 @@
-import localforage from "localforage";
+import { useScripts } from "./global";
 import modules from "./modules";
-
-localforage.config({
-  name: "lichtHikari",
-});
 
 let oldUrl = "";
 
@@ -14,7 +10,7 @@ let oldUrl = "";
       console.log("lichtHikari: switched page " + pathname);
 
       modules.forEach((module) => {
-        if (module.urlMatch(pathname, oldUrl)) {
+        if (useScripts[module.id] && module.urlMatch(pathname, oldUrl)) {
           module.code();
         }
       });
