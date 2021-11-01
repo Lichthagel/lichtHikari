@@ -5,7 +5,7 @@ import AWCListsAPI from "./api";
 import AWCListsDOM from "./dom";
 import "./style.css";
 
-const cacheTTL = 604800000;
+const cacheTTL = 86400000; // 24 hours in ms
 
 async function launch(target: Element, mediaId: string) {
   // load cache
@@ -25,7 +25,7 @@ async function launch(target: Element, mediaId: string) {
 
     AWCListsDOM.addTo(target, lists);
   } else {
-    console.log("lichtAnisongs: data in cache");
+    console.log("lichtAWCLists: data in cache");
 
     AWCListsDOM.addTo(target, cache);
   }
