@@ -23,6 +23,8 @@ const AWCListsAPI = {
 
     const json = await data.json();
 
+    if (!json.data || !json.data.MediaList) return [];
+
     return Object.entries(json.data.MediaList.customLists).filter((
       [, b]: [string, boolean],
     ) => b).map(([a]: [string, boolean]) => a);

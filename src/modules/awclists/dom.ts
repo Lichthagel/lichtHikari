@@ -11,7 +11,7 @@ const AWCListsDOM = {
 
     const value = document.createElement("div");
     value.classList.add("lichtAWCListsValue");
-    value.innerText = data.join(", ");
+    value.innerText = (data && data.length > 0) ? data.join(", ") : "None";
 
     dataSet.appendChild(value);
 
