@@ -1,4 +1,3 @@
-import localforage from "localforage";
 import { Module } from "../../module";
 import { waitForElement } from "../../utils";
 import AnisongsAPI from "./api";
@@ -6,14 +5,12 @@ import AnisongsDOM from "./dom";
 import { themes_to_data } from "./models";
 import "./style.css";
 
-const cacheTTL = 604800000;
-
 async function launch(target: Element, mediaId: string) {
   // load cache
-  const cache: any = await localforage.getItem(mediaId) || { time: 0 };
+  const cache: any = sessionStorage.getItem("lichtSong" + mediaId);
 
   // check if request needed
-  if ((cache.time + cacheTTL) < +new Date()) {
+  if (!cache) {
     const themes = await AnisongsAPI.getThemes(mediaId);
 
     if (!themes) {
@@ -23,13 +20,13 @@ async function launch(target: Element, mediaId: string) {
 
     const data = themes_to_data(themes);
 
-    await localforage.setItem(mediaId, data);
+    sessionStorage.setItem("lichtSong" + mediaId, JSON.stringify(data));
 
     AnisongsDOM.addTo(target, data);
   } else {
     console.log("lichtAnisongs: data in cache");
 
-    AnisongsDOM.addTo(target, cache);
+    AnisongsDOM.addTo(target, JSON.parse(cache));
   }
 }
 

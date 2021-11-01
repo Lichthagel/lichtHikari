@@ -1,9 +1,4 @@
-import localforage from "localforage";
 import modules from "./modules";
-
-localforage.config({
-  name: "lichtHikari",
-});
 
 function loadActiveModules(): { [k: string]: boolean } {
   const stored = localStorage.getItem("lichtActiveModules");

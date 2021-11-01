@@ -1,4 +1,3 @@
-import localforage from "localforage";
 import {
   AnimeTheme,
   AnimeThemeEntry,
@@ -9,17 +8,16 @@ import {
 } from "./models";
 
 function highlight_active(parent: Element, activeEl?: Element) {
-  parent.childNodes.forEach(child => {
+  parent.childNodes.forEach((child) => {
     if (child instanceof Element) {
       if (child == activeEl) {
         child.classList.add("active");
       } else if (child.tagName === "video") {
-
       } else {
         child.classList.remove("active");
       }
     }
-  })
+  });
 }
 
 const AnisongsDOM = {
@@ -29,13 +27,15 @@ const AnisongsDOM = {
     videoEl.src = videos[0].link.replace("staging.", "");
     videoEl.controls = true;
     videoEl.preload = "none";
-    videoEl.volume = await localforage.getItem("volume") || 0.4;
+    videoEl.volume = parseFloat(
+      localStorage.getItem("lichtSongsVolume") || "0.4",
+    );
     videoEl.addEventListener("ended", () => {
       highlight_active(target);
       videoEl.remove();
     });
     videoEl.addEventListener("volumechange", () => {
-      localforage.setItem("volume", videoEl.volume);
+      localStorage.setItem("lichtSongsVolume", videoEl.volume.toString());
     });
 
     videos.forEach((video) => {
@@ -66,7 +66,7 @@ const AnisongsDOM = {
 
   insertThemeEntry(target: Element, theme: AnimeThemeEntry) {
     const el = document.createElement("div");
-    el.classList.add("lichtThemeEntry")
+    el.classList.add("lichtThemeEntry");
 
     // VERSION
     if (theme.version) {
@@ -138,11 +138,11 @@ const AnisongsDOM = {
 
     // GROUP
     if (theme.group) {
-        const group = document.createElement("div");
+      const group = document.createElement("div");
 
-        group.innerHTML = `<b>${theme.group}</b>`;
+      group.innerHTML = `<b>${theme.group}</b>`;
 
-        el.append(group);
+      el.append(group);
     }
 
     // ARTIST(S)
@@ -162,16 +162,21 @@ const AnisongsDOM = {
     target.append(el);
   },
 
-  insertThemes(target: Element, themes: AnimeTheme[], heading: string, pos: number) {
+  insertThemes(
+    target: Element,
+    themes: AnimeTheme[],
+    heading: string,
+    pos: number,
+  ) {
     const container = document.createElement("div");
     container.appendChild(document.createElement("h2"));
     (container.children[0] as HTMLElement).innerText = heading;
     container.classList.add("lichtContainer");
 
     if (!themes || themes.length == 0) {
-        const el = document.createElement("div")
-        el.innerText = "Nothing found";
-        container.appendChild(el);
+      const el = document.createElement("div");
+      el.innerText = "Nothing found";
+      container.appendChild(el);
     }
 
     themes.forEach((theme: AnimeTheme) => {

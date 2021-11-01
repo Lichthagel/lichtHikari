@@ -8,7 +8,6 @@ const settings: Module = {
   description: "Shows userscript settings in Anilist App Settings",
   isDefault: true,
   urlMatch: (currentUrl: string, oldUrl: string) => {
-    console.log(/\/settings\/developer/.test(currentUrl));
     return /\/settings\/developer/.test(currentUrl);
   },
   code: async () => {

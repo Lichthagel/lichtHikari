@@ -1,27 +1,18 @@
-import localforage from "localforage";
 import { Module } from "../../module";
 import { waitForElement } from "../../utils";
 import AWCListsAPI from "./api";
 import AWCListsDOM from "./dom";
 import "./style.css";
 
-const cacheTTL = 86400000; // 24 hours in ms
-
 async function launch(target: Element, mediaId: string) {
   // load cache
-  const cache: any = await localforage.getItem("awclists" + mediaId) ||
-    { time: 0 };
+  const cache: string | null = sessionStorage.getItem("lichtAWCLists" + mediaId);
 
   // check if request needed
-  if ((cache.time + cacheTTL) < +new Date()) {
-    const lists = await AWCListsAPI.getLists(parseInt(mediaId));
+  if (!cache) {
+    const lists = await AWCListsAPI.getListsString(parseInt(mediaId));
 
-    if (!lists) {
-      console.log("lichtAWCLists: not found");
-      return;
-    }
-
-    await localforage.setItem("awclists" + mediaId, lists);
+    sessionStorage.setItem("lichtAWCLists" + mediaId, lists);
 
     AWCListsDOM.addTo(target, lists);
   } else {

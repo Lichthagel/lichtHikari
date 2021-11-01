@@ -29,6 +29,14 @@ const AWCListsAPI = {
       [, b]: [string, boolean],
     ) => b).map(([a]: [string, boolean]) => a);
   },
+  async getListsString(mediaId: number): Promise<string> {
+    const lists = await this.getLists(mediaId);
+    if (!lists || lists.length == 0) {
+      return "None";
+    } else {
+      return lists.join(", ");
+    }
+  }
 };
 
 export default AWCListsAPI;

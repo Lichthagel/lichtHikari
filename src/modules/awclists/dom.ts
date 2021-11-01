@@ -1,5 +1,5 @@
 const AWCListsDOM = {
-  addTo(target: Element, data: string[]) {
+  addTo(target: Element, data: string) {
     const dataSet = document.createElement("div");
     dataSet.classList.add("lichtAWCListsSet");
 
@@ -11,7 +11,7 @@ const AWCListsDOM = {
 
     const value = document.createElement("div");
     value.classList.add("lichtAWCListsValue");
-    value.innerText = (data && data.length > 0) ? data.join(", ") : "None";
+    value.innerText = data;
 
     dataSet.appendChild(value);
 
