@@ -1,0 +1,15 @@
+.lichtAWCListsSet {
+    padding-bottom: 14px;
+}
+
+.lichtAWCListsSet>.lichtAWCListsType {
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding-bottom: 5px;
+}
+
+.lichtAWCListsSet>.lichtAWCListsValue {
+    line-height: 1.4;
+    color: rgb(var(--color-text-lighter));
+    font-size: 1.2rem;
+}
