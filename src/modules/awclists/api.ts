@@ -34,7 +34,7 @@ const AWCListsAPI = {
     if (!lists || lists.length == 0) {
       return "None";
     } else {
-      return lists.join(", ");
+      return lists.join(", \n");
     }
   }
 };
