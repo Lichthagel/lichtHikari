@@ -43,7 +43,7 @@ const awclists: Module = {
         return container.querySelector(".sidebar > .data");
       });
 
-      if (mediaType === "anime" && loc === "") {
+      if (mediaType === "anime") {
         AWCListsDOM.clean(target);
         launch(target, mediaId);
       } else {
