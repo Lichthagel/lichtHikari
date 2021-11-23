@@ -56,7 +56,7 @@ const mangadexbutton: Module = {
 
       const title = await getTitle();
 
-      if (mediaType === "manga" && loc === "") {
+      if (mediaType === "manga") {
         MangaDexButtonDOM.clean(target);
         launch(target, title, mediaId);
       } else {
