@@ -49,6 +49,5 @@ export default {
             headers: "./meta.json"
         })
     ],
-    externals: ["localforage"],
     target: "es2020"
 }

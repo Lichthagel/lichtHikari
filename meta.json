@@ -8,6 +8,5 @@
     "supportURL": "https://github.com/Lichthagel/lichtHikari/issues",
     "license": "GPL-3.0-or-later",
     "match": "https://anilist.co/*",
-    "connect": "staging.animetheme.moe",
-    "require": "https://unpkg.com/localforage@1.10/dist/localforage.min.js"
+    "connect": "staging.animetheme.moe"
 }
