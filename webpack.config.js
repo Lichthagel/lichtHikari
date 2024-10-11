@@ -1,11 +1,11 @@
-const path = require("path");
-const webpackUserscript = require("webpack-userscript");
+import path from "node:path";
+import WebpackUserscript from "webpack-userscript";
 
-module.exports = {
+export default {
     entry: "./src/index.user.ts",
     output: {
         filename: "lichtHikari.user.js",
-        path: path.resolve(__dirname, "dist"),
+        path: path.resolve("./dist"),
         chunkFormat: "array-push"
     },
     module: {
@@ -45,7 +45,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpackUserscript({
+        new WebpackUserscript({
             headers: "./meta.json"
         })
     ],
