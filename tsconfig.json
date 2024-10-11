@@ -1,12 +1,13 @@
 {
     "compilerOptions": {
-        "outDir": "./dist/",
-        "noImplicitAny": true,
-        "module": "es2020",
-        "target": "es2020",
-        "moduleResolution": "node",
+        "allowJs": true,
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
+        "module": "es2020",
+        "moduleResolution": "node",
+        "noEmit": true,
+        "noImplicitAny": true,
         "strictNullChecks": true,
+        "target": "es2020"
     }
 }

@@ -17,6 +17,6 @@ export default [
     },
   },
   {
-    ignores: ["dist/**/*", "*.config.js"],
+    ignores: ["dist/**/*"],
   },
 ];
