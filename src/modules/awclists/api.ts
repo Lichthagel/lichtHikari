@@ -14,29 +14,31 @@ const AWCListsAPI = {
         "Accept": "application/json",
       },
       body: JSON.stringify({
-        query: this.query,
+        query: AWCListsAPI.query,
         variables: {
           id: mediaId,
         },
       }),
     });
 
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const json = await data.json();
 
-    if (!json.data || !json.data.MediaList) return [];
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+    if (!json.data || !json.data.MediaList) {
+      return [];
+    }
 
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
     return Object.entries(json.data.MediaList.customLists).filter((
       [, b]: [string, boolean],
-    ) => b).map(([a]: [string, boolean]) => a);
+    ) => b)
+      .map(([a]: [string, boolean]) => a);
   },
   async getListsString(mediaId: number): Promise<string> {
-    const lists = await this.getLists(mediaId);
-    if (!lists || lists.length == 0) {
-      return "None";
-    } else {
-      return lists.join(", \n");
-    }
-  }
+    const lists = await AWCListsAPI.getLists(mediaId);
+    return !lists || lists.length === 0 ? "None" : lists.join(", \n");
+  },
 };
 
 export default AWCListsAPI;

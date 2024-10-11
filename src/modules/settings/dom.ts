@@ -9,7 +9,7 @@ const SettingsDOM = {
     if (useScripts[module.id]) {
       moduleToggle.classList.add("lichtActive");
     }
-    moduleToggle.innerText = module.id;
+    moduleToggle.textContent = module.id;
 
     moduleToggle.addEventListener("click", () => {
       useScripts[module.id] = !useScripts[module.id];
@@ -29,19 +29,19 @@ const SettingsDOM = {
     container.classList.add("lichtSettings");
 
     const heading = document.createElement("h2");
-    heading.innerText = "lichtHikari";
+    heading.textContent = "lichtHikari";
 
-    container.appendChild(heading);
+    container.append(heading);
 
-    modules.forEach((module) => {
-      container.appendChild(this.createModuleToggle(module));
-    });
+    for (const module of modules) {
+      container.append(SettingsDOM.createModuleToggle(module));
+    }
 
     return container;
   },
 
   addTo(target: Element) {
-    target.appendChild(this.createSettingsContainer());
+    target.append(SettingsDOM.createSettingsContainer());
   },
 };
 

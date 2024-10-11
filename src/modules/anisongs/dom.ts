@@ -8,26 +8,27 @@ import {
 } from "./models";
 
 function highlight_active(parent: Element, activeEl?: Element) {
-  parent.childNodes.forEach((child) => {
+  for (const child of parent.childNodes) {
     if (child instanceof Element) {
-      if (child == activeEl) {
+      if (child === activeEl) {
         child.classList.add("active");
       } else if (child.tagName === "video") {
+        /* empty */
       } else {
         child.classList.remove("active");
       }
     }
-  });
+  }
 }
 
 const AnisongsDOM = {
-  async insertVideos(target: Element, videos: Video[]) {
+  insertVideos(target: Element, videos: Video[]) {
     const videoEl = document.createElement("video");
 
     videoEl.src = videos[0].link.replace("staging.", "");
     videoEl.controls = true;
     videoEl.preload = "none";
-    videoEl.volume = parseFloat(
+    videoEl.volume = Number.parseFloat(
       localStorage.getItem("lichtSongsVolume") || "0.4",
     );
     videoEl.addEventListener("ended", () => {
@@ -38,30 +39,30 @@ const AnisongsDOM = {
       localStorage.setItem("lichtSongsVolume", videoEl.volume.toString());
     });
 
-    videos.forEach((video) => {
+    for (const video of videos) {
       const videoButton = document.createElement("div");
-      videoButton.innerText = video_to_string(video);
+      videoButton.textContent = video_to_string(video);
       videoButton.classList.add("lichtButton");
-      videoButton.addEventListener("click", (event) => {
+      videoButton.addEventListener("click", () => {
         if (videoEl.parentElement) { // video element already placed
           if (videoEl.src === video.link.replace("staging.", "")) { // video element currently playing correct video
             videoEl.remove();
             videoButton.classList.remove("active");
           } else {
             videoEl.src = video.link.replace("staging.", ""); // video element currently playing another video
-            videoEl.play();
+            void videoEl.play();
             highlight_active(target, videoButton);
           }
         } else { // video element not yet placed
           videoEl.src = video.link.replace("staging.", "");
           videoEl.autoplay = true;
-          target.appendChild(videoEl);
+          target.append(videoEl);
           highlight_active(target, videoButton);
         }
       });
 
-      target.appendChild(videoButton);
-    });
+      target.append(videoButton);
+    }
   },
 
   insertThemeEntry(target: Element, theme: AnimeThemeEntry) {
@@ -71,46 +72,46 @@ const AnisongsDOM = {
     // VERSION
     if (theme.version) {
       const version = document.createElement("div");
-      version.innerText = "v" + theme.version;
+      version.textContent = `v${theme.version}`;
       version.classList.add("lichtTag");
-      el.appendChild(version);
+      el.append(version);
     }
 
     // EPISODES
     if (theme.episodes) {
       const episodes = document.createElement("div");
-      episodes.innerText = "Episode(s): " + theme.episodes;
+      episodes.textContent = `Episode(s): ${theme.episodes}`;
       episodes.classList.add("lichtTag");
-      el.appendChild(episodes);
+      el.append(episodes);
     }
 
     // NSFW
     if (theme.nsfw) {
       const nsfw = document.createElement("div");
-      nsfw.innerText = "NSFW";
+      nsfw.textContent = "NSFW";
       nsfw.classList.add("lichtTag");
-      el.appendChild(nsfw);
+      el.append(nsfw);
     }
 
     // SPOILER
     if (theme.spoiler) {
       const spoiler = document.createElement("div");
-      spoiler.innerText = "Spoiler";
+      spoiler.textContent = "Spoiler";
       spoiler.classList.add("lichtTag");
-      el.appendChild(spoiler);
+      el.append(spoiler);
     }
 
     // VIDEOS
     const videos = document.createElement("div");
 
-    this.insertVideos(videos, theme.videos);
-    //const videosElement = new VideosElement(videos, theme.videos);
+    AnisongsDOM.insertVideos(videos, theme.videos);
+    // const videosElement = new VideosElement(videos, theme.videos);
 
-    //theme.videos.forEach((video) => this.insertVideo(videos, video));
+    // theme.videos.forEach((video) => this.insertVideo(videos, video));
 
-    el.appendChild(videos);
+    el.append(videos);
 
-    target.appendChild(el);
+    target.append(el);
   },
 
   insertTheme(target: Element, theme: AnimeTheme) {
@@ -124,11 +125,11 @@ const AnisongsDOM = {
     // SLUG
     const slug = document.createElement("span");
     slug.classList.add("lichtThemeSlug");
-    slug.innerText = theme.slug;
+    slug.textContent = theme.slug;
 
     // SONG
     const song = document.createElement("span");
-    song.innerText = theme.song.title || "";
+    song.textContent = theme.song.title || "";
 
     heading.append(slug);
     heading.append(song);
@@ -149,15 +150,15 @@ const AnisongsDOM = {
     if (theme.song.artists && theme.song.artists.length > 0) {
       const artist = document.createElement("div");
 
-      artist.innerHTML = "<b>Artist(s):</b> " +
-        theme.song.artists!.map(artist_to_string).join(", ");
+      artist.innerHTML = `<b>Artist(s):</b> ${
+        theme.song.artists.map((element) => artist_to_string(element)).join(", ")}`;
 
       el.append(artist);
     }
 
-    theme.animethemeentries.forEach((entry) =>
-      this.insertThemeEntry(el, entry)
-    );
+    for (const entry of theme.animethemeentries) {
+      AnisongsDOM.insertThemeEntry(el, entry);
+    }
 
     target.append(el);
   },
@@ -169,32 +170,32 @@ const AnisongsDOM = {
     pos: number,
   ) {
     const container = document.createElement("div");
-    container.appendChild(document.createElement("h2"));
-    (container.children[0] as HTMLElement).innerText = heading;
+    container.append(document.createElement("h2"));
+    (container.children[0] as HTMLElement).textContent = heading;
     container.classList.add("lichtContainer");
 
-    if (!themes || themes.length == 0) {
+    if (!themes || themes.length === 0) {
       const el = document.createElement("div");
-      el.innerText = "Nothing found";
-      container.appendChild(el);
+      el.textContent = "Nothing found";
+      container.append(el);
     }
 
-    themes.forEach((theme: AnimeTheme) => {
-      this.insertTheme(container, theme);
-    });
+    for (const theme of themes) {
+      AnisongsDOM.insertTheme(container, theme);
+    }
 
     target.insertBefore(container, target.children[pos]);
   },
 
   addTo(target: Element, data: AnisongsData) {
-    this.insertThemes(target, data.ops, "Openings", 0);
-    this.insertThemes(target, data.eds, "Endings", 1);
+    AnisongsDOM.insertThemes(target, data.ops, "Openings", 0);
+    AnisongsDOM.insertThemes(target, data.eds, "Endings", 1);
   },
 
   clean(target: Element) {
-    target.querySelectorAll(".lichtContainer").forEach((e) =>
-      target.removeChild(e)
-    );
+    for (const e of target.querySelectorAll(".lichtContainer")) {
+      e.remove();
+    }
   },
 };
 

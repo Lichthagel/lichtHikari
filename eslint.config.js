@@ -12,8 +12,11 @@ export default [
         project: true,
       },
     },
+    rules: {
+      "no-console": "off", // TODO improve logging
+    },
   },
   {
-    ignores: ["dist/**/*", "webpack.config.js"],
+    ignores: ["dist/**/*", "*.config.js"],
   },
 ];

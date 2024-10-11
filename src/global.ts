@@ -1,23 +1,25 @@
 import modules from "./modules";
 
-function loadActiveModules(): { [k: string]: boolean } {
+type Config = Record<string, boolean>;
+
+function loadActiveModules(): Config {
   const stored = localStorage.getItem("lichtActiveModules");
 
-  let config = stored ? JSON.parse(stored) : {};
+  const config: Config = stored ? JSON.parse(stored) as Config : {}; // TODO validate
 
-  modules.forEach((module) => {
+  for (const module of modules) {
     if (config[module.id] === undefined) {
       config[module.id] = module.isDefault;
     }
-  });
+  }
 
   localStorage.setItem("lichtActiveModules", JSON.stringify(config));
 
   return config;
 }
 
+export const useScripts = loadActiveModules();
+
 export function saveActiveModules() {
   localStorage.setItem("lichtActiveModules", JSON.stringify(useScripts));
 }
-
-export let useScripts = loadActiveModules();

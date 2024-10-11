@@ -1,8 +1,8 @@
-export interface Module {
-    id: string,
-    description: string,
-    isDefault: boolean,
-    urlMatch: (currentUrl: string, oldUrl: string) => boolean,
-    code: () => void,
-    load?: () => void
-}
+export type Module = {
+  code: () => Promise<void> | void;
+  description: string;
+  id: string;
+  isDefault: boolean;
+  load?: () => void;
+  urlMatch: (currentUrl: string, oldUrl: string) => boolean;
+};

@@ -1,35 +1,39 @@
-import { AnimeTheme, AnimeThemeEntry, Artist, Song, Video } from "./models";
+import {
+  AnimeTheme, AnimeThemeEntry, Artist, Song, Video,
+} from "./models";
 
+// TODO validate the response
 const AnisongsAPI = {
   async getThemes(mediaId: string): Promise<AnimeTheme[]> {
     const res = await fetch(
       `https://staging.animethemes.moe/api/anime?filter[has]=resources&filter[site]=AniList&filter[external_id]=${mediaId}&include=animethemes.animethemeentries.videos,animethemes.song.artists`,
     );
-    const data: any = await res.json();
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    const data = await res.json();
 
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
     if (!data.anime || data.anime.length === 0) {
-        return [];
+      return [];
     }
-    return data.anime[0].animethemes;
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+    return data.anime[0].animethemes as AnimeTheme[];
   },
 
   parseArtist(artistInfo: Artist) {
-    if (artistInfo.as) {
-      return `${artistInfo.as} (${artistInfo.name})`;
-    } else {
-      return artistInfo.name;
-    }
+    return artistInfo.as ? `${artistInfo.as} (${artistInfo.name})` : artistInfo.name;
   },
 
   parseArtists(artistsInfo: Artist[]) {
-    if (!artistsInfo || artistsInfo.length == 0) return "";
+    if (!artistsInfo || artistsInfo.length === 0) {
+      return "";
+    }
 
-    return artistsInfo.map((artistInfo: any) => this.parseArtist(artistInfo))
+    return artistsInfo.map((artistInfo) => AnisongsAPI.parseArtist(artistInfo))
       .join(", ");
   },
 
   parseSong(songInfo: Song) {
-    return `${songInfo.title} by ${this.parseArtists(songInfo.artists)}`;
+    return `${songInfo.title} by ${songInfo.artists ? AnisongsAPI.parseArtists(songInfo.artists) : "uknown artist"}`;
   },
 
   parseVideo(videoInfo: Video, prefix: string) {
@@ -40,35 +44,36 @@ const AnisongsAPI = {
   },
 
   parseVideos(videosInfo: Video[], prefix: string) {
-    return videosInfo.map((videoInfo: any) =>
-      this.parseVideo(videoInfo, prefix)
-    );
+    return videosInfo.map((videoInfo) =>
+      AnisongsAPI.parseVideo(videoInfo, prefix));
   },
 
   parseThemeEntries(entriesInfo: AnimeThemeEntry[]) {
-    if (entriesInfo.length == 0) return [];
-    if (entriesInfo.length == 1) {
-      return this.parseVideos(entriesInfo[0].videos, "");
+    if (entriesInfo.length === 0) {
+      return [];
     }
-    return entriesInfo.map((entryInfo: any) =>
-      this.parseVideos(entryInfo.videos, `v${entryInfo.version}_`)
-    ).reduce((l: any[], r: any[]) => l.concat(r), []);
+    if (entriesInfo.length === 1) {
+      return AnisongsAPI.parseVideos(entriesInfo[0].videos, "");
+    }
+    return entriesInfo.flatMap((entryInfo) =>
+      AnisongsAPI.parseVideos(entryInfo.videos, `v${entryInfo.version}_`));
   },
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   parseResponse(data: any) {
-    if (data.anime.length == 0) {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+    if (data.anime.length === 0) {
       return null;
     }
 
-    data = data.anime[0].animethemes;
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+    const themes = data.anime[0].animethemes as AnimeTheme[];
 
-    return data.map((theme: AnimeTheme) => {
-      return {
-        slug: theme.slug,
-        song: this.parseSong(theme.song),
-        videos: this.parseThemeEntries(theme.animethemeentries),
-      };
-    });
+    return themes.map((theme) => ({
+      slug: theme.slug,
+      song: AnisongsAPI.parseSong(theme.song),
+      videos: AnisongsAPI.parseThemeEntries(theme.animethemeentries),
+    }));
   },
 };
 

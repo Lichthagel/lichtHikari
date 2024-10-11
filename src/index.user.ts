@@ -3,24 +3,22 @@ import modules from "./modules";
 
 let oldUrl = "";
 
-(async function () {
-  const observer = new MutationObserver(() => {
-    const pathname = window.location.pathname;
-    if (pathname !== oldUrl) {
-      console.log("lichtHikari: switched page " + pathname);
+const observer = new MutationObserver(() => {
+  const pathname = globalThis.location.pathname;
+  if (pathname !== oldUrl) {
+    console.log(`lichtHikari: switched page ${pathname}`);
 
-      modules.forEach((module) => {
-        if (useScripts[module.id] && module.urlMatch(pathname, oldUrl)) {
-          module.code();
-        }
-      });
-
-      oldUrl = pathname;
+    for (const module of modules) {
+      if (useScripts[module.id] && module.urlMatch(pathname, oldUrl)) {
+        void module.code();
+      }
     }
-  });
 
-  observer.observe(document.querySelector("head > title")!, {
-    childList: true,
-    subtree: true,
-  });
-})();
+    oldUrl = pathname;
+  }
+});
+
+observer.observe(document.querySelector("head > title")!, {
+  childList: true,
+  subtree: true,
+});

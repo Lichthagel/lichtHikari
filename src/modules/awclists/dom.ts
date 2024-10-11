@@ -5,20 +5,22 @@ const AWCListsDOM = {
 
     const type = document.createElement("div");
     type.classList.add("lichtAWCListsType");
-    type.innerText = "AWC Lists";
+    type.textContent = "AWC Lists";
 
-    dataSet.appendChild(type);
+    dataSet.append(type);
 
     const value = document.createElement("div");
     value.classList.add("lichtAWCListsValue");
-    value.innerText = data;
+    value.textContent = data;
 
-    dataSet.appendChild(value);
+    dataSet.append(value);
 
-    target.appendChild(dataSet);
+    target.append(dataSet);
   },
   clean(target: Element) {
-    target.querySelectorAll(".lichtAWCListsSet").forEach((e) => e.remove());
+    for (const e of target.querySelectorAll(".lichtAWCListsSet")) {
+      e.remove();
+    }
   },
 };
 
