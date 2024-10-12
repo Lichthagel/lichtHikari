@@ -1,3 +1,4 @@
+import { nodeResolve } from "@rollup/plugin-node-resolve";
 import typescript from "@rollup/plugin-typescript";
 import { defineConfig } from "rollup";
 import postcss from "rollup-plugin-postcss";
@@ -7,6 +8,7 @@ export default defineConfig({
   input: "src/index.user.ts",
   plugins: [
     typescript(),
+    nodeResolve(),
     postcss(),
     userscriptMeta({
       file: "meta.json",
