@@ -1,23 +1,23 @@
-export async function waitForElement(selector: (container: Document) => Element | null | undefined, container = document, timeoutSecs = 7): Promise<Element> {
-  const element = selector(container);
-  if (element) {
-    return element;
-  }
-
-  return new Promise((resolve, reject) => {
-    const timeoutTime = Date.now() + timeoutSecs * 1000;
-
-    const handler = () => {
-      const element = selector(container);
-      if (element) {
-        resolve(element);
-      } else if (Date.now() > timeoutTime) {
-        reject(new Error("Timed out waiting for element"));
-      } else {
-        setTimeout(handler, 100);
+export const waitForElement = async (selector: (container: Document) => Element | null | undefined, container = document, timeoutSecs = 7): Promise<Element> => new Promise((resolve, reject) => {
+  const observer = new MutationObserver((mutations) => {
+    for (const mutation of mutations) {
+      if (mutation.addedNodes.length > 0) {
+        const element = selector(container);
+        if (element) {
+          observer.disconnect();
+          resolve(element);
+        }
       }
-    };
-
-    handler();
+    }
   });
-}
+
+  observer.observe(container, {
+    childList: true,
+    subtree: true,
+  });
+
+  setTimeout(() => {
+    observer.disconnect();
+    reject(new Error("Timed out waiting for element"));
+  }, timeoutSecs * 1000);
+});
