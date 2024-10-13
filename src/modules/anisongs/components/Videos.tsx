@@ -4,6 +4,7 @@ import {
 } from "solid-js";
 
 import { type Video, video_to_string } from "../models";
+import styles from "./style.module.css";
 
 type Props = {
   videos: Video[];
@@ -49,8 +50,8 @@ const Videos: Component<Props> = ({ videos }) => {
       <For each={videos}>
         {(video) => (
           <div
-            class="button"
-            classList={{ active: activeVideo() === video }}
+            class={styles.button}
+            classList={{ [styles.active]: activeVideo() === video }}
             on:click={() => handleClick(video)}
           >
             {video_to_string(video)}

@@ -4,7 +4,7 @@ import { Component, For, Show } from "solid-js";
 import modules from "..";
 import { activeModules, saveActiveModules, setActiveModules } from "../../global";
 import { Module } from "../../module";
-import styleText from "./style.css?inline";
+import styles from "./style.module.css";
 
 type Props = object;
 
@@ -17,7 +17,7 @@ const toggleModule = (module: Module) => {
 };
 
 const Settings: Component<Props> = () => (
-  <div class="licht-settings">
+  <div class={styles.settings}>
     <h2>lichtHikari</h2>
     <For each={modules}>
       {(module) => (
@@ -41,12 +41,7 @@ export const defineSettingsElement = () => {
   customElement<Props>("licht-settings", { dataAttrName: null }, (props) => {
     noShadowDOM();
 
-    return (
-      <>
-        <style>{styleText}</style>
-        <Settings {...props} />
-      </>
-    );
+    return <Settings {...props} />;
   });
 };
 

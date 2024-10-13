@@ -1,6 +1,7 @@
 import { type Component, For, Show } from "solid-js";
 
 import { type AnimeTheme, artist_to_string } from "../models";
+import styles from "./style.module.css";
 import ThemeEntry from "./ThemeEntry";
 
 type Props = {
@@ -8,9 +9,9 @@ type Props = {
 };
 
 const Theme: Component<Props> = ({ theme }) => (
-  <div class="theme">
-    <div class="heading">
-      <span class="slug">{theme.slug}</span>
+  <div class={styles.theme}>
+    <div class={styles.heading}>
+      <span class={styles.slug}>{theme.slug}</span>
       <span>{theme.song.title}</span>
     </div>
     <Show when={theme.group}>

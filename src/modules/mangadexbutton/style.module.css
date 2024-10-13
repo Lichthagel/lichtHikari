@@ -1,0 +1,7 @@
+:global(.external-link).mangadex {
+  --link-color: rgb(var(--color-orange));
+}
+
+:global(.external-link).mangadex :global(.icon-wrap) {
+  background: rgb(var(--color-orange));
+}

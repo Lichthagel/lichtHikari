@@ -1,9 +1,9 @@
-import { customElement } from "solid-element";
+import { customElement, noShadowDOM } from "solid-element";
 import { type Component, createResource, Show } from "solid-js";
 
 import AnisongsAPI from "../api";
 import { type AnisongsData, themes_to_data } from "../models";
-import styleText from "./style.css?inline";
+import styles from "./style.module.css";
 import Themes from "./Themes";
 
 type Props = {
@@ -47,7 +47,7 @@ const Anisongs: Component<Props> = ({ mediaId }) => {
         </div>
       </Show>
       <Show when={data()}>
-        <div class="anisongs">
+        <div class={styles.anisongs}>
           <Themes heading="Openings" themes={data()!.ops} />
           <Themes heading="Endings" themes={data()!.eds} />
         </div>
@@ -61,11 +61,9 @@ export default Anisongs;
 export type AnisongsElement = HTMLElement & Props;
 
 export const defineAnisongsElement = () => {
-  customElement<Props>("licht-anisongs", { mediaId: null }, (props) =>
-    (
-      <>
-        <style>{styleText}</style>
-        <Anisongs {...props} />
-      </>
-    ));
+  customElement<Props>("licht-anisongs", { mediaId: null }, (props) => {
+    noShadowDOM();
+
+    return <Anisongs {...props} />;
+  });
 };

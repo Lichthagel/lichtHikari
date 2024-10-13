@@ -1,0 +1,13 @@
+.settings {
+  margin-top: 30px;
+  display: none;
+}
+
+:global(.clients) ~ licht-settings .settings {
+  display: block;
+}
+
+/* fix display of AutoMail */
+:global(.apps ~ #hohSettings) {
+  display: inline;
+}

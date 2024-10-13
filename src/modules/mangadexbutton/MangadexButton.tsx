@@ -4,7 +4,7 @@ import { Component, createMemo, createResource } from "solid-js";
 
 import { getExtraAttrs } from "../../utils";
 import { getManga } from "./api";
-import styleText from "./style.css?inline";
+import styles from "./style.module.css";
 
 type Props = {
   title: string | null;
@@ -33,7 +33,7 @@ const MangadexButton: Component<Props> = ({ title, mediaId, dataAttrName }) => {
 
   return (
     <a
-      class="external-link licht-mangadex"
+      class={`external-link ${styles.mangadex}`}
       href={link()}
       target="_blank"
       {...extraAttrs()}
@@ -54,12 +54,7 @@ export const defineMangadexButtonElement = () => {
   customElement<Props>("licht-mangadex-button", { title: null, mediaId: null, dataAttrName: null }, (props) => {
     noShadowDOM();
 
-    return (
-      <>
-        <style>{styleText}</style>
-        <MangadexButton {...props} />
-      </>
-    );
+    return <MangadexButton {...props} />;
   });
 };
 

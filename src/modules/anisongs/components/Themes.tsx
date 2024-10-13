@@ -10,7 +10,7 @@ type Props = {
 };
 
 const Themes: Component<Props> = ({ themes, heading }) => (
-  <div class="lichtThemes">
+  <div>
     <h2>{heading}</h2>
     <Show when={!themes || themes.length === 0}>
       <div>Nothing found</div>
