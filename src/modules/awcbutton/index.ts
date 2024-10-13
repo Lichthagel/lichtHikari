@@ -1,5 +1,5 @@
 import { Module } from "../../module";
-import { waitForElement } from "../../utils";
+import { getDataAttrName, waitForElement } from "../../utils";
 import { AwcButtonElement, defineAwcButtonElement } from "./AwcButton";
 
 defineAwcButtonElement();
@@ -16,22 +16,24 @@ const awcbutton: Module = {
       return;
     }
 
-    const actionsEl = await waitForElement((container) => container.querySelector(".banner-content > .actions"));
+    const target = await waitForElement((container) => container.querySelector(".banner-content > .actions"));
+    const dataAttrName = getDataAttrName(target);
 
-    for (const e of actionsEl.querySelectorAll("licht-awc-button")) {
+    for (const e of target.querySelectorAll("licht-awc-button")) {
       e.remove();
     }
 
     const elemAwcButton = document.createElement("licht-awc-button") as AwcButtonElement;
 
     elemAwcButton.username = matches[1];
+    elemAwcButton.dataAttrName = dataAttrName;
 
-    if (actionsEl.children.length === 0) {
-      actionsEl.append(elemAwcButton);
+    if (target.children.length === 0) {
+      target.append(elemAwcButton);
     } else {
-      actionsEl.insertBefore(
+      target.insertBefore(
         elemAwcButton,
-        actionsEl.children[0],
+        target.children[0],
       );
     }
   },
