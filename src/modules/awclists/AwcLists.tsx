@@ -1,6 +1,6 @@
 import { customElement, noShadowDOM } from "solid-element";
 import {
-  Component, createMemo, createResource, For, Show,
+  Component, createMemo, createResource, For, Match, Switch,
 } from "solid-js";
 
 import { getExtraAttrs } from "../../utils";
@@ -49,27 +49,36 @@ const AwcLists: Component<Props> = ({ mediaId, dataAttrName }) => {
   return (
     <div class="data-set data-list" {...extraAttrs()}>
       <div class="type" {...extraAttrs()}>AWC Lists</div>
-      <Show when={data.loading}>
-        <div class="value" {...extraAttrs()}>Loading...</div>
-      </Show>
-      <Show when={data.error as unknown}>
-        <div class="value" {...extraAttrs()}>
-          Error:
-          {data.error}
-        </div>
-      </Show>
-      <Show when={sortedData()}>
-        <div class="value" {...extraAttrs()}>
-          <For each={sortedData()}>
-            {(list) => (
-              <span>
-                {list}
-                <br />
-              </span>
-            )}
-          </For>
-        </div>
-      </Show>
+      <Switch>
+        <Match when={data.loading}>
+          <div class="value" {...extraAttrs()}>Loading...</div>
+        </Match>
+        <Match when={data.error as unknown}>
+          <div class="value" {...extraAttrs()}>
+            Error:
+            {data.error}
+          </div>
+        </Match>
+        <Match when={sortedData()}>
+          <div class="value" {...extraAttrs()}>
+            <Switch>
+              <Match when={sortedData()!.length === 0}>
+                <div>No lists</div>
+              </Match>
+              <Match when={sortedData()!.length > 0}>
+                <For each={sortedData()}>
+                  {(list) => (
+                    <span>
+                      {list}
+                      <br />
+                    </span>
+                  )}
+                </For>
+              </Match>
+            </Switch>
+          </div>
+        </Match>
+      </Switch>
     </div>
   );
 };
