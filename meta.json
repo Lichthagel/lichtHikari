@@ -8,5 +8,8 @@
     "supportURL": "https://github.com/Lichthagel/lichtHikari/issues",
     "license": "GPL-3.0-or-later",
     "match": "https://anilist.co/*",
-    "connect": "staging.animetheme.moe"
+    "connect": "staging.animetheme.moe",
+    "grant": [
+        "GM_xmlhttpRequest"
+    ]
 }

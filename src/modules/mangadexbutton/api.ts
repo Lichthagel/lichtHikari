@@ -1,24 +1,28 @@
 import { Manga, Result } from "./models";
 
-const MangaDexButtonAPI = {
-  async getManga(mediaTitle: string, mediaId: string): Promise<Manga | null> {
-    const res = await fetch(
-      `https://api.mangadex.org/manga?title=${mediaTitle}`,
-    );
-    const data = await res.json() as Result; // TODO validate
+export const getManga = async (mediaTitle: string, mediaId: string): Promise<Manga | null> =>
+  new Promise((resolve, reject) => {
+    GM_xmlhttpRequest({
+      method: "GET",
+      url: `https://api.mangadex.org/manga?title=${mediaTitle}`,
+      responseType: "json",
+      onload: (resp) => {
+        const body = resp.response as Result | null; // TODO verify
 
-    if (!data.data || data.data.length === 0) {
-      return null;
-    }
+        if (!body || !body.data || body.data.length === 0) {
+          return null;
+        }
 
-    for (const manga of data.data) {
-      if (manga.attributes.links.al && manga.attributes.links.al === mediaId) {
-        return manga;
-      }
-    }
+        for (const manga of body.data) {
+          if (manga.attributes.links.al && manga.attributes.links.al === mediaId) {
+            resolve(manga);
+          }
+        }
 
-    return null;
-  },
-};
-
-export default MangaDexButtonAPI;
+        resolve(null);
+      },
+      onerror: (err) => {
+        reject(new Error(`Failed to fetch manga: ${err.statusText}`));
+      },
+    });
+  });

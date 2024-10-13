@@ -1,15 +1,7 @@
-.external-link, .external-link:visited, .external-link:hover, .external-link:visited:hover {
-    border-radius: 3px;
-    color: rgb(var(--color-white));
-    display: block;
-    font-size: 1.3rem;
-    font-weight: 500;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 7px;
-    text-align: center;
+.external-link.licht-mangadex {
+  --link-color: rgb(var(--color-orange));
 }
 
-.external-link.mangadex {
-    background: rgb(var(--color-orange));
+.external-link.licht-mangadex .icon-wrap {
+  background: rgb(var(--color-orange));
 }

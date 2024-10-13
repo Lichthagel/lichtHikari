@@ -21,3 +21,13 @@ export const waitForElement = async (selector: (container: Document) => Element 
     reject(new Error("Timed out waiting for element"));
   }, timeoutSecs * 1000);
 });
+
+export const getDataAttrName = (target: Element): string | null => {
+  for (const attr of target.attributes) {
+    if (attr.name.startsWith("data-v-")) {
+      return attr.name;
+    }
+  }
+
+  return null;
+};

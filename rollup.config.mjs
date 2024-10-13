@@ -4,6 +4,7 @@ import typescript from "@rollup/plugin-typescript";
 import { defineConfig } from "rollup";
 import postcss from "rollup-plugin-postcss";
 import userscriptMeta from "rollup-plugin-userscript-metablock";
+import icons from "unplugin-icons/rollup";
 
 export default defineConfig({
   input: "src/index.user.ts",
@@ -20,7 +21,12 @@ export default defineConfig({
     }),
     typescript(),
     nodeResolve(),
-    postcss(),
+    icons({
+      compiler: "solid",
+    }),
+    postcss({
+      inject: false,
+    }),
     userscriptMeta({
       file: "meta.json",
     }),
