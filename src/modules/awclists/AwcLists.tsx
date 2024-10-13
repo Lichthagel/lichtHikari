@@ -1,16 +1,19 @@
-import { customElement } from "solid-element";
+import { customElement, noShadowDOM } from "solid-element";
 import {
-  Component, createResource, For, Show,
+  Component, createMemo, createResource, For, Show,
 } from "solid-js";
 
+import { getExtraAttrs } from "../../utils";
 import { getLists } from "./api";
-import styleText from "./style.css";
 
 type Props = {
   mediaId: string | null;
+  dataAttrName: string | null;
 };
 
-const AwcLists: Component<Props> = ({ mediaId }) => {
+const AwcLists: Component<Props> = ({ mediaId, dataAttrName }) => {
+  const extraAttrs = createMemo(() => getExtraAttrs(dataAttrName));
+
   const [data] = createResource<string[] | null, string | null>(mediaId, async (mediaId) => {
     if (!mediaId) {
       return null;
@@ -36,19 +39,19 @@ const AwcLists: Component<Props> = ({ mediaId }) => {
   });
 
   return (
-    <div class="data-set data-list">
-      <div class="type">AWC Lists</div>
+    <div class="data-set data-list" {...extraAttrs()}>
+      <div class="type" {...extraAttrs()}>AWC Lists</div>
       <Show when={data.loading}>
-        <div class="value">Loading...</div>
+        <div class="value" {...extraAttrs()}>Loading...</div>
       </Show>
       <Show when={data.error as unknown}>
-        <div class="value">
+        <div class="value" {...extraAttrs()}>
           Error:
           {data.error}
         </div>
       </Show>
       <Show when={data()}>
-        <div class="value">
+        <div class="value" {...extraAttrs()}>
           <For each={data()}>
             {(list) => (
               <span>
@@ -66,12 +69,13 @@ const AwcLists: Component<Props> = ({ mediaId }) => {
 export default AwcLists;
 
 export const defineAwcListsElement = () => {
-  customElement<Props>("licht-awc-lists", { mediaId: null }, ({ mediaId }) => (
-    <>
-      <style>{styleText}</style>
-      <AwcLists mediaId={mediaId} />
-    </>
-  ));
+  customElement<Props>("licht-awc-lists", { mediaId: null, dataAttrName: null }, (props) => {
+    noShadowDOM();
+
+    return (
+      <AwcLists {...props} />
+    );
+  });
 };
 
 export type AwcListsElement = HTMLElement & Props;

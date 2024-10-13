@@ -1,5 +1,5 @@
 import { Module } from "../../module";
-import { waitForElement } from "../../utils";
+import { getDataAttrName, waitForElement } from "../../utils";
 import { AwcListsElement, defineAwcListsElement } from "./AwcLists";
 
 defineAwcListsElement();
@@ -20,6 +20,8 @@ const awclists: Module = {
       // const loc = matches[3];
 
       const target = await waitForElement((container) => container.querySelector(".sidebar > .data"));
+      const targetChild = target.childElementCount > 0 ? target.children[0] : target;
+      const dataAttrName = getDataAttrName(targetChild);
 
       for (const e of target.querySelectorAll("licht-awc-lists")) {
         e.remove();
@@ -28,6 +30,7 @@ const awclists: Module = {
       const elemAwcLists = document.createElement("licht-awc-lists") as AwcListsElement;
 
       elemAwcLists.mediaId = mediaId;
+      elemAwcLists.dataAttrName = dataAttrName;
 
       target.append(elemAwcLists);
     }
