@@ -1,5 +1,5 @@
 import { customElement, noShadowDOM } from "solid-element";
-import { Component, For } from "solid-js";
+import { Component, For, Show } from "solid-js";
 
 import modules from "..";
 import { activeModules, saveActiveModules, setActiveModules } from "../../global";
@@ -21,13 +21,15 @@ const Settings: Component<Props> = () => (
     <h2>lichtHikari</h2>
     <For each={modules}>
       {(module) => (
-        <div
-          class="button"
-          classList={{ danger: activeModules[module.id] }}
-          on:click={() => toggleModule(module)}
-        >
-          {module.id}
-        </div>
+        <Show when={module.id !== "settings"}>
+          <div
+            class="button"
+            classList={{ danger: activeModules[module.id] }}
+            on:click={() => toggleModule(module)}
+          >
+            {module.id}
+          </div>
+        </Show>
       )}
     </For>
   </div>
