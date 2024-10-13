@@ -3,7 +3,7 @@ import { type Component, createResource, Show } from "solid-js";
 
 import AnisongsAPI from "../api";
 import { type AnisongsData, themes_to_data } from "../models";
-import styleText from "./style.css";
+import styleText from "./style.css?inline";
 import Themes from "./Themes";
 
 type Props = {

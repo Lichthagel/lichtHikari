@@ -4,7 +4,7 @@ import { Component, For, Show } from "solid-js";
 import modules from "..";
 import { activeModules, saveActiveModules, setActiveModules } from "../../global";
 import { Module } from "../../module";
-import styleText from "./style.css";
+import styleText from "./style.css?inline";
 
 type Props = object;
 

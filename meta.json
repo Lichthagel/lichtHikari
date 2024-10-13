@@ -9,9 +9,5 @@
     "downloadURL": "https://lichthagel.github.io/lichtHikari/lichtHikari.user.js",
     "updateURL": "https://lichthagel.github.io/lichtHikari/lichtHikari.user.js",
     "license": "GPL-3.0-or-later",
-    "match": "https://anilist.co/*",
-    "connect": "staging.animetheme.moe",
-    "grant": [
-        "GM_xmlhttpRequest"
-    ]
+    "match": "https://anilist.co/*"
 }

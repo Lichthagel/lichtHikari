@@ -1,7 +1,6 @@
 import { Module } from "../../module";
 import { waitForElement } from "../../utils";
 import { defineSettingsElement, SettingsElement } from "./Settings";
-import "./style.css";
 
 defineSettingsElement();
 

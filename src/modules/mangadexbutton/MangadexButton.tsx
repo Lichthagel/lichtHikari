@@ -4,7 +4,7 @@ import { Component, createMemo, createResource } from "solid-js";
 
 import { getExtraAttrs } from "../../utils";
 import { getManga } from "./api";
-import styleText from "./style.css";
+import styleText from "./style.css?inline";
 
 type Props = {
   title: string | null;

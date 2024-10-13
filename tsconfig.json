@@ -9,6 +9,7 @@
         "moduleResolution": "node",
         "noEmit": true,
         "noImplicitAny": true,
+        "resolveJsonModule": true,
         "strictNullChecks": true,
         "target": "ES2022",
         "types": [
