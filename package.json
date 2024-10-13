@@ -4,8 +4,9 @@
   "description": "Collection of user scripts for AniList",
   "type": "module",
   "scripts": {
+    "dev": "vite",
     "build": "vite build",
-    "dev": "vite dev",
+    "preview": "vite preview",
     "lint": "eslint ."
   },
   "repository": {
