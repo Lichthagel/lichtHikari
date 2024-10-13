@@ -14,9 +14,6 @@ importers:
       '@lichthagel/eslint-config':
         specifier: github:Lichthagel/eslint-config
         version: https://codeload.github.com/Lichthagel/eslint-config/tar.gz/759fe7cdca6baccf8d07bb0fee04e9caac25cb71(eslint-plugin-n@17.11.1(eslint@9.12.0))(eslint@9.12.0)(svelte@4.2.19)(typescript@5.6.3)
-      '@violentmonkey/types':
-        specifier: ^0.1.9
-        version: 0.1.9
       eslint:
         specifier: ^9.12.0
         version: 9.12.0
@@ -562,9 +559,6 @@ packages:
   '@typescript-eslint/visitor-keys@8.8.1':
     resolution: {integrity: sha512-0/TdC3aeRAsW7MDvYRwEc1Uwm0TIBfzjPFgg60UU2Haj5qsCs9cc3zNgY71edqE3LbWfF/WoZQd3lJoDXFQpag==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
-
-  '@violentmonkey/types@0.1.9':
-    resolution: {integrity: sha512-mBEHd8IOIrJW9NTSFf9474et5eduoq16Pmddg5O3MC/RElCxXay//Go0jpSz20LEpA9t0H44EHDRcXJYMBBtNg==}
 
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
@@ -2154,8 +2148,6 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 8.8.1
       eslint-visitor-keys: 3.4.3
-
-  '@violentmonkey/types@0.1.9': {}
 
   acorn-jsx@5.3.2(acorn@8.12.1):
     dependencies:
