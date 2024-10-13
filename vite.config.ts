@@ -10,6 +10,9 @@ export default defineConfig({
     solidPlugin(),
     monkey({
       entry: "src/index.user.ts",
+      build: {
+        fileName: "lichtHikari.user.js",
+      },
       userscript: {
         name: "lichtHikari",
         namespace: `${pkg.author}/lichtHikari`,
