@@ -1,3 +1,4 @@
+import path from "node:path";
 import icons from "unplugin-icons/vite";
 import { defineConfig } from "vite";
 import monkey from "vite-plugin-monkey";
@@ -23,4 +24,14 @@ export default defineConfig({
       compiler: "solid",
     }),
   ],
+  css: {
+    modules: {
+      generateScopedName: (name, filename) => {
+        const modulePath = path.relative("src", filename);
+        const module = modulePath.split(path.sep).at(1);
+
+        return module ? `licht-${module}-${name}` : `licht-${name}`;
+      },
+    },
+  },
 });
