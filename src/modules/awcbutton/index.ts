@@ -1,7 +1,8 @@
 import { Module } from "../../module";
 import { waitForElement } from "../../utils";
-import { createAWCButton } from "./dom";
-import "./style.css";
+import { AwcButtonElement, defineAwcButtonElement } from "./AwcButton";
+
+defineAwcButtonElement();
 
 const awcbutton: Module = {
   id: "awcbutton",
@@ -17,15 +18,19 @@ const awcbutton: Module = {
 
     const actionsEl = await waitForElement((container) => container.querySelector(".banner-content > .actions"));
 
-    for (const button of actionsEl.querySelectorAll(".lichtAWCButton")) {
-      button.remove();
+    for (const e of actionsEl.querySelectorAll("licht-awc-button")) {
+      e.remove();
     }
 
+    const elemAwcButton = document.createElement("licht-awc-button") as AwcButtonElement;
+
+    elemAwcButton.username = matches[1];
+
     if (actionsEl.children.length === 0) {
-      actionsEl.append(createAWCButton(matches[1]));
+      actionsEl.append(elemAwcButton);
     } else {
       actionsEl.insertBefore(
-        createAWCButton(matches[1]),
+        elemAwcButton,
         actionsEl.children[0],
       );
     }
