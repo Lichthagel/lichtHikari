@@ -40,16 +40,6 @@ h2 {
     margin: 10px 0;
 }
 
-.video-box {
-    cursor: pointer;
-    color: rgb(var(--color-text));
-}
-
-.video-box:hover {
-    transition: .15s;
-    color: rgb(var(--color-blue));
-}
-
 .theme video {
     cursor: auto;
     margin-top: 10px;
