@@ -1,4 +1,4 @@
-import { customElement, noShadowDOM } from "solid-element";
+import { customElement } from "solid-element";
 import { Component } from "solid-js";
 
 import styleText from "./style.css";
@@ -8,7 +8,7 @@ type Props = {
 };
 
 const AwcButton: Component<Props> = ({ username }) => (
-  <a class="licht-awc-button" href={`https://awc.moe/challenger/${username}`} target="_blank">
+  <a class="awc-button" href={`https://awc.moe/challenger/${username}`} target="_blank">
     AWC Profile
   </a>
 );
@@ -16,16 +16,12 @@ const AwcButton: Component<Props> = ({ username }) => (
 export default AwcButton;
 
 export const defineAwcButtonElement = () => {
-  customElement<Props>("licht-awc-button", { username: "" }, ({ username: challenger }) => {
-    noShadowDOM();
-
-    return (
-      <>
-        <style>{styleText}</style>
-        <AwcButton username={challenger} />
-      </>
-    );
-  });
+  customElement<Props>("licht-awc-button", { username: "" }, ({ username: challenger }) => (
+    <>
+      <style>{styleText}</style>
+      <AwcButton username={challenger} />
+    </>
+  ));
 };
 
 export type AwcButtonElement = HTMLElement & Props;
