@@ -1,3 +1,5 @@
+import { createStore } from "solid-js/store";
+
 import modules from "./modules";
 
 type Config = Record<string, boolean>;
@@ -18,8 +20,8 @@ function loadActiveModules(): Config {
   return config;
 }
 
-export const useScripts = loadActiveModules();
+export const [activeModules, setActiveModules] = createStore(loadActiveModules());
 
 export function saveActiveModules() {
-  localStorage.setItem("lichtActiveModules", JSON.stringify(useScripts));
+  localStorage.setItem("lichtActiveModules", JSON.stringify(activeModules));
 }

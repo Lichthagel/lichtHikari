@@ -1,4 +1,4 @@
-import { useScripts } from "./global";
+import { activeModules } from "./global";
 import modules from "./modules";
 
 let oldUrl = "";
@@ -9,7 +9,7 @@ const observer = new MutationObserver(() => {
     console.log(`lichtHikari: switched page ${pathname}`);
 
     for (const module of modules) {
-      if (useScripts[module.id] && module.urlMatch(pathname, oldUrl)) {
+      if (activeModules[module.id] && module.urlMatch(pathname, oldUrl)) {
         void module.code();
       }
     }

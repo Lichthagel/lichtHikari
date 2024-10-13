@@ -1,7 +1,9 @@
 import { Module } from "../../module";
 import { waitForElement } from "../../utils";
-import SettingsDOM from "./dom";
+import { defineSettingsElement, SettingsElement } from "./Settings";
 import "./style.css";
+
+defineSettingsElement();
 
 const settings: Module = {
   id: "settings",
@@ -12,8 +14,10 @@ const settings: Module = {
     const target = await waitForElement((container) =>
       container.querySelector(".settings > .content"));
 
-    if (!target.querySelector(".lichtSettings")) {
-      SettingsDOM.addTo(target);
+    if (!target.querySelector("licht-settings")) {
+      const elemSettings = document.createElement("licht-settings") as SettingsElement;
+
+      target.append(elemSettings);
     }
   },
 };
