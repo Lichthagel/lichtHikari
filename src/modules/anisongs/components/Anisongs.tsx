@@ -1,5 +1,7 @@
 import { customElement, noShadowDOM } from "solid-element";
-import { type Component, createResource, Show } from "solid-js";
+import {
+  type Component, createResource, Match, Switch,
+} from "solid-js";
 
 import AnisongsAPI from "../api";
 import { type AnisongsData, themes_to_data } from "../models";
@@ -36,23 +38,23 @@ const Anisongs: Component<Props> = ({ mediaId }) => {
   });
 
   return (
-    <>
-      <Show when={data.loading}>
+    <Switch>
+      <Match when={data.loading}>
         <div>Loading...</div>
-      </Show>
-      <Show when={data.error as unknown}>
+      </Match>
+      <Match when={data.error as unknown}>
         <div>
           Error:
           {data.error}
         </div>
-      </Show>
-      <Show when={data()}>
+      </Match>
+      <Match when={data()}>
         <div class={styles.anisongs}>
           <Themes heading="Openings" themes={data()!.ops} />
           <Themes heading="Endings" themes={data()!.eds} />
         </div>
-      </Show>
-    </>
+      </Match>
+    </Switch>
   );
 };
 
