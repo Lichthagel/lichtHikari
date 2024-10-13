@@ -1,7 +1,7 @@
 {
   "name": "lichthikari",
   "version": "1.0.0",
-  "description": "Collection of user scripts for AniList",
+  "description": "User script with various tweaks for AniList ",
   "type": "module",
   "scripts": {
     "dev": "vite",
