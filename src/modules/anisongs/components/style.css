@@ -1,4 +1,17 @@
-.lichtContainer .lichtTheme {
+h2 {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.anisongs {
+    display: grid;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.theme {
     background: rgb(var(--color-foreground));
     border-radius: 3px;
     padding: 8px 10px;
@@ -6,12 +19,12 @@
     margin-bottom: 10px;
 }
 
-.lichtContainer .lichtTheme .lichtThemeHeading {
+.theme .heading {
     font-size: 1.8rem;
     margin: 10px 0;
 }
 
-.lichtContainer .lichtTheme .lichtThemeHeading .lichtThemeSlug {
+.theme .heading .slug {
     border-radius: 3px;
     padding: 3px 5px;
     background-color: rgb(var(--color-blue));
@@ -20,30 +33,30 @@
     margin-right: 10px;
 }
 
-.lichtContainer .lichtTheme .lichtThemeEntry {
+.theme-entry {
     border-radius: 3px;
     padding: 3px 5px;
     background-color: rgb(var(--color-background));
     margin: 10px 0;
 }
 
-.lichtContainer .video-box {
+.video-box {
     cursor: pointer;
     color: rgb(var(--color-text));
 }
 
-.lichtContainer .video-box:hover {
+.video-box:hover {
     transition: .15s;
     color: rgb(var(--color-blue));
 }
 
-.lichtContainer .lichtTheme video {
+.theme video {
     cursor: auto;
     margin-top: 10px;
     width: 100%;
 }
 
-.lichtContainer .lichtTheme .lichtTag {
+.theme .tag {
     background-color: rgb(var(--color-foreground));
     color: rgb(var(--color-text));
     border-radius: 3px;
@@ -53,7 +66,7 @@
     padding: 8px 10px;
 }
 
-.lichtContainer .lichtTheme .lichtButton {
+.theme .button {
     background-color: rgb(var(--color-blue));
     border-radius: 3px;
     color: rgb(var(--color-white));
@@ -65,10 +78,10 @@
     text-align: center;
 }
 
-.lichtContainer .lichtTheme .lichtButton:hover {
+.theme .button:hover {
     cursor: pointer;
 }
 
-.lichtContainer .lichtTheme .lichtButton.active {
+.theme .button.active {
     background-color: rgb(var(--color-red));
 }

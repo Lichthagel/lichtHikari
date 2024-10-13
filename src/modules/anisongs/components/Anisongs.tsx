@@ -1,0 +1,71 @@
+import { customElement } from "solid-element";
+import { type Component, createResource, Show } from "solid-js";
+
+import AnisongsAPI from "../api";
+import { type AnisongsData, themes_to_data } from "../models";
+import styleText from "./style.css";
+import Themes from "./Themes";
+
+type Props = {
+  mediaId: string | null;
+};
+
+const Anisongs: Component<Props> = ({ mediaId }) => {
+  const [data] = createResource(mediaId, async (mediaId) => {
+    const cache = sessionStorage.getItem(`lichtSong${mediaId}`);
+
+    // check if request needed
+    if (cache) {
+      console.log("lichtAnisongs: data in cache");
+
+      return JSON.parse(cache) as AnisongsData; // TODO validate
+    } else {
+      const themes = await AnisongsAPI.getThemes(mediaId);
+
+      if (!themes) {
+        console.log("lichtAnisongs: not found on AnimeThemes");
+        return;
+      }
+
+      const data = themes_to_data(themes);
+
+      sessionStorage.setItem(`lichtSong${mediaId}`, JSON.stringify(data));
+
+      return data;
+    }
+  });
+
+  return (
+    <>
+      <Show when={data.loading}>
+        <div>Loading...</div>
+      </Show>
+      <Show when={data.error as unknown}>
+        <div>
+          Error:
+          {data.error}
+        </div>
+      </Show>
+      <Show when={data()}>
+        <div class="anisongs">
+          <Themes heading="Openings" themes={data()!.ops} />
+          <Themes heading="Endings" themes={data()!.eds} />
+        </div>
+      </Show>
+    </>
+  );
+};
+
+export default Anisongs;
+
+export type AnisongsElement = HTMLElement & Props;
+
+export const defineAnisongsElement = () => {
+  customElement<Props>("licht-anisongs", { mediaId: null }, (props) =>
+    (
+      <>
+        <style>{styleText}</style>
+        <Anisongs {...props} />
+      </>
+    ));
+};

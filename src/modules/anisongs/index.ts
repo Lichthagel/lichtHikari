@@ -1,34 +1,9 @@
-import { Module } from "../../module";
+import type { Module } from "../../module";
+
 import { waitForElement } from "../../utils";
-import AnisongsAPI from "./api";
-import AnisongsDOM from "./dom";
-import { AnisongsData, themes_to_data } from "./models";
-import "./style.css";
+import { type AnisongsElement, defineAnisongsElement } from "./components/Anisongs";
 
-async function launch(target: Element, mediaId: string) {
-  // load cache
-  const cache = sessionStorage.getItem(`lichtSong${mediaId}`);
-
-  // check if request needed
-  if (cache) {
-    console.log("lichtAnisongs: data in cache");
-
-    AnisongsDOM.addTo(target, JSON.parse(cache) as AnisongsData); // TODO validate
-  } else {
-    const themes = await AnisongsAPI.getThemes(mediaId);
-
-    if (!themes) {
-      console.log("lichtAnisongs: not found on AnimeThemes");
-      return;
-    }
-
-    const data = themes_to_data(themes);
-
-    sessionStorage.setItem(`lichtSong${mediaId}`, JSON.stringify(data));
-
-    AnisongsDOM.addTo(target, data);
-  }
-}
+defineAnisongsElement();
 
 const anisongs: Module = {
   id: "anisongs",
@@ -47,11 +22,17 @@ const anisongs: Module = {
 
       const target = await waitForElement((container) => container.querySelectorAll(".grid-section-wrap")[2]);
 
+      for (const e of target.querySelectorAll("licht-anisongs")) {
+        e.remove();
+      }
+
       if (mediaType === "anime" && loc === "") {
-        AnisongsDOM.clean(target);
-        void launch(target, mediaId);
-      } else {
-        AnisongsDOM.clean(target);
+        const anisongsElement = document.createElement("licht-anisongs") as AnisongsElement;
+
+        anisongsElement.mediaId = mediaId;
+        anisongsElement.style.gridColumn = "span 2";
+
+        target.insertBefore(anisongsElement, target.children[0]);
       }
     }
   },
