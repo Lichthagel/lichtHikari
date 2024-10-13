@@ -36,12 +36,12 @@ const MangadexButton: Component<Props> = ({ title, mediaId, dataAttrName }) => {
       class="external-link licht-mangadex"
       href={link()}
       target="_blank"
-      {...extraAttrs}
+      {...extraAttrs()}
     >
-      <div class="icon-wrap" {...extraAttrs}>
-        <LucideCat class="icon default" {...extraAttrs} />
+      <div class="icon-wrap" {...extraAttrs()}>
+        <LucideCat class="icon default" {...extraAttrs()} />
       </div>
-      <span class="name" {...extraAttrs}>
+      <span class="name" {...extraAttrs()}>
         MangaDex
       </span>
     </a>
