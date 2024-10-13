@@ -3,8 +3,6 @@ import { defineConfig } from "vite";
 import monkey from "vite-plugin-monkey";
 import solidPlugin from "vite-plugin-solid";
 
-import pkg from "./package.json";
-
 export default defineConfig({
   plugins: [
     solidPlugin(),
@@ -15,15 +13,9 @@ export default defineConfig({
       },
       userscript: {
         name: "lichtHikari",
-        namespace: `${pkg.author}/lichtHikari`,
-        version: pkg.version,
-        description: pkg.description,
-        author: pkg.author,
-        homepageURL: pkg.repository.url.replace("git+", "").replace(".git", ""),
-        supportURL: pkg.bugs.url,
+        namespace: `Lichthagel/lichtHikari`,
         downloadURL: "https://lichthagel.github.io/lichtHikari/lichtHikari.user.js",
         updateURL: "https://lichthagel.github.io/lichtHikari/lichtHikari.user.js",
-        license: pkg.license,
         match: ["*://anilist.co/*"],
       },
     }),
