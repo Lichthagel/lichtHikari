@@ -8,8 +8,16 @@
     padding-bottom: 5px;
 }
 
+.data-list > .type {
+    padding-bottom: 2px;
+}
+
 .data-set > .value {
     line-height: 1.4;
     color: rgb(var(--color-text-lighter));
     font-size: 1.2rem;
+}
+
+.data-list > .value {
+    line-height: 1.4;
 }

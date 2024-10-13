@@ -1,7 +1,9 @@
 import { customElement } from "solid-element";
-import { Component, createResource, Show } from "solid-js";
+import {
+  Component, createResource, For, Show,
+} from "solid-js";
 
-import AWCListsAPI from "./api";
+import { getLists } from "./api";
 import styleText from "./style.css";
 
 type Props = {
@@ -9,7 +11,7 @@ type Props = {
 };
 
 const AwcLists: Component<Props> = ({ mediaId }) => {
-  const [data] = createResource(mediaId, async (mediaId) => {
+  const [data] = createResource<string[] | null, string | null>(mediaId, async (mediaId) => {
     if (!mediaId) {
       return null;
     }
@@ -18,34 +20,43 @@ const AwcLists: Component<Props> = ({ mediaId }) => {
     const cache: string | null = sessionStorage.getItem(`lichtAWCLists${mediaId}`);
 
     // check if request needed
-    if (cache) {
+    if (cache && cache.length > 0) {
       console.log("lichtAWCLists: data in cache");
 
-      return cache;
-    } else {
-      const lists = await AWCListsAPI.getListsString(Number.parseInt(mediaId));
+      const lists = cache.split(",");
 
-      sessionStorage.setItem(`lichtAWCLists${mediaId}`, lists);
+      return lists;
+    } else {
+      const lists = await getLists(Number.parseInt(mediaId));
+
+      sessionStorage.setItem(`lichtAWCLists${mediaId}`, lists.join(","));
 
       return lists;
     }
   });
 
   return (
-    <div class="licht-data-set">
-      <div class="licht-type">AWC Lists</div>
+    <div class="data-set data-list">
+      <div class="type">AWC Lists</div>
       <Show when={data.loading}>
-        <div class="licht-value">Loading...</div>
+        <div class="value">Loading...</div>
       </Show>
       <Show when={data.error as unknown}>
-        <div class="licht-value">
+        <div class="value">
           Error:
           {data.error}
         </div>
       </Show>
       <Show when={data()}>
-        <div class="licht-value">
-          {data()}
+        <div class="value">
+          <For each={data()}>
+            {(list) => (
+              <span>
+                {list}
+                <br />
+              </span>
+            )}
+          </For>
         </div>
       </Show>
     </div>
