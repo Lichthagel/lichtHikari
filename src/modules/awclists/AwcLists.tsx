@@ -38,6 +38,14 @@ const AwcLists: Component<Props> = ({ mediaId, dataAttrName }) => {
     }
   });
 
+  const sortedData = createMemo(() => {
+    if (data()) {
+      return data()!.sort();
+    }
+
+    return null;
+  });
+
   return (
     <div class="data-set data-list" {...extraAttrs()}>
       <div class="type" {...extraAttrs()}>AWC Lists</div>
@@ -50,9 +58,9 @@ const AwcLists: Component<Props> = ({ mediaId, dataAttrName }) => {
           {data.error}
         </div>
       </Show>
-      <Show when={data()}>
+      <Show when={sortedData()}>
         <div class="value" {...extraAttrs()}>
-          <For each={data()}>
+          <For each={sortedData()}>
             {(list) => (
               <span>
                 {list}
