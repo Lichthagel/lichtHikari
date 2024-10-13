@@ -7,7 +7,6 @@ import meta from "./meta.json";
 
 export default defineConfig({
   plugins: [
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
     solidPlugin(),
     monkey({
       entry: "src/index.user.ts",
