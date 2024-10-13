@@ -23,7 +23,7 @@ jobs:
     - name: Build
       run: pnpm run build
     - name: Lint
-      run: pnpm run lint --ignore-pattern 'eslint.config.js'
+      run: pnpm run lint --ignore-pattern '*.config.{js,ts}'
     - name: Archive dist
       uses: actions/upload-artifact@v4
       with:
