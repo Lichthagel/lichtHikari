@@ -31,3 +31,7 @@ export const getDataAttrName = (target: Element): string | null => {
 
   return null;
 };
+
+export const getExtraAttrs =
+(dataAttrName: string | null): Record<string, string> =>
+  dataAttrName ? { [dataAttrName]: "" } : {};

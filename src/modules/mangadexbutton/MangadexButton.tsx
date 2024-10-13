@@ -2,6 +2,7 @@ import LucideCat from "~icons/lucide/cat";
 import { customElement, noShadowDOM } from "solid-element";
 import { Component, createMemo, createResource } from "solid-js";
 
+import { getExtraAttrs } from "../../utils";
 import { getManga } from "./api";
 import styleText from "./style.css";
 
@@ -12,7 +13,7 @@ type Props = {
 };
 
 const MangadexButton: Component<Props> = ({ title, mediaId, dataAttrName }) => {
-  const extraProps: Record<string, string> = {};
+  const extraAttrs = createMemo(() => getExtraAttrs(dataAttrName));
 
   const [data] = createResource(async () => {
     if (!title || !mediaId) {
@@ -27,24 +28,20 @@ const MangadexButton: Component<Props> = ({ title, mediaId, dataAttrName }) => {
       return `https://mangadex.org/title/${data()!.id}`;
     }
 
-    return `https://mangadex.org/search?title=${title}`;
+    return `https://mangadex.org/search?q=${title}`;
   });
-
-  if (dataAttrName) {
-    extraProps[dataAttrName] = "";
-  }
 
   return (
     <a
       class="external-link licht-mangadex"
       href={link()}
       target="_blank"
-      {...extraProps}
+      {...extraAttrs}
     >
-      <div class="icon-wrap" {...extraProps}>
-        <LucideCat class="icon default" {...extraProps} />
+      <div class="icon-wrap" {...extraAttrs}>
+        <LucideCat class="icon default" {...extraAttrs} />
       </div>
-      <span class="name" {...extraProps}>
+      <span class="name" {...extraAttrs}>
         MangaDex
       </span>
     </a>
