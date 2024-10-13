@@ -6,7 +6,7 @@ import {
 const AnisongsAPI = {
   async getThemes(mediaId: string): Promise<AnimeTheme[]> {
     const res = await fetch(
-      `https://staging.animethemes.moe/api/anime?filter[has]=resources&filter[site]=AniList&filter[external_id]=${mediaId}&include=animethemes.animethemeentries.videos,animethemes.song.artists`,
+      `https://api.animethemes.moe/anime?filter[has]=resources&filter[site]=AniList&filter[external_id]=${mediaId}&include=animethemes.animethemeentries.videos,animethemes.song.artists`,
     );
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const data = await res.json();
