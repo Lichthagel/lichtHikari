@@ -11,8 +11,8 @@ export default defineConfig({
     monkey({
       entry: "src/index.user.ts",
       userscript: {
-        name: pkg.name,
-        namespace: `${pkg.author}/${pkg.name}`,
+        name: "lichtHikari",
+        namespace: `${pkg.author}/lichtHikari`,
         version: pkg.version,
         description: pkg.description,
         author: pkg.author,
