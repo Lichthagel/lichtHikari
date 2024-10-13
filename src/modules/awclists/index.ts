@@ -1,26 +1,8 @@
 import { Module } from "../../module";
 import { waitForElement } from "../../utils";
-import AWCListsAPI from "./api";
-import AWCListsDOM from "./dom";
-import "./style.css";
+import { AwcListsElement, defineAwcListsElement } from "./AwcLists";
 
-async function launch(target: Element, mediaId: string) {
-  // load cache
-  const cache: string | null = sessionStorage.getItem(`lichtAWCLists${mediaId}`);
-
-  // check if request needed
-  if (cache) {
-    console.log("lichtAWCLists: data in cache");
-
-    AWCListsDOM.addTo(target, cache);
-  } else {
-    const lists = await AWCListsAPI.getListsString(Number.parseInt(mediaId));
-
-    sessionStorage.setItem(`lichtAWCLists${mediaId}`, lists);
-
-    AWCListsDOM.addTo(target, lists);
-  }
-}
+defineAwcListsElement();
 
 const awclists: Module = {
   id: "awclists",
@@ -33,18 +15,21 @@ const awclists: Module = {
     const matches = pathname.match(/(anime|manga)\/([0-9]+)\/[^/]*\/?(.*)/);
 
     if (matches) {
-      const mediaType = matches[1];
+      // const mediaType = matches[1];
       const mediaId = matches[2];
       // const loc = matches[3];
 
       const target = await waitForElement((container) => container.querySelector(".sidebar > .data"));
 
-      if (mediaType === "anime") {
-        AWCListsDOM.clean(target);
-        void launch(target, mediaId);
-      } else {
-        AWCListsDOM.clean(target);
+      for (const e of target.querySelectorAll("licht-awc-lists")) {
+        e.remove();
       }
+
+      const elemAwcLists = document.createElement("licht-awc-lists") as AwcListsElement;
+
+      elemAwcLists.mediaId = mediaId;
+
+      target.append(elemAwcLists);
     }
   },
 };
