@@ -1,6 +1,26 @@
 # Changelog
 
 
+## v1.0.4
+
+[compare changes](https://github.com/Lichthagel/lichtHikari/compare/v1.0.3...v1.0.4)
+
+### 📖 Documentation
+
+- **changelog:** Add old versions ([fd410fd](https://github.com/Lichthagel/lichtHikari/commit/fd410fd))
+
+### 🤖 CI
+
+- **deploy:** Also upload release artifact ([498117a](https://github.com/Lichthagel/lichtHikari/commit/498117a))
+- **deploy:** Always upload pages artifact ([d913050](https://github.com/Lichthagel/lichtHikari/commit/d913050))
+- **deploy:** Run on release ([c90b3b3](https://github.com/Lichthagel/lichtHikari/commit/c90b3b3))
+- **deploy:** Rename pipeline ([b6b5ff0](https://github.com/Lichthagel/lichtHikari/commit/b6b5ff0))
+- **deploy:** Allow write to contents ([43ca470](https://github.com/Lichthagel/lichtHikari/commit/43ca470))
+
+### ❤️ Contributors
+
+- Lichthagel ([@Lichthagel](http://github.com/Lichthagel))
+
 ## v1.0.3
 
 [compare changes](https://github.com/Lichthagel/lichtHikari/compare/v1.0.2...v1.0.3)
