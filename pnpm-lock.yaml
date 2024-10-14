@@ -10,7 +10,7 @@ importers:
     devDependencies:
       '@iconify/json':
         specifier: ^2.2.259
-        version: 2.2.259
+        version: 2.2.260
       '@lichthagel/eslint-config':
         specifier: github:Lichthagel/eslint-config
         version: https://codeload.github.com/Lichthagel/eslint-config/tar.gz/60c629bb0f454a2aae12bc1ced251d452a6598ae(eslint-plugin-n@17.11.1(eslint@9.12.0))(eslint-plugin-solid@0.14.3(eslint@9.12.0)(typescript@5.6.3))(eslint@9.12.0)(svelte@4.2.19)(typescript@5.6.3)
@@ -34,13 +34,13 @@ importers:
         version: 0.19.3
       vite:
         specifier: ^5.4.8
-        version: 5.4.8
+        version: 5.4.9
       vite-plugin-monkey:
         specifier: ^4.0.6
-        version: 4.0.6(vite@5.4.8)
+        version: 4.0.6(vite@5.4.9)
       vite-plugin-solid:
         specifier: ^2.10.2
-        version: 2.10.2(solid-js@1.9.2)(vite@5.4.8)
+        version: 2.10.2(solid-js@1.9.2)(vite@5.4.9)
 
 packages:
 
@@ -327,8 +327,8 @@ packages:
     resolution: {integrity: sha512-JBxkERygn7Bv/GbN5Rv8Ul6LVknS+5Bp6RgDC/O8gEBU/yeH5Ui5C/OlWrTb6qct7LjjfT6Re2NxB0ln0yYybA==}
     engines: {node: '>=18.18'}
 
-  '@iconify/json@2.2.259':
-    resolution: {integrity: sha512-QA5chdx3Jw/jpPv6NrABJIbG6++572KocO/hyebEpSx0KYPc1f5dWkGG1tFu6v9NB7Xls8bXZHXak011Gvoiiw==}
+  '@iconify/json@2.2.260':
+    resolution: {integrity: sha512-0vVJBAJ8GOoS07b8yC6c8NHfFx1GJnM8xtebtyynQYZ0/60dxKi86imdNftq5oY/cFfvVUGlmBi/2HS+sxWsWA==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -1617,8 +1617,8 @@ packages:
       '@testing-library/jest-dom':
         optional: true
 
-  vite@5.4.8:
-    resolution: {integrity: sha512-FqrItQ4DT1NC4zCUqMB4c4AZORMKIa0m8/URVCZ77OZ/QSNeJ54bU1vrFADbDsuwfIPcgknRkmqakQcgnL4GiQ==}
+  vite@5.4.9:
+    resolution: {integrity: sha512-20OVpJHh0PAM0oSOELa5GaZNWeDjcAvQjGXy2Uyr+Tp+/D2/Hdz6NLgpJLsarPTA2QJ6v8mX2P1ZfbsSKvdMkg==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -1931,7 +1931,7 @@ snapshots:
 
   '@humanwhocodes/retry@0.3.1': {}
 
-  '@iconify/json@2.2.259':
+  '@iconify/json@2.2.260':
     dependencies:
       '@iconify/types': 2.0.0
       pathe: 1.1.2
@@ -3231,7 +3231,7 @@ snapshots:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
 
-  vite-plugin-monkey@4.0.6(vite@5.4.8):
+  vite-plugin-monkey@4.0.6(vite@5.4.9):
     dependencies:
       acorn-walk: 8.3.4
       cross-spawn: 7.0.3
@@ -3243,9 +3243,9 @@ snapshots:
       picocolors: 1.1.0
       systemjs: 6.15.1
     optionalDependencies:
-      vite: 5.4.8
+      vite: 5.4.9
 
-  vite-plugin-solid@2.10.2(solid-js@1.9.2)(vite@5.4.8):
+  vite-plugin-solid@2.10.2(solid-js@1.9.2)(vite@5.4.9):
     dependencies:
       '@babel/core': 7.25.8
       '@types/babel__core': 7.20.5
@@ -3253,12 +3253,12 @@ snapshots:
       merge-anything: 5.1.7
       solid-js: 1.9.2
       solid-refresh: 0.6.3(solid-js@1.9.2)
-      vite: 5.4.8
-      vitefu: 0.2.5(vite@5.4.8)
+      vite: 5.4.9
+      vitefu: 0.2.5(vite@5.4.9)
     transitivePeerDependencies:
       - supports-color
 
-  vite@5.4.8:
+  vite@5.4.9:
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.47
@@ -3266,9 +3266,9 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
-  vitefu@0.2.5(vite@5.4.8):
+  vitefu@0.2.5(vite@5.4.9):
     optionalDependencies:
-      vite: 5.4.8
+      vite: 5.4.9
 
   webpack-virtual-modules@0.6.2: {}
 
