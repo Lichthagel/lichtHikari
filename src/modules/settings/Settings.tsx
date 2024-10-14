@@ -24,7 +24,7 @@ const Settings: Component<Props> = () => (
         <Show when={module.id !== "settings"}>
           <div
             class="button"
-            classList={{ danger: activeModules[module.id] }}
+            classList={{ danger: activeModules()[module.id] }}
             on:click={() => toggleModule(module)}
           >
             {module.id}

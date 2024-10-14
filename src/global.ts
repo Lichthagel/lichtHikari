@@ -1,4 +1,4 @@
-import { createStore } from "solid-js/store";
+import { createSignal } from "solid-js";
 
 import modules from "./modules";
 
@@ -20,8 +20,8 @@ function loadActiveModules(): Config {
   return config;
 }
 
-export const [activeModules, setActiveModules] = createStore(loadActiveModules());
+export const [activeModules, setActiveModules] = createSignal(loadActiveModules());
 
 export function saveActiveModules() {
-  localStorage.setItem("lichtActiveModules", JSON.stringify(activeModules));
+  localStorage.setItem("lichtActiveModules", JSON.stringify(activeModules()));
 }
