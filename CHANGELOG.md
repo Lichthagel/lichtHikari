@@ -22,3 +22,15 @@
 
 - Lichthagel ([@Lichthagel](http://github.com/Lichthagel))
 
+
+## v1.0.2
+
+[compare changes](https://github.com/Lichthagel/lichtHikari/compare/v1.0.1...v1.0.2)
+
+## v1.0.1
+
+[compare changes](https://github.com/Lichthagel/lichtHikari/compare/v1.0.0...v1.0.1)
+
+## v1.0.0
+
+[changes](https://github.com/Lichthagel/lichtHikari/commits/v1.0.0)
