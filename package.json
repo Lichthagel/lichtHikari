@@ -8,7 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint .",
-    "check": "tsc --noEmit"
+    "check": "tsc --noEmit",
+    "release": "changelogen --release --push"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   "devDependencies": {
     "@iconify/json": "^2.2.259",
     "@lichthagel/eslint-config": "github:Lichthagel/eslint-config",
+    "changelogen": "^0.5.7",
     "eslint": "^9.12.0",
     "eslint-plugin-solid": "^0.14.3",
     "solid-element": "^1.9.0",
