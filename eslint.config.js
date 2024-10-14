@@ -4,6 +4,7 @@ import lichthagel from "@lichthagel/eslint-config";
 /** @type {import("@lichthagel/eslint-config").FlatConfigItem[]} */
 export default [
   ...(await lichthagel({
+    solid: true,
     typescript: true,
   })),
   {

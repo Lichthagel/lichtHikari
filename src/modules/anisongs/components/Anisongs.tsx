@@ -12,8 +12,8 @@ type Props = {
   mediaId: string | null;
 };
 
-const Anisongs: Component<Props> = ({ mediaId }) => {
-  const [data] = createResource(mediaId, async (mediaId) => {
+const Anisongs: Component<Props> = (props) => {
+  const [data] = createResource(() => props.mediaId, async (mediaId) => {
     const cache = sessionStorage.getItem(`lichtSong${mediaId}`);
 
     // check if request needed

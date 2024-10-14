@@ -8,11 +8,11 @@ type Props = {
   dataAttrName: string | null;
 };
 
-const AwcButton: Component<Props> = ({ username, dataAttrName }) => {
-  const extraAttrs = createMemo(() => getExtraAttrs(dataAttrName));
+const AwcButton: Component<Props> = (props) => {
+  const extraAttrs = createMemo(() => getExtraAttrs(props.dataAttrName));
 
   return (
-    <a class="nav-btn" href={`https://awc.moe/challenger/${username}`} target="_blank" {...extraAttrs()}>
+    <a class="nav-btn" href={`https://awc.moe/challenger/${props.username}`} target="_blank" {...extraAttrs()}>
       AWC Profile
     </a>
   );

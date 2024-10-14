@@ -8,23 +8,23 @@ type Props = {
   theme: AnimeTheme;
 };
 
-const Theme: Component<Props> = ({ theme }) => (
+const Theme: Component<Props> = (props) => (
   <div class={styles.theme}>
     <div class={styles.heading}>
-      <span class={styles.slug}>{theme.slug}</span>
-      <span>{theme.song.title}</span>
+      <span class={styles.slug}>{props.theme.slug}</span>
+      <span>{props.theme.song.title}</span>
     </div>
-    <Show when={theme.group}>
-      <div><b>{theme.group}</b></div>
+    <Show when={props.theme.group}>
+      <div><b>{props.theme.group}</b></div>
     </Show>
-    <Show when={theme.song.artists && theme.song.artists.length > 0}>
+    <Show when={props.theme.song.artists && props.theme.song.artists.length > 0}>
       <div>
         <b>Artist(s):</b>
         {" "}
-        {theme.song.artists!.map((artist) => artist_to_string(artist)).join(", ")}
+        {props.theme.song.artists!.map((artist) => artist_to_string(artist)).join(", ")}
       </div>
     </Show>
-    <For each={theme.animethemeentries}>
+    <For each={props.theme.animethemeentries}>
       {(entry) => (
         <ThemeEntry entry={entry} />
       )}

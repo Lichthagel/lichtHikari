@@ -9,13 +9,13 @@ type Props = {
   heading: string;
 };
 
-const Themes: Component<Props> = ({ themes, heading }) => (
+const Themes: Component<Props> = (props) => (
   <div>
-    <h2>{heading}</h2>
-    <Show when={!themes || themes.length === 0}>
+    <h2>{props.heading}</h2>
+    <Show when={!props.themes || props.themes.length === 0}>
       <div>Nothing found</div>
     </Show>
-    <For each={themes}>
+    <For each={props.themes}>
       {(theme) => (
         <Theme theme={theme} />
       )}

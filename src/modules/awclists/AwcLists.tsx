@@ -11,10 +11,10 @@ type Props = {
   dataAttrName: string | null;
 };
 
-const AwcLists: Component<Props> = ({ mediaId, dataAttrName }) => {
-  const extraAttrs = createMemo(() => getExtraAttrs(dataAttrName));
+const AwcLists: Component<Props> = (props) => {
+  const extraAttrs = createMemo(() => getExtraAttrs(props.dataAttrName));
 
-  const [data] = createResource<string[] | null, string | null>(mediaId, async (mediaId) => {
+  const [data] = createResource<string[] | null, string | null>(() => props.mediaId, async (mediaId) => {
     if (!mediaId) {
       return null;
     }

@@ -12,15 +12,15 @@ type Props = {
   dataAttrName: string | null;
 };
 
-const MangadexButton: Component<Props> = ({ title, mediaId, dataAttrName }) => {
-  const extraAttrs = createMemo(() => getExtraAttrs(dataAttrName));
+const MangadexButton: Component<Props> = (props) => {
+  const extraAttrs = createMemo(() => getExtraAttrs(props.dataAttrName));
 
   const [data] = createResource(async () => {
-    if (!title || !mediaId) {
+    if (!props.title || !props.mediaId) {
       return null;
     }
 
-    return getManga(title, mediaId);
+    return getManga(props.title, props.mediaId);
   });
 
   const link = createMemo(() => {
@@ -28,7 +28,7 @@ const MangadexButton: Component<Props> = ({ title, mediaId, dataAttrName }) => {
       return `https://mangadex.org/title/${data()!.id}`;
     }
 
-    return `https://mangadex.org/search?q=${title}`;
+    return `https://mangadex.org/search?q=${props.title}`;
   });
 
   return (

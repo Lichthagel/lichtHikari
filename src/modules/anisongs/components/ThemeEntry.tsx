@@ -9,21 +9,21 @@ type Props = {
   entry: AnimeThemeEntry;
 };
 
-const ThemeEntry: Component<Props> = ({ entry }) => (
+const ThemeEntry: Component<Props> = (props) => (
   <div class={styles.themeEntry}>
-    <Show when={entry.version}>
-      <div class={styles.tag}>{`v${entry.version}`}</div>
+    <Show when={props.entry.version}>
+      <div class={styles.tag}>{`v${props.entry.version}`}</div>
     </Show>
-    <Show when={entry.episodes}>
-      <div class={styles.tag}>{`Episode(s): ${entry.episodes}`}</div>
+    <Show when={props.entry.episodes}>
+      <div class={styles.tag}>{`Episode(s): ${props.entry.episodes}`}</div>
     </Show>
-    <Show when={entry.nsfw}>
+    <Show when={props.entry.nsfw}>
       <div class={styles.tag}>NSFW</div>
     </Show>
-    <Show when={entry.spoiler}>
+    <Show when={props.entry.spoiler}>
       <div class={styles.tag}>Spoiler</div>
     </Show>
-    <Videos videos={entry.videos} />
+    <Videos videos={props.entry.videos} />
   </div>
 );
 

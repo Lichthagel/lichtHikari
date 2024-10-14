@@ -15,7 +15,7 @@ const handleVolumeChange = (event: Event) => {
   localStorage.setItem("lichtSongsVolume", target.volume.toString());
 };
 
-const Videos: Component<Props> = ({ videos }) => {
+const Videos: Component<Props> = (props) => {
   const [activeVideo, setActiveVideo] = createSignal<Video | undefined>();
   const [videoElement, setVideoElement] = createSignal<HTMLVideoElement | undefined>();
 
@@ -47,7 +47,7 @@ const Videos: Component<Props> = ({ videos }) => {
 
   return (
     <div>
-      <For each={videos}>
+      <For each={props.videos}>
         {(video) => (
           <div
             class={styles.button}
