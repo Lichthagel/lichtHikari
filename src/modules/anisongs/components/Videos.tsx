@@ -1,6 +1,5 @@
 import {
-  type Component, createEffect, createSignal, For,
-  Show,
+  type Component, createEffect, createMemo, createSignal, For, Show,
 } from "solid-js";
 
 import { type Video, video_to_string } from "../models";
@@ -15,20 +14,24 @@ const handleVolumeChange = (event: Event) => {
   localStorage.setItem("lichtSongsVolume", target.volume.toString());
 };
 
-const Videos: Component<Props> = (props) => {
-  const [activeVideo, setActiveVideo] = createSignal<Video | undefined>();
-  const [videoElement, setVideoElement] = createSignal<HTMLVideoElement | undefined>();
+const [activeVideo, setActiveVideo] = createSignal<Video | undefined>();
 
-  const handleClick = (video: Video) => {
-    if (activeVideo() === video) {
-      setActiveVideo(undefined);
-    } else {
-      setActiveVideo(video);
-    }
-  };
+const handleClick = (video: Video) => {
+  if (activeVideo() === video) {
+    setActiveVideo(undefined);
+  } else {
+    setActiveVideo(video);
+  }
+};
+
+const Videos: Component<Props> = (props) => {
+  const [videoElement, setVideoElement] = createSignal<HTMLVideoElement | undefined>();
+  const active = createMemo<boolean>(
+    () => !!activeVideo() && props.videos.includes(activeVideo()!),
+  );
 
   createEffect(() => {
-    if (activeVideo()) {
+    if (active()) {
       void videoElement()?.play();
     }
   });
@@ -58,7 +61,7 @@ const Videos: Component<Props> = (props) => {
           </div>
         )}
       </For>
-      <Show when={activeVideo()}>
+      <Show when={active()}>
         <video
           controls
           on:ended={() => setActiveVideo(undefined)}
