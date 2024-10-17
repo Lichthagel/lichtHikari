@@ -96,3 +96,10 @@ export const defineAwcListsElement = () => {
 };
 
 export type AwcListsElement = HTMLElement & Props;
+
+declare global {
+  // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
+  interface HTMLElementTagNameMap {
+    "licht-awc-lists": AwcListsElement;
+  }
+}

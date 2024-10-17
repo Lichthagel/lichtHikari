@@ -1,6 +1,6 @@
 import { Module } from "../../module";
 import { getDataAttrName, waitForElement } from "../../utils";
-import { AwcListsElement, defineAwcListsElement } from "./AwcLists";
+import { defineAwcListsElement } from "./AwcLists";
 
 defineAwcListsElement();
 
@@ -31,7 +31,7 @@ const awclists: Module = {
         return;
       }
 
-      const elemAwcLists = document.createElement("licht-awc-lists") as AwcListsElement;
+      const elemAwcLists = document.createElement("licht-awc-lists");
 
       elemAwcLists.mediaId = mediaId;
       elemAwcLists.dataAttrName = dataAttrName;

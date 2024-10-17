@@ -31,3 +31,10 @@ export const defineAwcButtonElement = () => {
 };
 
 export type AwcButtonElement = HTMLElement & Props;
+
+declare global {
+  // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
+  interface HTMLElementTagNameMap {
+    "licht-awc-button": AwcButtonElement;
+  }
+}

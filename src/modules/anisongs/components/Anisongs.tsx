@@ -69,3 +69,10 @@ export const defineAnisongsElement = () => {
     return <Anisongs {...props} />;
   });
 };
+
+declare global {
+  // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
+  interface HTMLElementTagNameMap {
+    "licht-anisongs": AnisongsElement;
+  }
+}

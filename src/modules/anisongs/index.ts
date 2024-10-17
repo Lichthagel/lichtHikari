@@ -1,7 +1,7 @@
 import type { Module } from "../../module";
 
 import { waitForElement } from "../../utils";
-import { type AnisongsElement, defineAnisongsElement } from "./components/Anisongs";
+import { defineAnisongsElement } from "./components/Anisongs";
 
 defineAnisongsElement();
 
@@ -27,7 +27,7 @@ const anisongs: Module = {
       }
 
       if (mediaType === "anime" && loc === "") {
-        const anisongsElement = document.createElement("licht-anisongs") as AnisongsElement;
+        const anisongsElement = document.createElement("licht-anisongs");
 
         anisongsElement.mediaId = mediaId;
         anisongsElement.style.gridColumn = "span 2";

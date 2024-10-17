@@ -1,6 +1,6 @@
 import { Module } from "../../module";
 import { getDataAttrName, waitForElement } from "../../utils";
-import { AwcButtonElement, defineAwcButtonElement } from "./AwcButton";
+import { defineAwcButtonElement } from "./AwcButton";
 
 defineAwcButtonElement();
 
@@ -23,7 +23,7 @@ const awcbutton: Module = {
       e.remove();
     }
 
-    const elemAwcButton = document.createElement("licht-awc-button") as AwcButtonElement;
+    const elemAwcButton = document.createElement("licht-awc-button");
 
     elemAwcButton.username = matches[1];
     elemAwcButton.dataAttrName = dataAttrName;

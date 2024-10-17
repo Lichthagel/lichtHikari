@@ -59,3 +59,10 @@ export const defineMangadexButtonElement = () => {
 };
 
 export type MangadexButtonElement = HTMLElement & Props;
+
+declare global {
+  // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
+  interface HTMLElementTagNameMap {
+    "licht-mangadex-button": MangadexButtonElement;
+  }
+}

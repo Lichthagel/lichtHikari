@@ -1,6 +1,6 @@
 import { Module } from "../../module";
 import { getDataAttrName, waitForElement } from "../../utils";
-import { defineMangadexButtonElement, MangadexButtonElement } from "./MangadexButton";
+import { defineMangadexButtonElement } from "./MangadexButton";
 
 defineMangadexButtonElement();
 
@@ -57,7 +57,7 @@ const mangadexbutton: Module = {
     console.log(target.attributes);
 
     if (mediaType === "manga") {
-      const elemMangadexButton = document.createElement("licht-mangadex-button") as MangadexButtonElement;
+      const elemMangadexButton = document.createElement("licht-mangadex-button");
 
       elemMangadexButton.title = title;
       elemMangadexButton.mediaId = mediaId;

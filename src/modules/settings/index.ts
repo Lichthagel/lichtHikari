@@ -1,6 +1,6 @@
 import { Module } from "../../module";
 import { waitForElement } from "../../utils";
-import { defineSettingsElement, SettingsElement } from "./Settings";
+import { defineSettingsElement } from "./Settings";
 
 defineSettingsElement();
 
@@ -14,7 +14,7 @@ const settings: Module = {
       container.querySelector(".settings > .content"));
 
     if (!target.querySelector("licht-settings")) {
-      const elemSettings = document.createElement("licht-settings") as SettingsElement;
+      const elemSettings = document.createElement("licht-settings");
 
       target.append(elemSettings);
     }
