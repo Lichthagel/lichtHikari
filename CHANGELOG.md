@@ -1,6 +1,13 @@
 # Changelog
 
 
+## [1.0.5](https://github.com/Lichthagel/lichtHikari/compare/v1.0.4...v1.0.5) (2024-10-23)
+
+
+### Bug Fixes
+
+* **deps:** update minor and patch upgrades ([#3](https://github.com/Lichthagel/lichtHikari/issues/3)) ([422eb44](https://github.com/Lichthagel/lichtHikari/commit/422eb448339e8771234f9318368737daf9f3e1bc))
+
 ## v1.0.4
 
 [compare changes](https://github.com/Lichthagel/lichtHikari/compare/v1.0.3...v1.0.4)
