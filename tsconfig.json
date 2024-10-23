@@ -20,5 +20,6 @@
             "unplugin-icons/types/solid",
             "vite/client",
         ]
-    }
+    },
+    "include": ["**/*", ".husky/**/*"]
 }
