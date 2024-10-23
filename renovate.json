@@ -9,13 +9,6 @@
       "matchUpdateTypes": ["minor", "patch", "digest"],
       "groupName": "minor and patch upgrades",
       "schedule": ["before 5am on the first day of the week"]
-    },
-    {
-      "matchDepTypes": [
-        "dependencies",
-        "require"
-      ],
-      "semanticCommitType": "deps"
     }
   ]
 }
