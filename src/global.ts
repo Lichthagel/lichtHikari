@@ -2,7 +2,7 @@ import { createSignal } from "solid-js";
 
 import modules from "./modules";
 
-type Config = Record<string, boolean>;
+type Config = { [key: string]: boolean };
 
 function loadActiveModules(): Config {
   const stored = localStorage.getItem("lichtActiveModules");

@@ -1,6 +1,7 @@
-import LucideCat from "~icons/lucide/cat";
 import { customElement, noShadowDOM } from "solid-element";
 import { Component, createMemo, createResource } from "solid-js";
+
+import LucideCat from "~icons/lucide/cat";
 
 import { getExtraAttrs } from "../../utils";
 import { getManga } from "./api";

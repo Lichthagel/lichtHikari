@@ -23,7 +23,7 @@
   "homepage": "https://github.com/Lichthagel/lichtHikari#readme",
   "devDependencies": {
     "@iconify/json": "^2.2.259",
-    "@lichthagel/eslint-config": "github:Lichthagel/eslint-config",
+    "@lichthagel/eslint-config": "^1.0.0",
     "@types/node": "^22.7.9",
     "changelogen": "^0.5.7",
     "eslint": "^9.12.0",
