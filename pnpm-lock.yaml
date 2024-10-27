@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@iconify/json':
         specifier: ^2.2.259
-        version: 2.2.263
+        version: 2.2.264
       solid-element:
         specifier: ^1.9.0
         version: 1.9.1(solid-js@1.9.3)
@@ -23,7 +23,7 @@ importers:
     devDependencies:
       '@commitlint/cli':
         specifier: ^19.5.0
-        version: 19.5.0(@types/node@22.7.9)(typescript@5.6.3)
+        version: 19.5.0(@types/node@22.8.1)(typescript@5.6.3)
       '@commitlint/config-conventional':
         specifier: ^19.5.0
         version: 19.5.0
@@ -35,7 +35,7 @@ importers:
         version: 1.0.0(eslint-plugin-n@17.11.1(eslint@9.13.0(jiti@1.21.6)))(eslint-plugin-solid@0.14.3(eslint@9.13.0(jiti@1.21.6))(typescript@5.6.3))(eslint@9.13.0(jiti@1.21.6))(svelte@4.2.19)(typescript@5.6.3)
       '@types/node':
         specifier: ^22.7.9
-        version: 22.7.9
+        version: 22.8.1
       eslint:
         specifier: ^9.12.0
         version: 9.13.0(jiti@1.21.6)
@@ -53,13 +53,13 @@ importers:
         version: 5.6.3
       vite:
         specifier: ^5.4.8
-        version: 5.4.10(@types/node@22.7.9)
+        version: 5.4.10(@types/node@22.8.1)
       vite-plugin-monkey:
         specifier: ^4.0.6
-        version: 4.0.6(vite@5.4.10(@types/node@22.7.9))
+        version: 4.0.6(vite@5.4.10(@types/node@22.8.1))
       vite-plugin-solid:
         specifier: ^2.10.2
-        version: 2.10.2(solid-js@1.9.3)(vite@5.4.10(@types/node@22.7.9))
+        version: 2.10.2(solid-js@1.9.3)(vite@5.4.10(@types/node@22.8.1))
 
 packages:
 
@@ -371,8 +371,18 @@ packages:
     peerDependencies:
       eslint: ^6.0.0 || ^7.0.0 || >=8.0.0
 
+  '@eslint-community/eslint-utils@4.4.1':
+    resolution: {integrity: sha512-s3O3waFUrMV8P/XaF/+ZTp1X9XBZW1a4B97ZnjQF2KYWaFD2A8KyFBsrsfSjEmjn3RGWAIuvlneuZm3CUK3jbA==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    peerDependencies:
+      eslint: ^6.0.0 || ^7.0.0 || >=8.0.0
+
   '@eslint-community/regexpp@4.11.1':
     resolution: {integrity: sha512-m4DVN9ZqskZoLU5GlWZadwDnYo3vAEydiUayB9widCl9ffWx2IvPnp6n3on5rJmziJSw9Bv+Z3ChDVdMwXCY8Q==}
+    engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
+
+  '@eslint-community/regexpp@4.11.2':
+    resolution: {integrity: sha512-2WwyTYNVaMNUWPZTOJdkax9iqTdirrApgTbk+Qoq5EPX6myqZvG8QGFRgdKmkjKVG6/G/a565vpPauHk0+hpBA==}
     engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
 
   '@eslint/config-array@0.18.0':
@@ -419,8 +429,8 @@ packages:
     resolution: {integrity: sha512-JBxkERygn7Bv/GbN5Rv8Ul6LVknS+5Bp6RgDC/O8gEBU/yeH5Ui5C/OlWrTb6qct7LjjfT6Re2NxB0ln0yYybA==}
     engines: {node: '>=18.18'}
 
-  '@iconify/json@2.2.263':
-    resolution: {integrity: sha512-pY6Jpfz76F+OURDt5+J9njuQSzOLKECA3ah8C210T9VfXdtkpkYWA6+l6ZCHOvhABjcoGjBvcTub8HV9QNacrw==}
+  '@iconify/json@2.2.264':
+    resolution: {integrity: sha512-yT8LqVC+WiOaE+UGQAy7Big7On+oCImkcQTIgrocvDezGOtispxfyg1bpT3gUedIsPwMW+Onwhj1awOl+sWrxw==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -591,8 +601,8 @@ packages:
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
-  '@types/node@22.7.9':
-    resolution: {integrity: sha512-jrTfRC7FM6nChvU7X2KqcrgquofrWLFDeYC1hKfwNWomVvrn7JIksqf344WN2X/y8xrgqBd2dJATZV4GbatBfg==}
+  '@types/node@22.8.1':
+    resolution: {integrity: sha512-k6Gi8Yyo8EtrNtkHXutUu2corfDf9su95VYVP10aGYMMROM6SAItZi0w1XszA6RtWTHSVp5OeFof37w0IEqCQg==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -2302,11 +2312,11 @@ snapshots:
       '@babel/helper-validator-identifier': 7.25.7
       to-fast-properties: 2.0.0
 
-  '@commitlint/cli@19.5.0(@types/node@22.7.9)(typescript@5.6.3)':
+  '@commitlint/cli@19.5.0(@types/node@22.8.1)(typescript@5.6.3)':
     dependencies:
       '@commitlint/format': 19.5.0
       '@commitlint/lint': 19.5.0
-      '@commitlint/load': 19.5.0(@types/node@22.7.9)(typescript@5.6.3)
+      '@commitlint/load': 19.5.0(@types/node@22.8.1)(typescript@5.6.3)
       '@commitlint/read': 19.5.0
       '@commitlint/types': 19.5.0
       tinyexec: 0.3.0
@@ -2353,7 +2363,7 @@ snapshots:
       '@commitlint/rules': 19.5.0
       '@commitlint/types': 19.5.0
 
-  '@commitlint/load@19.5.0(@types/node@22.7.9)(typescript@5.6.3)':
+  '@commitlint/load@19.5.0(@types/node@22.8.1)(typescript@5.6.3)':
     dependencies:
       '@commitlint/config-validator': 19.5.0
       '@commitlint/execute-rule': 19.5.0
@@ -2361,7 +2371,7 @@ snapshots:
       '@commitlint/types': 19.5.0
       chalk: 5.3.0
       cosmiconfig: 9.0.0(typescript@5.6.3)
-      cosmiconfig-typescript-loader: 5.1.0(@types/node@22.7.9)(cosmiconfig@9.0.0(typescript@5.6.3))(typescript@5.6.3)
+      cosmiconfig-typescript-loader: 5.1.0(@types/node@22.8.1)(cosmiconfig@9.0.0(typescript@5.6.3))(typescript@5.6.3)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
@@ -2486,7 +2496,16 @@ snapshots:
       eslint: 9.13.0(jiti@1.21.6)
       eslint-visitor-keys: 3.4.3
 
+  '@eslint-community/eslint-utils@4.4.1(eslint@9.13.0(jiti@1.21.6))':
+    dependencies:
+      eslint: 9.13.0(jiti@1.21.6)
+      eslint-visitor-keys: 3.4.3
+    optional: true
+
   '@eslint-community/regexpp@4.11.1': {}
+
+  '@eslint-community/regexpp@4.11.2':
+    optional: true
 
   '@eslint/config-array@0.18.0':
     dependencies:
@@ -2533,7 +2552,7 @@ snapshots:
 
   '@humanwhocodes/retry@0.3.1': {}
 
-  '@iconify/json@2.2.263':
+  '@iconify/json@2.2.264':
     dependencies:
       '@iconify/types': 2.0.0
       pathe: 1.1.2
@@ -2690,13 +2709,13 @@ snapshots:
 
   '@types/conventional-commits-parser@5.0.0':
     dependencies:
-      '@types/node': 22.7.9
+      '@types/node': 22.8.1
 
   '@types/estree@1.0.6': {}
 
   '@types/json-schema@7.0.15': {}
 
-  '@types/node@22.7.9':
+  '@types/node@22.8.1':
     dependencies:
       undici-types: 6.19.8
 
@@ -3027,9 +3046,9 @@ snapshots:
     dependencies:
       browserslist: 4.24.0
 
-  cosmiconfig-typescript-loader@5.1.0(@types/node@22.7.9)(cosmiconfig@9.0.0(typescript@5.6.3))(typescript@5.6.3):
+  cosmiconfig-typescript-loader@5.1.0(@types/node@22.8.1)(cosmiconfig@9.0.0(typescript@5.6.3))(typescript@5.6.3):
     dependencies:
-      '@types/node': 22.7.9
+      '@types/node': 22.8.1
       cosmiconfig: 9.0.0(typescript@5.6.3)
       jiti: 1.21.6
       typescript: 5.6.3
@@ -3165,15 +3184,15 @@ snapshots:
 
   eslint-plugin-es-x@7.8.0(eslint@9.13.0(jiti@1.21.6)):
     dependencies:
-      '@eslint-community/eslint-utils': 4.4.0(eslint@9.13.0(jiti@1.21.6))
-      '@eslint-community/regexpp': 4.11.1
+      '@eslint-community/eslint-utils': 4.4.1(eslint@9.13.0(jiti@1.21.6))
+      '@eslint-community/regexpp': 4.11.2
       eslint: 9.13.0(jiti@1.21.6)
       eslint-compat-utils: 0.5.1(eslint@9.13.0(jiti@1.21.6))
     optional: true
 
   eslint-plugin-n@17.11.1(eslint@9.13.0(jiti@1.21.6)):
     dependencies:
-      '@eslint-community/eslint-utils': 4.4.0(eslint@9.13.0(jiti@1.21.6))
+      '@eslint-community/eslint-utils': 4.4.1(eslint@9.13.0(jiti@1.21.6))
       enhanced-resolve: 5.17.1
       eslint: 9.13.0(jiti@1.21.6)
       eslint-plugin-es-x: 7.8.0(eslint@9.13.0(jiti@1.21.6))
@@ -4177,7 +4196,7 @@ snapshots:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
 
-  vite-plugin-monkey@4.0.6(vite@5.4.10(@types/node@22.7.9)):
+  vite-plugin-monkey@4.0.6(vite@5.4.10(@types/node@22.8.1)):
     dependencies:
       acorn-walk: 8.3.4
       cross-spawn: 7.0.3
@@ -4189,9 +4208,9 @@ snapshots:
       picocolors: 1.1.0
       systemjs: 6.15.1
     optionalDependencies:
-      vite: 5.4.10(@types/node@22.7.9)
+      vite: 5.4.10(@types/node@22.8.1)
 
-  vite-plugin-solid@2.10.2(solid-js@1.9.3)(vite@5.4.10(@types/node@22.7.9)):
+  vite-plugin-solid@2.10.2(solid-js@1.9.3)(vite@5.4.10(@types/node@22.8.1)):
     dependencies:
       '@babel/core': 7.25.8
       '@types/babel__core': 7.20.5
@@ -4199,23 +4218,23 @@ snapshots:
       merge-anything: 5.1.7
       solid-js: 1.9.3
       solid-refresh: 0.6.3(solid-js@1.9.3)
-      vite: 5.4.10(@types/node@22.7.9)
-      vitefu: 0.2.5(vite@5.4.10(@types/node@22.7.9))
+      vite: 5.4.10(@types/node@22.8.1)
+      vitefu: 0.2.5(vite@5.4.10(@types/node@22.8.1))
     transitivePeerDependencies:
       - supports-color
 
-  vite@5.4.10(@types/node@22.7.9):
+  vite@5.4.10(@types/node@22.8.1):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.47
       rollup: 4.24.0
     optionalDependencies:
-      '@types/node': 22.7.9
+      '@types/node': 22.8.1
       fsevents: 2.3.3
 
-  vitefu@0.2.5(vite@5.4.10(@types/node@22.7.9)):
+  vitefu@0.2.5(vite@5.4.10(@types/node@22.8.1)):
     optionalDependencies:
-      vite: 5.4.10(@types/node@22.7.9)
+      vite: 5.4.10(@types/node@22.8.1)
 
   webpack-virtual-modules@0.6.2: {}
 
