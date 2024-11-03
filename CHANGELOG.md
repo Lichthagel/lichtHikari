@@ -1,6 +1,14 @@
 # Changelog
 
 
+## [1.0.6](https://github.com/Lichthagel/lichtHikari/compare/v1.0.5...v1.0.6) (2024-11-03)
+
+
+### Bug Fixes
+
+* **awcbutton:** text color on hover ([1e09745](https://github.com/Lichthagel/lichtHikari/commit/1e0974529a81103f9036f64ddfa0ba625b74562f))
+* **deps:** update minor and patch upgrades ([#6](https://github.com/Lichthagel/lichtHikari/issues/6)) ([31cab91](https://github.com/Lichthagel/lichtHikari/commit/31cab91256b63bfee02fb90165b26a44b6cee91b))
+
 ## [1.0.5](https://github.com/Lichthagel/lichtHikari/compare/v1.0.4...v1.0.5) (2024-10-27)
 
 
