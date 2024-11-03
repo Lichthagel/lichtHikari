@@ -12,7 +12,13 @@ const AwcButton: Component<Props> = (props) => {
   const extraAttrs = createMemo(() => getExtraAttrs(props.dataAttrName));
 
   return (
-    <a class="nav-btn" href={`https://awc.moe/challenger/${props.username}`} target="_blank" {...extraAttrs()}>
+    <a
+      class="nav-btn"
+      href={`https://awc.moe/challenger/${props.username}`}
+      style={{ color: "rgb(var(--color-white))" }}
+      target="_blank"
+      {...extraAttrs()}
+    >
       AWC Profile
     </a>
   );
