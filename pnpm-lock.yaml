@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@iconify/json':
         specifier: ^2.2.259
-        version: 2.2.270
+        version: 2.2.273
       solid-element:
         specifier: ^1.9.0
         version: 1.9.1(solid-js@1.9.3)
@@ -423,8 +423,8 @@ packages:
     resolution: {integrity: sha512-xnRgu9DxZbkWak/te3fcytNyp8MTbuiZIaueg2rgEvBuN55n04nwLYLU9TX/VVlusc9L2ZNXi99nUFNkHXtr5g==}
     engines: {node: '>=18.18'}
 
-  '@iconify/json@2.2.270':
-    resolution: {integrity: sha512-BpuvTnPpjmKwzopqhokLz99v69n2BOeWAEvm7ttIsesUM2a8JWr4PTYzu8iMbK9cFNcrGMtWNmBYqDznxRAQcA==}
+  '@iconify/json@2.2.273':
+    resolution: {integrity: sha512-HTnvNpfeFxrMu39VaSTU+UE+ai75Yxa5BbuHmQz9EAtgyPqTqxLgBXPX1sPeMQP8Fxc2X9UrmDwbH5dOEaWthw==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -2567,7 +2567,7 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.0': {}
 
-  '@iconify/json@2.2.270':
+  '@iconify/json@2.2.273':
     dependencies:
       '@iconify/types': 2.0.0
       pathe: 1.1.2
