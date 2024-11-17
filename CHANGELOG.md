@@ -1,6 +1,14 @@
 # Changelog
 
 
+## [1.0.7](https://github.com/Lichthagel/lichtHikari/compare/v1.0.6...v1.0.7) (2024-11-17)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @iconify/json to v2.2.273 ([#12](https://github.com/Lichthagel/lichtHikari/issues/12)) ([5b9b00e](https://github.com/Lichthagel/lichtHikari/commit/5b9b00e0986e1ae208b03966ab0f951e0a7559cf))
+* **deps:** update minor and patch upgrades ([#8](https://github.com/Lichthagel/lichtHikari/issues/8)) ([ffde9de](https://github.com/Lichthagel/lichtHikari/commit/ffde9de10a5d8ff1e2a79a3bc074dd7748899221))
+
 ## [1.0.6](https://github.com/Lichthagel/lichtHikari/compare/v1.0.5...v1.0.6) (2024-11-03)
 
 
