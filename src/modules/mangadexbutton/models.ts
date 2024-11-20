@@ -1,20 +1,3 @@
-export type LocalizedString = {
-  en: string;
-  [key: string]: string;
-};
-
-export type Links = {
-  al?: string;
-  ap?: string;
-  bw?: string;
-  kt?: string;
-  mu?: string;
-  amz?: string;
-  ebj?: string;
-  mal?: string;
-  engtl?: string;
-};
-
 export type Attributes = {
   title: LocalizedString;
   altTitles: LocalizedString[];
@@ -34,10 +17,21 @@ export type Attributes = {
   version: number;
 };
 
-export type Relation = {
-  id: string;
-  type: string; // TODO enum
-  related?: string;
+export type Links = {
+  al?: string;
+  ap?: string;
+  bw?: string;
+  kt?: string;
+  mu?: string;
+  amz?: string;
+  ebj?: string;
+  mal?: string;
+  engtl?: string;
+};
+
+export type LocalizedString = {
+  en: string;
+  [key: string]: string;
 };
 
 export type Manga = {
@@ -45,6 +39,12 @@ export type Manga = {
   type: string;
   attributes: Attributes;
   relationships: Relation[];
+};
+
+export type Relation = {
+  id: string;
+  type: string; // TODO enum
+  related?: string;
 };
 
 export type Result = {
