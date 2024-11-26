@@ -9,6 +9,11 @@
       "extends": ["packages:linters"],
       "matchPackageNames": ["@eslint-react/**", "@commitlint/**"],
       "groupName": "linters"
+    },
+    {
+      "matchPackageNames": ["@iconify/json", "@iconify-json/**"],
+      "groupName": "icons",
+      "extends": ["schedule:monthly"]
     }
   ]
 }
