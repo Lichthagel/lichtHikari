@@ -1,6 +1,13 @@
 # Changelog
 
 
+## [1.0.10](https://github.com/Lichthagel/lichtHikari/compare/v1.0.9...v1.0.10) (2025-02-01)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @iconify-json/lucide to v1.2.25 ([#101](https://github.com/Lichthagel/lichtHikari/issues/101)) ([1147878](https://github.com/Lichthagel/lichtHikari/commit/1147878a621fd7e5dfc6468b4584f27d8ef9ac20))
+
 ## [1.0.9](https://github.com/Lichthagel/lichtHikari/compare/v1.0.8...v1.0.9) (2025-01-08)
 
 
