@@ -1,4 +1,4 @@
-import { Module } from "../../module";
+import { type Module } from "../../module";
 import { waitForElement } from "../../utils";
 import { defineSettingsElement } from "./Settings";
 

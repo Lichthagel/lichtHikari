@@ -1,4 +1,4 @@
-import { Manga, Result } from "./models";
+import { type Manga, type Result } from "./models";
 
 export const getManga = async (mediaTitle: string, mediaId: string): Promise<Manga | null> =>
   new Promise((resolve, reject) => {

@@ -1,4 +1,4 @@
-import { Module } from "../../module";
+import { type Module } from "../../module";
 import { getDataAttrName, waitForElement } from "../../utils";
 import { defineAwcButtonElement } from "./AwcButton";
 

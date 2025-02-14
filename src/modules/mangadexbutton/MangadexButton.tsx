@@ -1,5 +1,5 @@
 import { customElement, noShadowDOM } from "solid-element";
-import { Component, createMemo, createResource } from "solid-js";
+import { type Component, createMemo, createResource } from "solid-js";
 
 import LucideCat from "~icons/lucide/cat";
 

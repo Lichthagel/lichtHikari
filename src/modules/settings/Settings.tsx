@@ -1,9 +1,9 @@
 import { customElement, noShadowDOM } from "solid-element";
-import { Component, For, Show } from "solid-js";
+import { type Component, For, Show } from "solid-js";
 
 import modules from "..";
 import { activeModules, saveActiveModules, setActiveModules } from "../../global";
-import { Module } from "../../module";
+import { type Module } from "../../module";
 import styles from "./style.module.css";
 
 type Props = object;
