@@ -1,5 +1,5 @@
 import {
-  AnimeTheme, AnimeThemeEntry, Artist, Song, Video,
+  type AnimeTheme, type AnimeThemeEntry, type Artist, type Song, type Video,
 } from "./models";
 
 // TODO validate the response

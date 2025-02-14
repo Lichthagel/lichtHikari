@@ -1,5 +1,5 @@
 import { customElement, noShadowDOM } from "solid-element";
-import { Component, createMemo } from "solid-js";
+import { type Component, createMemo } from "solid-js";
 
 import { getExtraAttrs } from "../../utils";
 
