@@ -1,6 +1,14 @@
 # Changelog
 
 
+## [1.0.11](https://github.com/Lichthagel/lichtHikari/compare/v1.0.10...v1.0.11) (2025-02-22)
+
+
+### Bug Fixes
+
+* **deps:** update dependency solid-js to v1.9.5 ([#131](https://github.com/Lichthagel/lichtHikari/issues/131)) ([8be0699](https://github.com/Lichthagel/lichtHikari/commit/8be0699ed332a1200c0a198be0cbc3c766e0c70d))
+* **deps:** update dependency unplugin-icons to v22.1.0 ([#125](https://github.com/Lichthagel/lichtHikari/issues/125)) ([2e74f6d](https://github.com/Lichthagel/lichtHikari/commit/2e74f6d97c47b5c149ba17fce5b9c5fbb1703265))
+
 ## [1.0.10](https://github.com/Lichthagel/lichtHikari/compare/v1.0.9...v1.0.10) (2025-02-01)
 
 
