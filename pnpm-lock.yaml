@@ -13,17 +13,17 @@ importers:
         version: 1.2.39
       solid-element:
         specifier: ^1.9.0
-        version: 1.9.1(solid-js@1.9.5)
+        version: 1.9.1(solid-js@1.9.6)
       solid-js:
         specifier: ^1.9.2
-        version: 1.9.5
+        version: 1.9.6
       unplugin-icons:
         specifier: ^22.0.0
         version: 22.1.0
     devDependencies:
       '@commitlint/cli':
         specifier: ^19.5.0
-        version: 19.8.0(@types/node@22.15.2)(typescript@5.8.3)
+        version: 19.8.0(@types/node@22.15.3)(typescript@5.8.3)
       '@commitlint/config-conventional':
         specifier: ^19.5.0
         version: 19.8.0
@@ -32,10 +32,10 @@ importers:
         version: 19.8.0
       '@lichthagel/eslint-config':
         specifier: ^1.0.0
-        version: 1.0.25(eslint-plugin-solid@0.14.5(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)
+        version: 1.0.26(eslint-plugin-solid@0.14.5(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)
       '@types/node':
         specifier: ^22.7.9
-        version: 22.15.2
+        version: 22.15.3
       eslint:
         specifier: ^9.12.0
         version: 9.25.1(jiti@2.4.2)
@@ -53,13 +53,13 @@ importers:
         version: 5.8.3
       vite:
         specifier: ^6.0.0
-        version: 6.3.3(@types/node@22.15.2)(jiti@2.4.2)(yaml@2.7.1)
+        version: 6.3.4(@types/node@22.15.3)(jiti@2.4.2)(yaml@2.7.1)
       vite-plugin-monkey:
         specifier: ^5.0.0
-        version: 5.0.8(vite@6.3.3(@types/node@22.15.2)(jiti@2.4.2)(yaml@2.7.1))
+        version: 5.0.8(vite@6.3.4(@types/node@22.15.3)(jiti@2.4.2)(yaml@2.7.1))
       vite-plugin-solid:
         specifier: ^2.10.2
-        version: 2.11.6(solid-js@1.9.5)(vite@6.3.3(@types/node@22.15.2)(jiti@2.4.2)(yaml@2.7.1))
+        version: 2.11.6(solid-js@1.9.6)(vite@6.3.4(@types/node@22.15.3)(jiti@2.4.2)(yaml@2.7.1))
 
 packages:
 
@@ -454,8 +454,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
 
-  '@lichthagel/eslint-config@1.0.25':
-    resolution: {integrity: sha512-Ta1IFHD60eJKYgRNXpVVO3iTFzUKOucX0Mk+fM1FfRqbh4CBRYrMM5DGTwBYBVhjuOLsUcDRZUD/MXCv6Gac8Q==}
+  '@lichthagel/eslint-config@1.0.26':
+    resolution: {integrity: sha512-Xxt51aS4xrSUgu86idBsQW07lsZkMk+HRVB3sB/fjBTVh9/5EQLBYS3DrAPxkbotJ9JFRmkr5YGuCpwMLB9Ryg==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       eslint: '>=8.40.0'
@@ -612,8 +612,8 @@ packages:
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
-  '@types/node@22.15.2':
-    resolution: {integrity: sha512-uKXqKN9beGoMdBfcaTY1ecwz6ctxuJAcUlwE55938g0ZJ8lRxwAZqRz2AJ4pzpt5dHdTPMB863UZ0ESiFUcP7A==}
+  '@types/node@22.15.3':
+    resolution: {integrity: sha512-lX7HFZeHf4QG/J7tBZqrCAXwz9J5RD56Y6MpP0eJkka8p+K0RY/yBTW7CYFJ4VGCclxqOLKmiGP5juQc6MKgcw==}
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
@@ -1670,8 +1670,8 @@ packages:
     peerDependencies:
       solid-js: ^1.9.3
 
-  solid-js@1.9.5:
-    resolution: {integrity: sha512-ogI3DaFcyn6UhYhrgcyRAMbu/buBJitYQASZz5WzfQVPP10RD2AbCoRZ517psnezrasyCbWzIxZ6kVqet768xw==}
+  solid-js@1.9.6:
+    resolution: {integrity: sha512-PoasAJvLk60hRtOTe9ulvALOdLjjqxuxcGZRolBQqxOnXrBXHGzqMT4ijNhGsDAYdOgEa8ZYaAE94PSldrFSkA==}
 
   solid-refresh@0.6.3:
     resolution: {integrity: sha512-F3aPsX6hVw9ttm5LYlth8Q15x6MlI/J3Dn+o3EQyRTtTxidepSTwAYdozt01/YA+7ObcciagGEyXIopGZzQtbA==}
@@ -1854,8 +1854,8 @@ packages:
       '@testing-library/jest-dom':
         optional: true
 
-  vite@6.3.3:
-    resolution: {integrity: sha512-5nXH+QsELbFKhsEfWLkHrvgRpTdGJzqOZ+utSdmPTvwHmvU6ITTm3xx+mRusihkcI8GeC7lCDyn3kDtiki9scw==}
+  vite@6.3.4:
+    resolution: {integrity: sha512-BiReIiMS2fyFqbqNT/Qqt4CVITDU9M9vE+DKcVAsB+ZV0wvTKd+3hMbkpxz1b+NmEDMegpVbisKiAZOnvO92Sw==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
     peerDependencies:
@@ -2073,11 +2073,11 @@ snapshots:
       '@babel/helper-string-parser': 7.25.9
       '@babel/helper-validator-identifier': 7.25.9
 
-  '@commitlint/cli@19.8.0(@types/node@22.15.2)(typescript@5.8.3)':
+  '@commitlint/cli@19.8.0(@types/node@22.15.3)(typescript@5.8.3)':
     dependencies:
       '@commitlint/format': 19.8.0
       '@commitlint/lint': 19.8.0
-      '@commitlint/load': 19.8.0(@types/node@22.15.2)(typescript@5.8.3)
+      '@commitlint/load': 19.8.0(@types/node@22.15.3)(typescript@5.8.3)
       '@commitlint/read': 19.8.0
       '@commitlint/types': 19.8.0
       tinyexec: 0.3.2
@@ -2124,7 +2124,7 @@ snapshots:
       '@commitlint/rules': 19.8.0
       '@commitlint/types': 19.8.0
 
-  '@commitlint/load@19.8.0(@types/node@22.15.2)(typescript@5.8.3)':
+  '@commitlint/load@19.8.0(@types/node@22.15.3)(typescript@5.8.3)':
     dependencies:
       '@commitlint/config-validator': 19.8.0
       '@commitlint/execute-rule': 19.8.0
@@ -2132,7 +2132,7 @@ snapshots:
       '@commitlint/types': 19.8.0
       chalk: 5.4.1
       cosmiconfig: 9.0.0(typescript@5.8.3)
-      cosmiconfig-typescript-loader: 6.1.0(@types/node@22.15.2)(cosmiconfig@9.0.0(typescript@5.8.3))(typescript@5.8.3)
+      cosmiconfig-typescript-loader: 6.1.0(@types/node@22.15.3)(cosmiconfig@9.0.0(typescript@5.8.3))(typescript@5.8.3)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
@@ -2351,7 +2351,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@lichthagel/eslint-config@1.0.25(eslint-plugin-solid@0.14.5(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)':
+  '@lichthagel/eslint-config@1.0.26(eslint-plugin-solid@0.14.5(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3))(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)':
     dependencies:
       '@eslint/js': 9.25.1
       '@stylistic/eslint-plugin': 4.2.0(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)
@@ -2473,13 +2473,13 @@ snapshots:
 
   '@types/conventional-commits-parser@5.0.1':
     dependencies:
-      '@types/node': 22.15.2
+      '@types/node': 22.15.3
 
   '@types/estree@1.0.7': {}
 
   '@types/json-schema@7.0.15': {}
 
-  '@types/node@22.15.2':
+  '@types/node@22.15.3':
     dependencies:
       undici-types: 6.21.0
 
@@ -2728,9 +2728,9 @@ snapshots:
     dependencies:
       browserslist: 4.24.4
 
-  cosmiconfig-typescript-loader@6.1.0(@types/node@22.15.2)(cosmiconfig@9.0.0(typescript@5.8.3))(typescript@5.8.3):
+  cosmiconfig-typescript-loader@6.1.0(@types/node@22.15.3)(cosmiconfig@9.0.0(typescript@5.8.3))(typescript@5.8.3):
     dependencies:
-      '@types/node': 22.15.2
+      '@types/node': 22.15.3
       cosmiconfig: 9.0.0(typescript@5.8.3)
       jiti: 2.4.2
       typescript: 5.8.3
@@ -3538,23 +3538,23 @@ snapshots:
       ansi-styles: 6.2.1
       is-fullwidth-code-point: 5.0.0
 
-  solid-element@1.9.1(solid-js@1.9.5):
+  solid-element@1.9.1(solid-js@1.9.6):
     dependencies:
       component-register: 0.8.7
-      solid-js: 1.9.5
+      solid-js: 1.9.6
 
-  solid-js@1.9.5:
+  solid-js@1.9.6:
     dependencies:
       csstype: 3.1.3
       seroval: 1.2.1
       seroval-plugins: 1.2.1(seroval@1.2.1)
 
-  solid-refresh@0.6.3(solid-js@1.9.5):
+  solid-refresh@0.6.3(solid-js@1.9.6):
     dependencies:
       '@babel/generator': 7.27.0
       '@babel/helper-module-imports': 7.25.9
       '@babel/types': 7.27.0
-      solid-js: 1.9.5
+      solid-js: 1.9.6
     transitivePeerDependencies:
       - supports-color
 
@@ -3692,7 +3692,7 @@ snapshots:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
 
-  vite-plugin-monkey@5.0.8(vite@6.3.3(@types/node@22.15.2)(jiti@2.4.2)(yaml@2.7.1)):
+  vite-plugin-monkey@5.0.8(vite@6.3.4(@types/node@22.15.3)(jiti@2.4.2)(yaml@2.7.1)):
     dependencies:
       acorn-walk: 8.3.4
       cross-spawn: 7.0.6
@@ -3704,22 +3704,22 @@ snapshots:
       picocolors: 1.1.1
       systemjs: 6.15.1
     optionalDependencies:
-      vite: 6.3.3(@types/node@22.15.2)(jiti@2.4.2)(yaml@2.7.1)
+      vite: 6.3.4(@types/node@22.15.3)(jiti@2.4.2)(yaml@2.7.1)
 
-  vite-plugin-solid@2.11.6(solid-js@1.9.5)(vite@6.3.3(@types/node@22.15.2)(jiti@2.4.2)(yaml@2.7.1)):
+  vite-plugin-solid@2.11.6(solid-js@1.9.6)(vite@6.3.4(@types/node@22.15.3)(jiti@2.4.2)(yaml@2.7.1)):
     dependencies:
       '@babel/core': 7.26.10
       '@types/babel__core': 7.20.5
       babel-preset-solid: 1.9.5(@babel/core@7.26.10)
       merge-anything: 5.1.7
-      solid-js: 1.9.5
-      solid-refresh: 0.6.3(solid-js@1.9.5)
-      vite: 6.3.3(@types/node@22.15.2)(jiti@2.4.2)(yaml@2.7.1)
-      vitefu: 1.0.6(vite@6.3.3(@types/node@22.15.2)(jiti@2.4.2)(yaml@2.7.1))
+      solid-js: 1.9.6
+      solid-refresh: 0.6.3(solid-js@1.9.6)
+      vite: 6.3.4(@types/node@22.15.3)(jiti@2.4.2)(yaml@2.7.1)
+      vitefu: 1.0.6(vite@6.3.4(@types/node@22.15.3)(jiti@2.4.2)(yaml@2.7.1))
     transitivePeerDependencies:
       - supports-color
 
-  vite@6.3.3(@types/node@22.15.2)(jiti@2.4.2)(yaml@2.7.1):
+  vite@6.3.4(@types/node@22.15.3)(jiti@2.4.2)(yaml@2.7.1):
     dependencies:
       esbuild: 0.25.3
       fdir: 6.4.4(picomatch@4.0.2)
@@ -3728,14 +3728,14 @@ snapshots:
       rollup: 4.40.0
       tinyglobby: 0.2.13
     optionalDependencies:
-      '@types/node': 22.15.2
+      '@types/node': 22.15.3
       fsevents: 2.3.3
       jiti: 2.4.2
       yaml: 2.7.1
 
-  vitefu@1.0.6(vite@6.3.3(@types/node@22.15.2)(jiti@2.4.2)(yaml@2.7.1)):
+  vitefu@1.0.6(vite@6.3.4(@types/node@22.15.3)(jiti@2.4.2)(yaml@2.7.1)):
     optionalDependencies:
-      vite: 6.3.3(@types/node@22.15.2)(jiti@2.4.2)(yaml@2.7.1)
+      vite: 6.3.4(@types/node@22.15.3)(jiti@2.4.2)(yaml@2.7.1)
 
   webpack-virtual-modules@0.6.2: {}
 
