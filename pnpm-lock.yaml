@@ -56,7 +56,7 @@ importers:
         version: 6.3.5(@types/node@22.15.32)(jiti@2.4.2)(yaml@2.8.0)
       vite-plugin-monkey:
         specifier: ^5.0.0
-        version: 5.0.8(vite@6.3.5(@types/node@22.15.32)(jiti@2.4.2)(yaml@2.8.0))
+        version: 5.0.9(vite@6.3.5(@types/node@22.15.32)(jiti@2.4.2)(yaml@2.8.0))
       vite-plugin-solid:
         specifier: ^2.10.2
         version: 2.11.6(solid-js@1.9.7)(vite@6.3.5(@types/node@22.15.32)(jiti@2.4.2)(yaml@2.8.0))
@@ -1832,8 +1832,8 @@ packages:
   validate-npm-package-license@3.0.4:
     resolution: {integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==}
 
-  vite-plugin-monkey@5.0.8:
-    resolution: {integrity: sha512-rkXl7A4y7m1Py/p1cqfCdvvy1Qy5ZwzGMsITH5L1XWzjtu9DXqrVKzo8kGbZCohtha2K19ToAgD1n2e6SPrtig==}
+  vite-plugin-monkey@5.0.9:
+    resolution: {integrity: sha512-Q9K8AHOFWCBeWR7WENy4eDiOHV8OOGCKgbtP8B/Z4D5wXHloHqgO2yyEvvePHzTDwk8zqJFXLXLPs+q2upoCAw==}
     peerDependencies:
       vite: ^5.4.11 || ^6.0.0
     peerDependenciesMeta:
@@ -3686,7 +3686,7 @@ snapshots:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
 
-  vite-plugin-monkey@5.0.8(vite@6.3.5(@types/node@22.15.32)(jiti@2.4.2)(yaml@2.8.0)):
+  vite-plugin-monkey@5.0.9(vite@6.3.5(@types/node@22.15.32)(jiti@2.4.2)(yaml@2.8.0)):
     dependencies:
       acorn-walk: 8.3.4
       cross-spawn: 7.0.6
