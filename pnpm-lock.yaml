@@ -32,7 +32,7 @@ importers:
         version: 19.8.1
       '@lichthagel/eslint-config':
         specifier: ^1.0.0
-        version: 1.0.27(eslint-plugin-solid@0.14.5(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3)
+        version: 1.0.28(eslint-plugin-solid@0.14.5(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3)
       '@types/node':
         specifier: ^22.7.9
         version: 22.16.4
@@ -467,8 +467,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.29':
     resolution: {integrity: sha512-uw6guiW/gcAGPDhLmd77/6lW8QLeiV5RUTsAX46Db6oLhGaVj4lhnPwb184s1bkc8kdVg/+h988dro8GRDpmYQ==}
 
-  '@lichthagel/eslint-config@1.0.27':
-    resolution: {integrity: sha512-co+9HbYHogX6TWIIqvRvP/GcP7F+Yfgfl+jE07mx3JTLCCctQalTpBM7trwnwilkjhbuydokrINajszfbU5pRQ==}
+  '@lichthagel/eslint-config@1.0.28':
+    resolution: {integrity: sha512-8c5Fh7t0OIMeVLtZvz8aFFMmUd1yotUq+kIMFoKe4iBCWCxxPzE/lWHtc2BG6JFvDq6DKheaLjX2UFoIPPIbWQ==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       eslint: '>=8.40.0'
@@ -2307,7 +2307,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.4
 
-  '@lichthagel/eslint-config@1.0.27(eslint-plugin-solid@0.14.5(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3)':
+  '@lichthagel/eslint-config@1.0.28(eslint-plugin-solid@0.14.5(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.31.0(jiti@2.4.2))(typescript@5.8.3)':
     dependencies:
       '@eslint/js': 9.31.0
       '@stylistic/eslint-plugin': 5.2.0(eslint@9.31.0(jiti@2.4.2))
