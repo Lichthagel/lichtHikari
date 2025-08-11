@@ -18,7 +18,7 @@ async function getNativeTitle(): Promise<string> {
 
   console.log(target);
 
-  return target.textContent!;
+  return target.textContent;
 }
 
 // async function getTitle(): Promise<string> {
