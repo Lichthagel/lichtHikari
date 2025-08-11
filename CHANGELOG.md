@@ -1,6 +1,18 @@
 # Changelog
 
 
+## [1.0.12](https://github.com/Lichthagel/lichtHikari/compare/v1.0.11...v1.0.12) (2025-08-11)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @iconify-json/lucide to v1.2.27 ([#143](https://github.com/Lichthagel/lichtHikari/issues/143)) ([e518bd2](https://github.com/Lichthagel/lichtHikari/commit/e518bd23ba75592f7631e1c8ddcf6c4862d17d11))
+* **deps:** update dependency @iconify-json/lucide to v1.2.54 ([#242](https://github.com/Lichthagel/lichtHikari/issues/242)) ([675e8ab](https://github.com/Lichthagel/lichtHikari/commit/675e8ab77ca76689c2d8ed4a752b136abdaa07a9))
+* **deps:** update dependency @iconify-json/lucide to v1.2.59 ([#267](https://github.com/Lichthagel/lichtHikari/issues/267)) ([feb12f7](https://github.com/Lichthagel/lichtHikari/commit/feb12f7e4805b58211d6365f1605058edb8c7a4d))
+* **deps:** update dependency solid-js to v1.9.7 ([#210](https://github.com/Lichthagel/lichtHikari/issues/210)) ([66c2337](https://github.com/Lichthagel/lichtHikari/commit/66c2337bc5dfe15717eef864a266a56db1ad7c11))
+* **deps:** update dependency solid-js to v1.9.8 ([#270](https://github.com/Lichthagel/lichtHikari/issues/270)) ([62e5515](https://github.com/Lichthagel/lichtHikari/commit/62e55153435e2c8101ed960321c67df1bfb6f618))
+* **deps:** update dependency unplugin-icons to v22.2.0 ([#263](https://github.com/Lichthagel/lichtHikari/issues/263)) ([bd47d72](https://github.com/Lichthagel/lichtHikari/commit/bd47d727217239f01ccf45397dcde8f8ec95434d))
+
 ## [1.0.11](https://github.com/Lichthagel/lichtHikari/compare/v1.0.10...v1.0.11) (2025-02-22)
 
 
