@@ -33,5 +33,5 @@ export const getDataAttrName = (target: Element): string | null => {
 };
 
 export const getExtraAttrs
-= (dataAttrName: string | null): { [key: string]: string } =>
-  dataAttrName ? { [dataAttrName]: "" } : {};
+  = (dataAttrName: string | null): { [key: string]: string } =>
+    dataAttrName ? { [dataAttrName]: "" } : {};
