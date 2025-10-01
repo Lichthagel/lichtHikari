@@ -59,7 +59,7 @@ importers:
         version: 7.1.4(postcss@8.5.6)(vite@7.1.7(@types/node@22.18.8)(jiti@2.6.0)(yaml@2.8.1))
       vite-plugin-solid:
         specifier: ^2.10.2
-        version: 2.11.8(solid-js@1.9.9)(vite@7.1.7(@types/node@22.18.8)(jiti@2.6.0)(yaml@2.8.1))
+        version: 2.11.9(solid-js@1.9.9)(vite@7.1.7(@types/node@22.18.8)(jiti@2.6.0)(yaml@2.8.1))
 
 packages:
 
@@ -751,6 +751,10 @@ packages:
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
 
+  baseline-browser-mapping@2.8.10:
+    resolution: {integrity: sha512-uLfgBi+7IBNay8ECBO2mVMGZAc1VgZWEChxm4lv+TobGdG82LnXMjuNGo/BSSZZL4UmkWhxEHP2f5ziLNwGWMA==}
+    hasBin: true
+
   baseline-browser-mapping@2.8.9:
     resolution: {integrity: sha512-hY/u2lxLrbecMEWSB0IpGzGyDyeoMFQhCvZd2jGFSE5I17Fh01sYUBPCJtkWERw7zrac9+cIghxm/ytJa2X8iA==}
     hasBin: true
@@ -770,6 +774,11 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
 
+  browserslist@4.26.3:
+    resolution: {integrity: sha512-lAUU+02RFBuCKQPj/P6NgjlbCnLBMp4UtgTx7vNHd3XSIJF87s9a5rA3aH2yw3GS9DqZAUbOtZdCCiZeVRqt0w==}
+    engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
+    hasBin: true
+
   builtin-modules@5.0.0:
     resolution: {integrity: sha512-bkXY9WsVpY7CvMhKSR6pZilZu9Ln5WDrKVBUXf2S443etkmEO4V58heTecXcUIsNsi4Rx8JUO4NfX1IcQl4deg==}
     engines: {node: '>=18.20'}
@@ -784,6 +793,9 @@ packages:
 
   caniuse-lite@1.0.30001745:
     resolution: {integrity: sha512-ywt6i8FzvdgrrrGbr1jZVObnVv6adj+0if2/omv9cmR2oiZs30zL4DIyaptKcbOrBdOIc74QTMoJvSE2QHh5UQ==}
+
+  caniuse-lite@1.0.30001746:
+    resolution: {integrity: sha512-eA7Ys/DGw+pnkWWSE/id29f2IcPHVoE8wxtvE5JdvD2V28VTDPy1yEeo11Guz0sJ4ZeGRcm3uaTcAqK1LXaphA==}
 
   chalk@4.1.2:
     resolution: {integrity: sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==}
@@ -938,6 +950,9 @@ packages:
 
   electron-to-chromium@1.5.227:
     resolution: {integrity: sha512-ITxuoPfJu3lsNWUi2lBM2PaBPYgH3uqmxut5vmBxgYvyI4AlJ6P3Cai1O76mOrkJCBzq0IxWg/NtqOrpu/0gKA==}
+
+  electron-to-chromium@1.5.228:
+    resolution: {integrity: sha512-nxkiyuqAn4MJ1QbobwqJILiDtu/jk14hEAWaMiJmNPh1Z+jqoFlBFZjdXwLWGeVSeu9hGLg6+2G9yJaW8rBIFA==}
 
   emoji-regex@10.5.0:
     resolution: {integrity: sha512-lb49vf1Xzfx080OKA0o6l8DQQpV+6Vg95zyCJX9VB/BqKYlhG7N4wgROUUHRA+ZPUefLnteQOad7z1kT2bV7bg==}
@@ -1803,8 +1818,8 @@ packages:
       vite:
         optional: true
 
-  vite-plugin-solid@2.11.8:
-    resolution: {integrity: sha512-hFrCxBfv3B1BmFqnJF4JOCYpjrmi/zwyeKjcomQ0khh8HFyQ8SbuBWQ7zGojfrz6HUOBFrJBNySDi/JgAHytWg==}
+  vite-plugin-solid@2.11.9:
+    resolution: {integrity: sha512-bTA6p+bspXZsuulSd2y6aTzegF8xGaJYcq1Uyh/mv+W4DQtzCgL9nN6n2fsTaxp/dMk+ZHHKgGndlNeooqHLKw==}
     peerDependencies:
       '@testing-library/jest-dom': ^5.16.6 || ^5.17.0 || ^6.*
       solid-js: ^1.7.2
@@ -1965,7 +1980,7 @@ snapshots:
     dependencies:
       '@babel/compat-data': 7.28.4
       '@babel/helper-validator-option': 7.27.1
-      browserslist: 4.26.2
+      browserslist: 4.26.3
       lru-cache: 5.1.1
       semver: 6.3.1
 
@@ -2612,6 +2627,8 @@ snapshots:
 
   balanced-match@1.0.2: {}
 
+  baseline-browser-mapping@2.8.10: {}
+
   baseline-browser-mapping@2.8.9: {}
 
   brace-expansion@1.1.12:
@@ -2635,6 +2652,14 @@ snapshots:
       node-releases: 2.0.21
       update-browserslist-db: 1.1.3(browserslist@4.26.2)
 
+  browserslist@4.26.3:
+    dependencies:
+      baseline-browser-mapping: 2.8.10
+      caniuse-lite: 1.0.30001746
+      electron-to-chromium: 1.5.228
+      node-releases: 2.0.21
+      update-browserslist-db: 1.1.3(browserslist@4.26.3)
+
   builtin-modules@5.0.0: {}
 
   bundle-name@4.1.0:
@@ -2644,6 +2669,8 @@ snapshots:
   callsites@3.1.0: {}
 
   caniuse-lite@1.0.30001745: {}
+
+  caniuse-lite@1.0.30001746: {}
 
   chalk@4.1.2:
     dependencies:
@@ -2785,6 +2812,8 @@ snapshots:
       is-obj: 2.0.0
 
   electron-to-chromium@1.5.227: {}
+
+  electron-to-chromium@1.5.228: {}
 
   emoji-regex@10.5.0: {}
 
@@ -3601,6 +3630,12 @@ snapshots:
       escalade: 3.2.0
       picocolors: 1.1.1
 
+  update-browserslist-db@1.1.3(browserslist@4.26.3):
+    dependencies:
+      browserslist: 4.26.3
+      escalade: 3.2.0
+      picocolors: 1.1.1
+
   uri-js@4.4.1:
     dependencies:
       punycode: 2.3.1
@@ -3625,7 +3660,7 @@ snapshots:
     transitivePeerDependencies:
       - postcss
 
-  vite-plugin-solid@2.11.8(solid-js@1.9.9)(vite@7.1.7(@types/node@22.18.8)(jiti@2.6.0)(yaml@2.8.1)):
+  vite-plugin-solid@2.11.9(solid-js@1.9.9)(vite@7.1.7(@types/node@22.18.8)(jiti@2.6.0)(yaml@2.8.1)):
     dependencies:
       '@babel/core': 7.28.4
       '@types/babel__core': 7.20.5
