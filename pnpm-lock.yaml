@@ -19,7 +19,7 @@ importers:
         version: 1.9.9
       unplugin-icons:
         specifier: ^22.0.0
-        version: 22.3.0
+        version: 22.4.2
     devDependencies:
       '@commitlint/cli':
         specifier: ^20.0.0
@@ -1771,8 +1771,8 @@ packages:
     resolution: {integrity: sha512-lRfVq8fE8gz6QMBuDM6a+LO3IAzTi05H6gCVaUpir2E1Rwpo4ZUog45KpNXKC/Mn3Yb9UDuHumeFTo9iV/D9FQ==}
     engines: {node: '>=18'}
 
-  unplugin-icons@22.3.0:
-    resolution: {integrity: sha512-Q7c2RoVUn4LzFADT0H/oT5ApJgiWW+xTK7D5/hi6gYtObmAuEE6ebyvejvfbinJL8tH4wanoNjkWcmlqEsTcXg==}
+  unplugin-icons@22.4.2:
+    resolution: {integrity: sha512-Yv15405unO67Chme0Slk0JRA/H2AiAZLK5t7ebt8/ZpTDlBfM4d4En2qD3MX2rzOSkIteQ0syIm3q8MSofeoBA==}
     peerDependencies:
       '@svgr/core': '>=7.0.0'
       '@svgx/core': ^1.0.1
@@ -3607,7 +3607,7 @@ snapshots:
 
   unicorn-magic@0.1.0: {}
 
-  unplugin-icons@22.3.0:
+  unplugin-icons@22.4.2:
     dependencies:
       '@antfu/install-pkg': 1.1.0
       '@iconify/utils': 3.0.2
