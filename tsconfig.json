@@ -19,6 +19,11 @@
             "vite-plugin-monkey/global",
             "unplugin-icons/types/solid",
             "vite/client",
+        ],
+        "lib": [
+            "DOM",
+            "DOM.Iterable",
+            "ESNext"
         ]
     },
     "include": ["**/*", ".husky/**/*"]
