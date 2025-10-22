@@ -40,7 +40,7 @@ const AwcLists: Component<Props> = (props) => {
 
   const sortedData = createMemo(() => {
     if (data()) {
-      return data()!.sort();
+      return data()!.toSorted();
     }
 
     return null;
