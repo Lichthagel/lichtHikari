@@ -56,7 +56,7 @@ importers:
         version: 8.0.11(@types/node@24.12.2)(jiti@2.6.1)(yaml@2.8.4)
       vite-plugin-monkey:
         specifier: ^8.0.0
-        version: 8.0.0(postcss@8.5.14)(vite@8.0.11(@types/node@24.12.2)(jiti@2.6.1)(yaml@2.8.4))
+        version: 8.0.1(postcss@8.5.14)(vite@8.0.11(@types/node@24.12.2)(jiti@2.6.1)(yaml@2.8.4))
       vite-plugin-solid:
         specifier: ^2.10.2
         version: 2.11.12(solid-js@1.9.12)(vite@8.0.11(@types/node@24.12.2)(jiti@2.6.1)(yaml@2.8.4))
@@ -1687,8 +1687,8 @@ packages:
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
 
-  vite-plugin-monkey@8.0.0:
-    resolution: {integrity: sha512-tz9QR/d4aZ8ehlF3f/FtHLFoP+OGTq/779AHgdXqcgjuP7EDebY5eoLZDmGfWlZbHjKQioX5WfOTdRTnpH10Jg==}
+  vite-plugin-monkey@8.0.1:
+    resolution: {integrity: sha512-+kPRsixZ2mLKhmVRQ7shx0EYJKNKn7vq/Li9qwMYMSZRgGntWlFDlfjnMArYstbn+7mKBLZAsmIz/m8EWSBpeQ==}
     peerDependencies:
       vite: ^8.0.0
     peerDependenciesMeta:
@@ -3382,7 +3382,7 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  vite-plugin-monkey@8.0.0(postcss@8.5.14)(vite@8.0.11(@types/node@24.12.2)(jiti@2.6.1)(yaml@2.8.4)):
+  vite-plugin-monkey@8.0.1(postcss@8.5.14)(vite@8.0.11(@types/node@24.12.2)(jiti@2.6.1)(yaml@2.8.4)):
     dependencies:
       acorn-walk: 8.3.5
       cross-spawn: 7.0.6
