@@ -23,7 +23,7 @@ importers:
     devDependencies:
       '@commitlint/cli':
         specifier: ^21.0.0
-        version: 21.0.0(@types/node@24.12.3)(conventional-commits-parser@6.4.0)(typescript@6.0.3)
+        version: 21.0.0(@types/node@24.12.4)(conventional-commits-parser@6.4.0)(typescript@6.0.3)
       '@commitlint/config-conventional':
         specifier: ^21.0.0
         version: 21.0.0
@@ -35,7 +35,7 @@ importers:
         version: 1.0.33(eslint-plugin-solid@0.14.5(eslint@10.3.0(jiti@2.6.1))(typescript@6.0.3))(eslint@10.3.0(jiti@2.6.1))(typescript@6.0.3)
       '@types/node':
         specifier: ^24.0.0
-        version: 24.12.3
+        version: 24.12.4
       eslint:
         specifier: ^10.0.0
         version: 10.3.0(jiti@2.6.1)
@@ -53,13 +53,13 @@ importers:
         version: 6.0.3
       vite:
         specifier: ^8.0.0
-        version: 8.0.12(@types/node@24.12.3)(jiti@2.6.1)(yaml@2.8.4)
+        version: 8.0.12(@types/node@24.12.4)(jiti@2.6.1)(yaml@2.8.4)
       vite-plugin-monkey:
         specifier: ^8.0.0
-        version: 8.0.5(postcss@8.5.14)(vite@8.0.12(@types/node@24.12.3)(jiti@2.6.1)(yaml@2.8.4))
+        version: 8.0.4(postcss@8.5.14)(vite@8.0.12(@types/node@24.12.4)(jiti@2.6.1)(yaml@2.8.4))
       vite-plugin-solid:
         specifier: ^2.10.2
-        version: 2.11.12(solid-js@1.9.12)(vite@8.0.12(@types/node@24.12.3)(jiti@2.6.1)(yaml@2.8.4))
+        version: 2.11.12(solid-js@1.9.12)(vite@8.0.12(@types/node@24.12.4)(jiti@2.6.1)(yaml@2.8.4))
 
 packages:
 
@@ -630,8 +630,8 @@ packages:
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
-  '@types/node@24.12.3':
-    resolution: {integrity: sha512-8oljBDGun9cIsZRJR6fkihn0TSXJI0UDOOhncYaERq6M0JMDoPLxyscwruJcb4GKS6dvK/d8xebYBg27h/duaQ==}
+  '@types/node@24.12.4':
+    resolution: {integrity: sha512-GUUEShf+PBCGW2KaXwcIt3Yk+e3pkKwWKb9GSyM9WQVE+ep2jzmHdGsHzu4wgcZy5fN9FBdVzjpBQsYlpfpgLA==}
 
   '@typescript-eslint/eslint-plugin@8.59.2':
     resolution: {integrity: sha512-j/bwmkBvHUtPNxzuWe5z6BEk3q54YRyGlBXkSsmfoih7zNrBvl5A9A98anlp/7JbyZcWIJ8KXo/3Tq/DjFLtuQ==}
@@ -1694,8 +1694,8 @@ packages:
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
 
-  vite-plugin-monkey@8.0.5:
-    resolution: {integrity: sha512-2ByJCxGEebg6ElEbBkor1RNXtk7PgbfRT1CGmTO13P4wtYPIcMat5c2uN6eMX6t1eB1URG23Ioh1ZM/bDUAmDw==}
+  vite-plugin-monkey@8.0.4:
+    resolution: {integrity: sha512-hDcPEiL8kckfJ8FhBG4xcJ05/185EcmnGSmNKHghQRuYZb8Iewo2nnPaVBtCj4Ievz1I/5yVrUQcFwi83ZcAhQ==}
     peerDependencies:
       vite: ^8.0.0
     peerDependenciesMeta:
@@ -1932,11 +1932,11 @@ snapshots:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.28.5
 
-  '@commitlint/cli@21.0.0(@types/node@24.12.3)(conventional-commits-parser@6.4.0)(typescript@6.0.3)':
+  '@commitlint/cli@21.0.0(@types/node@24.12.4)(conventional-commits-parser@6.4.0)(typescript@6.0.3)':
     dependencies:
       '@commitlint/format': 21.0.1
       '@commitlint/lint': 21.0.1
-      '@commitlint/load': 21.0.1(@types/node@24.12.3)(typescript@6.0.3)
+      '@commitlint/load': 21.0.1(@types/node@24.12.4)(typescript@6.0.3)
       '@commitlint/read': 21.0.1(conventional-commits-parser@6.4.0)
       '@commitlint/types': 21.0.0
       tinyexec: 1.1.2
@@ -1981,14 +1981,14 @@ snapshots:
       '@commitlint/rules': 21.0.1
       '@commitlint/types': 21.0.1
 
-  '@commitlint/load@21.0.1(@types/node@24.12.3)(typescript@6.0.3)':
+  '@commitlint/load@21.0.1(@types/node@24.12.4)(typescript@6.0.3)':
     dependencies:
       '@commitlint/config-validator': 21.0.1
       '@commitlint/execute-rule': 21.0.1
       '@commitlint/resolve-extends': 21.0.1
       '@commitlint/types': 21.0.1
       cosmiconfig: 9.0.1(typescript@6.0.3)
-      cosmiconfig-typescript-loader: 6.3.0(@types/node@24.12.3)(cosmiconfig@9.0.1(typescript@6.0.3))(typescript@6.0.3)
+      cosmiconfig-typescript-loader: 6.3.0(@types/node@24.12.4)(cosmiconfig@9.0.1(typescript@6.0.3))(typescript@6.0.3)
       es-toolkit: 1.46.1
       is-plain-obj: 4.1.0
       picocolors: 1.1.1
@@ -2350,7 +2350,7 @@ snapshots:
 
   '@types/json-schema@7.0.15': {}
 
-  '@types/node@24.12.3':
+  '@types/node@24.12.4':
     dependencies:
       undici-types: 7.16.0
 
@@ -2585,9 +2585,9 @@ snapshots:
     dependencies:
       browserslist: 4.28.2
 
-  cosmiconfig-typescript-loader@6.3.0(@types/node@24.12.3)(cosmiconfig@9.0.1(typescript@6.0.3))(typescript@6.0.3):
+  cosmiconfig-typescript-loader@6.3.0(@types/node@24.12.4)(cosmiconfig@9.0.1(typescript@6.0.3))(typescript@6.0.3):
     dependencies:
-      '@types/node': 24.12.3
+      '@types/node': 24.12.4
       cosmiconfig: 9.0.1(typescript@6.0.3)
       jiti: 2.6.1
       typescript: 6.0.3
@@ -3396,7 +3396,7 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  vite-plugin-monkey@8.0.5(postcss@8.5.14)(vite@8.0.12(@types/node@24.12.3)(jiti@2.6.1)(yaml@2.8.4)):
+  vite-plugin-monkey@8.0.4(postcss@8.5.14)(vite@8.0.12(@types/node@24.12.4)(jiti@2.6.1)(yaml@2.8.4)):
     dependencies:
       acorn-walk: 8.3.5
       cross-spawn: 7.0.6
@@ -3410,11 +3410,11 @@ snapshots:
       rollup: 4.60.3
       systemjs: 6.15.1
     optionalDependencies:
-      vite: 8.0.12(@types/node@24.12.3)(jiti@2.6.1)(yaml@2.8.4)
+      vite: 8.0.12(@types/node@24.12.4)(jiti@2.6.1)(yaml@2.8.4)
     transitivePeerDependencies:
       - postcss
 
-  vite-plugin-solid@2.11.12(solid-js@1.9.12)(vite@8.0.12(@types/node@24.12.3)(jiti@2.6.1)(yaml@2.8.4)):
+  vite-plugin-solid@2.11.12(solid-js@1.9.12)(vite@8.0.12(@types/node@24.12.4)(jiti@2.6.1)(yaml@2.8.4)):
     dependencies:
       '@babel/core': 7.29.0
       '@types/babel__core': 7.20.5
@@ -3422,12 +3422,12 @@ snapshots:
       merge-anything: 5.1.7
       solid-js: 1.9.12
       solid-refresh: 0.6.3(solid-js@1.9.12)
-      vite: 8.0.12(@types/node@24.12.3)(jiti@2.6.1)(yaml@2.8.4)
-      vitefu: 1.1.3(vite@8.0.12(@types/node@24.12.3)(jiti@2.6.1)(yaml@2.8.4))
+      vite: 8.0.12(@types/node@24.12.4)(jiti@2.6.1)(yaml@2.8.4)
+      vitefu: 1.1.3(vite@8.0.12(@types/node@24.12.4)(jiti@2.6.1)(yaml@2.8.4))
     transitivePeerDependencies:
       - supports-color
 
-  vite@8.0.12(@types/node@24.12.3)(jiti@2.6.1)(yaml@2.8.4):
+  vite@8.0.12(@types/node@24.12.4)(jiti@2.6.1)(yaml@2.8.4):
     dependencies:
       lightningcss: 1.32.0
       picomatch: 4.0.4
@@ -3435,14 +3435,14 @@ snapshots:
       rolldown: 1.0.0
       tinyglobby: 0.2.16
     optionalDependencies:
-      '@types/node': 24.12.3
+      '@types/node': 24.12.4
       fsevents: 2.3.3
       jiti: 2.6.1
       yaml: 2.8.4
 
-  vitefu@1.1.3(vite@8.0.12(@types/node@24.12.3)(jiti@2.6.1)(yaml@2.8.4)):
+  vitefu@1.1.3(vite@8.0.12(@types/node@24.12.4)(jiti@2.6.1)(yaml@2.8.4)):
     optionalDependencies:
-      vite: 8.0.12(@types/node@24.12.3)(jiti@2.6.1)(yaml@2.8.4)
+      vite: 8.0.12(@types/node@24.12.4)(jiti@2.6.1)(yaml@2.8.4)
 
   webpack-virtual-modules@0.6.2: {}
 
