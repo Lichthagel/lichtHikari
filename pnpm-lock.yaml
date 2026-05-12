@@ -23,13 +23,13 @@ importers:
     devDependencies:
       '@commitlint/cli':
         specifier: ^21.0.0
-        version: 21.0.1(@types/node@24.12.3)(conventional-commits-parser@6.4.0)(typescript@6.0.3)
+        version: 21.0.0(@types/node@24.12.3)(conventional-commits-parser@6.4.0)(typescript@6.0.3)
       '@commitlint/config-conventional':
         specifier: ^21.0.0
-        version: 21.0.1
+        version: 21.0.0
       '@commitlint/types':
         specifier: ^21.0.0
-        version: 21.0.1
+        version: 21.0.0
       '@lichthagel/eslint-config':
         specifier: ^1.0.0
         version: 1.0.33(eslint-plugin-solid@0.14.5(eslint@10.3.0(jiti@2.6.1))(typescript@6.0.3))(eslint@10.3.0(jiti@2.6.1))(typescript@6.0.3)
@@ -56,7 +56,7 @@ importers:
         version: 8.0.12(@types/node@24.12.3)(jiti@2.6.1)(yaml@2.8.4)
       vite-plugin-monkey:
         specifier: ^8.0.0
-        version: 8.0.4(postcss@8.5.14)(vite@8.0.12(@types/node@24.12.3)(jiti@2.6.1)(yaml@2.8.4))
+        version: 8.0.5(postcss@8.5.14)(vite@8.0.12(@types/node@24.12.3)(jiti@2.6.1)(yaml@2.8.4))
       vite-plugin-solid:
         specifier: ^2.10.2
         version: 2.11.12(solid-js@1.9.12)(vite@8.0.12(@types/node@24.12.3)(jiti@2.6.1)(yaml@2.8.4))
@@ -147,13 +147,13 @@ packages:
     resolution: {integrity: sha512-LwdZHpScM4Qz8Xw2iKSzS+cfglZzJGvofQICy7W7v4caru4EaAmyUuO6BGrbyQ2mYV11W0U8j5mBhd14dd3B0A==}
     engines: {node: '>=6.9.0'}
 
-  '@commitlint/cli@21.0.1':
-    resolution: {integrity: sha512-8vq10krmbJwBkvzXKhbs4o4JQEVscd3pqOlWuDUaDBwbeL694/P33UC29tZQFTAgPU9fVJ2+f2m3zw16yKWxHg==}
+  '@commitlint/cli@21.0.0':
+    resolution: {integrity: sha512-p3y2oC0G2R45zaadMwBxCiSesS8digi5RDplP3Zrfpzm7xIgrgAj0W4fGzONjpHyg8obDVJDU45g5txzeMcblg==}
     engines: {node: '>=22.12.0'}
     hasBin: true
 
-  '@commitlint/config-conventional@21.0.1':
-    resolution: {integrity: sha512-gRorrkfWOh/+V5X8GYWWbQvrzPczopGMS4CCNrQdHkK4xWElv82BDvIsDhJZWTlI7TazOlYea6VATufCsFs+sw==}
+  '@commitlint/config-conventional@21.0.0':
+    resolution: {integrity: sha512-QJX/rPK4Yu3f5J4OCIBy5aXq2e0EEdwSDFZ3NQvFAXTm3gs12ipyZ+yjhZxm3hHn6DB8wuv3zhFTL1I2tYzUBA==}
     engines: {node: '>=22.12.0'}
 
   '@commitlint/config-validator@21.0.1':
@@ -210,6 +210,10 @@ packages:
 
   '@commitlint/top-level@21.0.1':
     resolution: {integrity: sha512-4esUYqzY7K0FCgcJ/1xWEZekV7Ch4yZT1+xjEb7KzqbJ05XEkxHVsTfC8ADKNNtlCE2pj98KEbPGZWw9WwEnVw==}
+    engines: {node: '>=22.12.0'}
+
+  '@commitlint/types@21.0.0':
+    resolution: {integrity: sha512-6nEz+M7I90iix4sviA8NLwskOuyt0M98KUU2aYgiKbn46jMSxUm1l2ACtzRd9ec+y38aKyJhW4Fp6NW0z35kJQ==}
     engines: {node: '>=22.12.0'}
 
   '@commitlint/types@21.0.1':
@@ -1690,8 +1694,8 @@ packages:
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
 
-  vite-plugin-monkey@8.0.4:
-    resolution: {integrity: sha512-hDcPEiL8kckfJ8FhBG4xcJ05/185EcmnGSmNKHghQRuYZb8Iewo2nnPaVBtCj4Ievz1I/5yVrUQcFwi83ZcAhQ==}
+  vite-plugin-monkey@8.0.5:
+    resolution: {integrity: sha512-2ByJCxGEebg6ElEbBkor1RNXtk7PgbfRT1CGmTO13P4wtYPIcMat5c2uN6eMX6t1eB1URG23Ioh1ZM/bDUAmDw==}
     peerDependencies:
       vite: ^8.0.0
     peerDependenciesMeta:
@@ -1928,13 +1932,13 @@ snapshots:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.28.5
 
-  '@commitlint/cli@21.0.1(@types/node@24.12.3)(conventional-commits-parser@6.4.0)(typescript@6.0.3)':
+  '@commitlint/cli@21.0.0(@types/node@24.12.3)(conventional-commits-parser@6.4.0)(typescript@6.0.3)':
     dependencies:
       '@commitlint/format': 21.0.1
       '@commitlint/lint': 21.0.1
       '@commitlint/load': 21.0.1(@types/node@24.12.3)(typescript@6.0.3)
       '@commitlint/read': 21.0.1(conventional-commits-parser@6.4.0)
-      '@commitlint/types': 21.0.1
+      '@commitlint/types': 21.0.0
       tinyexec: 1.1.2
       yargs: 18.0.0
     transitivePeerDependencies:
@@ -1943,9 +1947,9 @@ snapshots:
       - conventional-commits-parser
       - typescript
 
-  '@commitlint/config-conventional@21.0.1':
+  '@commitlint/config-conventional@21.0.0':
     dependencies:
-      '@commitlint/types': 21.0.1
+      '@commitlint/types': 21.0.0
       conventional-changelog-conventionalcommits: 9.3.1
 
   '@commitlint/config-validator@21.0.1':
@@ -2030,6 +2034,11 @@ snapshots:
   '@commitlint/top-level@21.0.1':
     dependencies:
       escalade: 3.2.0
+
+  '@commitlint/types@21.0.0':
+    dependencies:
+      conventional-commits-parser: 6.4.0
+      picocolors: 1.1.1
 
   '@commitlint/types@21.0.1':
     dependencies:
@@ -3387,7 +3396,7 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  vite-plugin-monkey@8.0.4(postcss@8.5.14)(vite@8.0.12(@types/node@24.12.3)(jiti@2.6.1)(yaml@2.8.4)):
+  vite-plugin-monkey@8.0.5(postcss@8.5.14)(vite@8.0.12(@types/node@24.12.3)(jiti@2.6.1)(yaml@2.8.4)):
     dependencies:
       acorn-walk: 8.3.5
       cross-spawn: 7.0.6
