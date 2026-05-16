@@ -13,10 +13,10 @@ importers:
         version: 1.2.106
       solid-element:
         specifier: ^1.9.0
-        version: 1.9.1(solid-js@1.9.12)
+        version: 1.9.1(solid-js@1.9.13)
       solid-js:
         specifier: ^1.9.2
-        version: 1.9.12
+        version: 1.9.13
       unplugin-icons:
         specifier: ^23.0.0
         version: 23.0.1
@@ -47,7 +47,7 @@ importers:
         version: 9.1.7
       lint-staged:
         specifier: ^17.0.0
-        version: 17.0.5
+        version: 17.0.4
       typescript:
         specifier: ^6.0.0
         version: 6.0.3
@@ -59,7 +59,7 @@ importers:
         version: 8.0.5(postcss@8.5.14)(vite@8.0.13(@types/node@24.12.4)(jiti@2.6.1)(yaml@2.9.0))
       vite-plugin-solid:
         specifier: ^2.10.2
-        version: 2.11.12(solid-js@1.9.12)(vite@8.0.13(@types/node@24.12.4)(jiti@2.6.1)(yaml@2.9.0))
+        version: 2.11.12(solid-js@1.9.13)(vite@8.0.13(@types/node@24.12.4)(jiti@2.6.1)(yaml@2.9.0))
 
 packages:
 
@@ -1328,8 +1328,8 @@ packages:
   lines-and-columns@1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
 
-  lint-staged@17.0.5:
-    resolution: {integrity: sha512-d12yC+/e8RhBjZtaxZn71FyrgU/P5e+uAPifhCLwdosQZP/zamSdKRWDC30ocVIbzDKiFG1McHc/LUgB92GIPw==}
+  lint-staged@17.0.4:
+    resolution: {integrity: sha512-+rU9lSUyVOZ/hDUmRLVGzyS2v73cDdQjX+XQz1AaOdIE4RysLq0HoPW2HrrgeNCLklkhi904VBU1bmgWLHVnkA==}
     engines: {node: '>=22.22.1'}
     hasBin: true
 
@@ -1583,8 +1583,8 @@ packages:
     peerDependencies:
       solid-js: ^1.9.3
 
-  solid-js@1.9.12:
-    resolution: {integrity: sha512-QzKaSJq2/iDrWR1As6MHZQ8fQkdOBf8GReYb7L5iKwMGceg7HxDcaOHk0at66tNgn9U2U7dXo8ZZpLIAmGMzgw==}
+  solid-js@1.9.13:
+    resolution: {integrity: sha512-6hJeJMOcEX8ktqjpDoJZEmld3ijvcvWBDtiXBm7f4332SiFN66QeAQI1REQshvyUoISsSeJ4PHDauKYbwao9JQ==}
 
   solid-refresh@0.6.3:
     resolution: {integrity: sha512-F3aPsX6hVw9ttm5LYlth8Q15x6MlI/J3Dn+o3EQyRTtTxidepSTwAYdozt01/YA+7ObcciagGEyXIopGZzQtbA==}
@@ -2481,12 +2481,12 @@ snapshots:
       html-entities: 2.3.3
       parse5: 7.3.0
 
-  babel-preset-solid@1.9.12(@babel/core@7.29.0)(solid-js@1.9.12):
+  babel-preset-solid@1.9.12(@babel/core@7.29.0)(solid-js@1.9.13):
     dependencies:
       '@babel/core': 7.29.0
       babel-plugin-jsx-dom-expressions: 0.40.6(@babel/core@7.29.0)
     optionalDependencies:
-      solid-js: 1.9.12
+      solid-js: 1.9.13
 
   balanced-match@1.0.2: {}
 
@@ -3000,7 +3000,7 @@ snapshots:
 
   lines-and-columns@1.2.4: {}
 
-  lint-staged@17.0.5:
+  lint-staged@17.0.4:
     dependencies:
       listr2: 10.2.1
       picomatch: 4.0.4
@@ -3280,23 +3280,23 @@ snapshots:
       ansi-styles: 6.2.3
       is-fullwidth-code-point: 5.1.0
 
-  solid-element@1.9.1(solid-js@1.9.12):
+  solid-element@1.9.1(solid-js@1.9.13):
     dependencies:
       component-register: 0.8.8
-      solid-js: 1.9.12
+      solid-js: 1.9.13
 
-  solid-js@1.9.12:
+  solid-js@1.9.13:
     dependencies:
       csstype: 3.2.3
       seroval: 1.5.4
       seroval-plugins: 1.5.4(seroval@1.5.4)
 
-  solid-refresh@0.6.3(solid-js@1.9.12):
+  solid-refresh@0.6.3(solid-js@1.9.13):
     dependencies:
       '@babel/generator': 7.29.1
       '@babel/helper-module-imports': 7.28.6
       '@babel/types': 7.29.0
-      solid-js: 1.9.12
+      solid-js: 1.9.13
     transitivePeerDependencies:
       - supports-color
 
@@ -3405,14 +3405,14 @@ snapshots:
     transitivePeerDependencies:
       - postcss
 
-  vite-plugin-solid@2.11.12(solid-js@1.9.12)(vite@8.0.13(@types/node@24.12.4)(jiti@2.6.1)(yaml@2.9.0)):
+  vite-plugin-solid@2.11.12(solid-js@1.9.13)(vite@8.0.13(@types/node@24.12.4)(jiti@2.6.1)(yaml@2.9.0)):
     dependencies:
       '@babel/core': 7.29.0
       '@types/babel__core': 7.20.5
-      babel-preset-solid: 1.9.12(@babel/core@7.29.0)(solid-js@1.9.12)
+      babel-preset-solid: 1.9.12(@babel/core@7.29.0)(solid-js@1.9.13)
       merge-anything: 5.1.7
-      solid-js: 1.9.12
-      solid-refresh: 0.6.3(solid-js@1.9.12)
+      solid-js: 1.9.13
+      solid-refresh: 0.6.3(solid-js@1.9.13)
       vite: 8.0.13(@types/node@24.12.4)(jiti@2.6.1)(yaml@2.9.0)
       vitefu: 1.1.3(vite@8.0.13(@types/node@24.12.4)(jiti@2.6.1)(yaml@2.9.0))
     transitivePeerDependencies:
