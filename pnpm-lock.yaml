@@ -56,7 +56,7 @@ importers:
         version: 8.0.14(@types/node@24.12.4)(jiti@2.6.1)(yaml@2.9.0)
       vite-plugin-monkey:
         specifier: ^8.0.0
-        version: 8.0.5(postcss@8.5.15)(vite@8.0.14(@types/node@24.12.4)(jiti@2.6.1)(yaml@2.9.0))
+        version: 8.0.6(postcss@8.5.15)(vite@8.0.14(@types/node@24.12.4)(jiti@2.6.1)(yaml@2.9.0))
       vite-plugin-solid:
         specifier: ^2.10.2
         version: 2.11.12(solid-js@1.9.13)(vite@8.0.14(@types/node@24.12.4)(jiti@2.6.1)(yaml@2.9.0))
@@ -752,8 +752,8 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
 
-  brace-expansion@1.1.14:
-    resolution: {integrity: sha512-MWPGfDxnyzKU7rNOW9SP/c50vi3xrmrua/+6hfPbCS2ABNWfx24vPidzvC7krjU/RTo235sV776ymlsMtGKj8g==}
+  brace-expansion@1.1.15:
+    resolution: {integrity: sha512-EwOCDEex4quD37XhqM3omwtMoJjr//isUZz1JopUNWms+4Z2ViyM/k1YIRePpoVNnQhENnxtFjLaxNHrT7xIUg==}
 
   brace-expansion@5.0.6:
     resolution: {integrity: sha512-kLpxurY4Z4r9sgMsyG0Z9uzsBlgiU/EFKhj/h91/8yHu0edo7XuixOIH3VcJ8kkxs6/jPzoI6U9Vj3WqbMQ94g==}
@@ -1691,8 +1691,8 @@ packages:
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
 
-  vite-plugin-monkey@8.0.5:
-    resolution: {integrity: sha512-2ByJCxGEebg6ElEbBkor1RNXtk7PgbfRT1CGmTO13P4wtYPIcMat5c2uN6eMX6t1eB1URG23Ioh1ZM/bDUAmDw==}
+  vite-plugin-monkey@8.0.6:
+    resolution: {integrity: sha512-DpNKGLpATKMiFh0m0UaT85oEZYUJ4gtKeaTmL/zyR2jmCmuuybJGC1iI5+wJzLASZpdkTF055UDxVfHtF1RlNQ==}
     peerDependencies:
       vite: ^8.0.0
     peerDependenciesMeta:
@@ -2495,7 +2495,7 @@ snapshots:
 
   baseline-browser-mapping@2.10.32: {}
 
-  brace-expansion@1.1.14:
+  brace-expansion@1.1.15:
     dependencies:
       balanced-match: 1.0.2
       concat-map: 0.0.1
@@ -3064,7 +3064,7 @@ snapshots:
 
   minimatch@3.1.5:
     dependencies:
-      brace-expansion: 1.1.14
+      brace-expansion: 1.1.15
 
   mlly@1.8.2:
     dependencies:
@@ -3388,7 +3388,7 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  vite-plugin-monkey@8.0.5(postcss@8.5.15)(vite@8.0.14(@types/node@24.12.4)(jiti@2.6.1)(yaml@2.9.0)):
+  vite-plugin-monkey@8.0.6(postcss@8.5.15)(vite@8.0.14(@types/node@24.12.4)(jiti@2.6.1)(yaml@2.9.0)):
     dependencies:
       acorn-walk: 8.3.5
       cross-spawn: 7.0.6
