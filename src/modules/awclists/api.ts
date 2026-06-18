@@ -29,9 +29,8 @@ export const getLists = async (mediaId: number): Promise<string[]> => {
     return [];
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
-  return Object.entries(json.data.MediaList.customLists).filter((
-    [, b]: [string, boolean],
-  ) => b)
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+  return Object.entries(json.data.MediaList.customLists as { [key: string]: boolean })
+    .filter(([, b]: [string, boolean]) => b)
     .map(([a]: [string, boolean]) => a);
 };
