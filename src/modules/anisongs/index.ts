@@ -3,6 +3,7 @@ import type { Module } from "../../module";
 import { waitForElement } from "../../utils";
 import { defineAnisongsElement } from "./components/Anisongs";
 
+// eslint-disable-next-line unicorn/no-top-level-side-effects
 defineAnisongsElement();
 
 const anisongs: Module = {
@@ -20,9 +21,9 @@ const anisongs: Module = {
       const mediaId = matches[2];
       const loc = matches[3];
 
-      const target = await waitForElement((container) => container.querySelectorAll(".grid-section-wrap")[2]);
+      const target = await waitForElement((container) => container.querySelectorAll(":scope .grid-section-wrap")[2]);
 
-      for (const e of target.querySelectorAll("licht-anisongs")) {
+      for (const e of target.querySelectorAll(":scope licht-anisongs")) {
         e.remove();
       }
 
@@ -32,7 +33,7 @@ const anisongs: Module = {
         anisongsElement.mediaId = mediaId;
         anisongsElement.style.gridColumn = "span 2";
 
-        target.insertBefore(anisongsElement, target.children[0]);
+        target.insertBefore(anisongsElement, target.firstElementChild);
       }
     }
   },

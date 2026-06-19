@@ -2,6 +2,7 @@ import { type Module } from "../../module";
 import { getDataAttrName, waitForElement } from "../../utils";
 import { defineAwcButtonElement } from "./AwcButton";
 
+// eslint-disable-next-line unicorn/no-top-level-side-effects
 defineAwcButtonElement();
 
 const awcbutton: Module = {
@@ -16,10 +17,10 @@ const awcbutton: Module = {
       return;
     }
 
-    const target = await waitForElement((container) => container.querySelector(".banner-content > .actions"));
+    const target = await waitForElement((container) => container.querySelector(":scope .banner-content > .actions"));
     const dataAttrName = getDataAttrName(target);
 
-    for (const e of target.querySelectorAll("licht-awc-button")) {
+    for (const e of target.querySelectorAll(":scope licht-awc-button")) {
       e.remove();
     }
 
@@ -33,7 +34,7 @@ const awcbutton: Module = {
     } else {
       target.insertBefore(
         elemAwcButton,
-        target.children[0],
+        target.firstElementChild,
       );
     }
   },

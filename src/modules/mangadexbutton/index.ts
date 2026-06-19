@@ -2,14 +2,16 @@ import { type Module } from "../../module";
 import { getDataAttrName, waitForElement } from "../../utils";
 import { defineMangadexButtonElement } from "./MangadexButton";
 
+// eslint-disable-next-line unicorn/no-top-level-side-effects
 defineMangadexButtonElement();
 
 async function getNativeTitle(): Promise<string> {
   const target = await waitForElement((container) => {
-    for (const dataSet of container.querySelectorAll(".sidebar .data-set")) {
-      if (dataSet.children[0] && dataSet.children[0].textContent === "Native") {
-        console.log(dataSet.children[1]);
-        return dataSet.children[1];
+    for (const dataSet of container.querySelectorAll(":scope .sidebar .data-set")) {
+      if (dataSet.firstElementChild && dataSet.firstElementChild.textContent === "Native") {
+        const child = dataSet.querySelector(":scope > *:nth-child(2)");
+        console.log(child);
+        return child;
       }
     }
 
@@ -45,9 +47,9 @@ const mangadexbutton: Module = {
     const mediaId = matches[2];
     // const loc = matches[3];
 
-    const target = await waitForElement((container) => container.querySelector(".external-links-wrap"));
+    const target = await waitForElement((container) => container.querySelector(":scope .external-links-wrap"));
 
-    for (const e of target.querySelectorAll("licht-mangadex-button")) {
+    for (const e of target.querySelectorAll(":scope licht-mangadex-button")) {
       e.remove();
     }
 

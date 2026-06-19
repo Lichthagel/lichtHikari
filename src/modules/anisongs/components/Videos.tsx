@@ -44,7 +44,7 @@ const Videos: Component<Props> = (props) => {
     const volume = localStorage.getItem("lichtSongsVolume");
 
     if (volume) {
-      videoElement()!.volume = Number.parseFloat(volume);
+      videoElement()!.volume = Number(volume);
     }
   });
 

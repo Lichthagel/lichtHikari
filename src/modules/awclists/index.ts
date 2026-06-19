@@ -2,6 +2,7 @@ import { type Module } from "../../module";
 import { getDataAttrName, waitForElement } from "../../utils";
 import { defineAwcListsElement } from "./AwcLists";
 
+// eslint-disable-next-line unicorn/no-top-level-side-effects
 defineAwcListsElement();
 
 const awclists: Module = {
@@ -19,11 +20,11 @@ const awclists: Module = {
       const mediaId = matches[2];
       // const loc = matches[3];
 
-      const target = await waitForElement((container) => container.querySelector(".sidebar > .data"));
-      const targetChild = target.childElementCount > 0 ? target.children[0] : target;
+      const target = await waitForElement((container) => container.querySelector(":scope .sidebar > .data"));
+      const targetChild = target.firstElementChild ?? target;
       const dataAttrName = getDataAttrName(targetChild);
 
-      for (const e of target.querySelectorAll("licht-awc-lists")) {
+      for (const e of target.querySelectorAll(":scope licht-awc-lists")) {
         e.remove();
       }
 

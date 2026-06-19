@@ -19,11 +19,9 @@ const AnisongsAPI = {
     return data.anime[0].animethemes as AnimeTheme[];
   },
 
-  parseArtist(artistInfo: Artist) {
-    return artistInfo.as ? `${artistInfo.as} (${artistInfo.name})` : artistInfo.name;
-  },
+  parseArtist: (artistInfo: Artist) => artistInfo.as ? `${artistInfo.as} (${artistInfo.name})` : artistInfo.name,
 
-  parseArtists(artistsInfo: Artist[]) {
+  parseArtists: (artistsInfo: Artist[]) => {
     if (!artistsInfo || artistsInfo.length === 0) {
       return "";
     }
@@ -32,23 +30,17 @@ const AnisongsAPI = {
       .join(", ");
   },
 
-  parseSong(songInfo: Song) {
-    return `${songInfo.title} by ${songInfo.artists ? AnisongsAPI.parseArtists(songInfo.artists) : "uknown artist"}`;
-  },
+  parseSong: (songInfo: Song) => `${songInfo.title} by ${songInfo.artists ? AnisongsAPI.parseArtists(songInfo.artists) : "uknown artist"}`,
 
-  parseVideo(videoInfo: Video, prefix: string) {
-    return {
-      tags: prefix + videoInfo.tags,
-      link: videoInfo.link.replace("staging.", ""),
-    };
-  },
+  parseVideo: (videoInfo: Video, prefix: string) => ({
+    tags: prefix + videoInfo.tags,
+    link: videoInfo.link.replace("staging.", ""),
+  }),
 
-  parseVideos(videosInfo: Video[], prefix: string) {
-    return videosInfo.map((videoInfo) =>
-      AnisongsAPI.parseVideo(videoInfo, prefix));
-  },
+  parseVideos: (videosInfo: Video[], prefix: string) => videosInfo.map((videoInfo) =>
+    AnisongsAPI.parseVideo(videoInfo, prefix)),
 
-  parseThemeEntries(entriesInfo: AnimeThemeEntry[]) {
+  parseThemeEntries: (entriesInfo: AnimeThemeEntry[]) => {
     if (entriesInfo.length === 0) {
       return [];
     }
