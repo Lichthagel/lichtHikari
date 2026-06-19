@@ -21,20 +21,20 @@ const Anisongs: Component<Props> = (props) => {
       console.log("lichtAnisongs: data in cache");
 
       return JSON.parse(cache) as AnisongsData; // TODO validate
-    } else {
-      const themes = await AnisongsAPI.getThemes(mediaId);
-
-      if (!themes) {
-        console.log("lichtAnisongs: not found on AnimeThemes");
-        return;
-      }
-
-      const data = themes_to_data(themes);
-
-      sessionStorage.setItem(`lichtSong${mediaId}`, JSON.stringify(data));
-
-      return data;
     }
+
+    const themes = await AnisongsAPI.getThemes(mediaId);
+
+    if (!themes) {
+      console.log("lichtAnisongs: not found on AnimeThemes");
+      return;
+    }
+
+    const data = themes_to_data(themes);
+
+    sessionStorage.setItem(`lichtSong${mediaId}`, JSON.stringify(data));
+
+    return data;
   });
 
   return (

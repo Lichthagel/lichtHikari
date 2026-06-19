@@ -11,7 +11,7 @@ type Props = object;
 const toggleModule = (module: Module) => {
   setActiveModules((prev) => ({
     ...prev,
-    [module.id]: !prev[module.id],
+    [module.id]: prev[module.id] !== true,
   }));
   saveActiveModules();
 };

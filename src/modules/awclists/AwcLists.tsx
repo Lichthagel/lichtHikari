@@ -29,18 +29,18 @@ const AwcLists: Component<Props> = (props) => {
       const lists = cache.split(",");
 
       return lists;
-    } else {
-      const lists = await getLists(Number.parseInt(mediaId));
-
-      sessionStorage.setItem(`lichtAWCLists${mediaId}`, lists.join(","));
-
-      return lists;
     }
+
+    const lists = await getLists(Number.parseInt(mediaId));
+
+    sessionStorage.setItem(`lichtAWCLists${mediaId}`, lists.join(","));
+
+    return lists;
   });
 
   const sortedData = createMemo(() => {
     if (data()) {
-      return data()!.toSorted();
+      return data()!.toSorted((a, b) => a.localeCompare(b));
     }
 
     return null;
