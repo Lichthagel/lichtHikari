@@ -11,7 +11,8 @@ type Props = object;
 const toggleModule = (module: Module) => {
   setActiveModules((prev) => ({
     ...prev,
-    [module.id]: prev[module.id] !== true,
+    // eslint-disable-next-line unicorn/no-computed-property-existence-check
+    [module.id]: !prev[module.id],
   }));
   saveActiveModules();
 };
