@@ -14,6 +14,7 @@ const observer = new MutationObserver(() => {
       }
     }
 
+    // eslint-disable-next-line unicorn/no-top-level-assignment-in-function
     oldUrl = pathname;
   }
 });
