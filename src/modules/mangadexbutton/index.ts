@@ -8,11 +8,13 @@ defineMangadexButtonElement();
 async function getNativeTitle(): Promise<string> {
   const target = await waitForElement((container) => {
     for (const dataSet of container.querySelectorAll(":scope .sidebar .data-set")) {
-      if (dataSet.firstElementChild && dataSet.firstElementChild.textContent === "Native") {
-        const child = dataSet.querySelector(":scope > *:nth-child(2)");
-        console.log(child);
-        return child;
+      if (!(dataSet.firstElementChild && dataSet.firstElementChild.textContent === "Native")) {
+        continue;
       }
+
+      const child = dataSet.querySelector(":scope > *:nth-child(2)");
+      console.log(child);
+      return child;
     }
 
     return null;

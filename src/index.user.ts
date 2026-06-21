@@ -9,7 +9,8 @@ const observer = new MutationObserver(() => {
     console.log(`lichtHikari: switched page ${pathname}`);
 
     for (const module of modules) {
-      if (activeModules()[module.id] === true && module.urlMatch(pathname, oldUrl)) {
+      // eslint-disable-next-line unicorn/no-computed-property-existence-check
+      if (activeModules()[module.id] && module.urlMatch(pathname, oldUrl)) {
         void module.code();
       }
     }
