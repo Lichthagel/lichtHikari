@@ -13,7 +13,7 @@ importers:
         version: 1.2.115
       solid-element:
         specifier: ^1.9.0
-        version: 1.9.1(solid-js@1.9.14)
+        version: 1.9.2(solid-js@1.9.14)
       solid-js:
         specifier: ^1.9.2
         version: 1.9.14
@@ -1577,10 +1577,10 @@ packages:
     resolution: {integrity: sha512-stxByr12oeeOyY2BlviTNQlYV5xOj47GirPr4yA1hE9JCtxfQN0+tVbkxwCtYDQWhEKWFHsEK48ORg5jrouCAg==}
     engines: {node: '>=20'}
 
-  solid-element@1.9.1:
-    resolution: {integrity: sha512-baJy6Qz27oAUgkPlqOf3Y+7RsBiuVQrS51Nrh1ddDbrqrNPvJbIvehpUsTzLNFb2ZHIoHuNnDg330go/ZKcRdg==}
+  solid-element@1.9.2:
+    resolution: {integrity: sha512-+6bK9YGAf47lrwWyTFXUVKCkKTkof3bn6yxknHJPAE5MGSCvx4DJH1KE3ltUjIXeDWhS2gU5yjpynkH709+Xag==}
     peerDependencies:
-      solid-js: ^1.9.3
+      solid-js: ^1.9.14
 
   solid-js@1.9.14:
     resolution: {integrity: sha512-sAEXC0Kk0S1EDg+8ysEWJDbYhA3RRoEjwuySUGlKIemeo0I5YZfOyumNjNs9Sv3y2nmhD+0rW66ag2HsMuQiGQ==}
@@ -3273,7 +3273,7 @@ snapshots:
       ansi-styles: 6.2.3
       is-fullwidth-code-point: 5.1.0
 
-  solid-element@1.9.1(solid-js@1.9.14):
+  solid-element@1.9.2(solid-js@1.9.14):
     dependencies:
       component-register: 0.8.8
       solid-js: 1.9.14
