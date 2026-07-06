@@ -32,7 +32,7 @@ importers:
         version: 21.2.0
       '@lichthagel/eslint-config':
         specifier: ^1.0.0
-        version: 1.0.39(eslint-plugin-solid@0.14.5(eslint@10.6.0(jiti@2.6.1))(typescript@6.0.3))(eslint@10.6.0(jiti@2.6.1))(typescript@6.0.3)
+        version: 1.0.40(eslint-plugin-solid@0.14.5(eslint@10.6.0(jiti@2.6.1))(typescript@6.0.3))(eslint@10.6.0(jiti@2.6.1))(typescript@6.0.3)
       '@types/node':
         specifier: ^24.0.0
         version: 24.13.2
@@ -325,8 +325,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@lichthagel/eslint-config@1.0.39':
-    resolution: {integrity: sha512-uSpuVy3c6Xvpr5eHG5NDjbCNdXNKtjEWVAi7LYoBNVAcokKCnm5Q1WubI1TzgM9LmvZnaoNs1cBhuX7yRfJ6eA==}
+  '@lichthagel/eslint-config@1.0.40':
+    resolution: {integrity: sha512-yo9MiDHqMhBGjw1/k6LFVKJakK60o5jWhCdDww5vhnzDHG/VgUiUy1Cjkmc7Lr8mgGipg8Ayb36lm/TM8phWRA==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       eslint: '>=8.40.0'
@@ -955,8 +955,8 @@ packages:
       eslint: ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0
       typescript: '>=4.8.4'
 
-  eslint-plugin-unicorn@69.0.0:
-    resolution: {integrity: sha512-ZN/KtHr9hQ6AOByANSNJpsDbo/+Nn+EyQ6blK4w+dcmS/xpYkqLLfrUc+NA/wOK6vF5uEUvhn8my5B/3sruB9g==}
+  eslint-plugin-unicorn@70.0.0:
+    resolution: {integrity: sha512-uAF9xMcVvvhTfvusCgogJ1wh4To3q2KhVMw3i1Apf/ILTbxsCjscvraAZACsEurb7no2fdXblD3whcbVnjw5zg==}
     engines: {node: '>=22'}
     peerDependencies:
       eslint: '>=10.4'
@@ -2132,13 +2132,13 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@lichthagel/eslint-config@1.0.39(eslint-plugin-solid@0.14.5(eslint@10.6.0(jiti@2.6.1))(typescript@6.0.3))(eslint@10.6.0(jiti@2.6.1))(typescript@6.0.3)':
+  '@lichthagel/eslint-config@1.0.40(eslint-plugin-solid@0.14.5(eslint@10.6.0(jiti@2.6.1))(typescript@6.0.3))(eslint@10.6.0(jiti@2.6.1))(typescript@6.0.3)':
     dependencies:
       '@eslint/js': 10.0.1(eslint@10.6.0(jiti@2.6.1))
       '@stylistic/eslint-plugin': 5.10.0(eslint@10.6.0(jiti@2.6.1))
       eslint: 10.6.0(jiti@2.6.1)
       eslint-plugin-perfectionist: 5.9.1(eslint@10.6.0(jiti@2.6.1))(typescript@6.0.3)
-      eslint-plugin-unicorn: 69.0.0(eslint@10.6.0(jiti@2.6.1))
+      eslint-plugin-unicorn: 70.0.0(eslint@10.6.0(jiti@2.6.1))
       globals: 17.7.0
       typescript-eslint: 8.62.1(eslint@10.6.0(jiti@2.6.1))(typescript@6.0.3)
     optionalDependencies:
@@ -2663,7 +2663,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-unicorn@69.0.0(eslint@10.6.0(jiti@2.6.1)):
+  eslint-plugin-unicorn@70.0.0(eslint@10.6.0(jiti@2.6.1)):
     dependencies:
       '@babel/helper-validator-identifier': 7.29.7
       '@eslint-community/eslint-utils': 4.9.1(eslint@10.6.0(jiti@2.6.1))
