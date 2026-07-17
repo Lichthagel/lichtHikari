@@ -9,6 +9,7 @@ export const waitForElement = async (selector: (container: Document) => Element 
       if (element) {
         observer.disconnect();
         resolve(element);
+        return;
       }
     }
   });

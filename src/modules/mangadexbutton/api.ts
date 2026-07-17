@@ -16,6 +16,7 @@ export const getManga = async (mediaTitle: string, mediaId: string): Promise<Man
         for (const manga of body.data) {
           if (manga.attributes.links.al && manga.attributes.links.al === mediaId) {
             resolve(manga);
+            return;
           }
         }
 
