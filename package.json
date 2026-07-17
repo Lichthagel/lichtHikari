@@ -34,11 +34,12 @@
     "@commitlint/types": "^21.0.0",
     "@lichthagel/eslint-config": "^1.0.0",
     "@types/node": "^24.0.0",
+    "@typescript/native": "npm:typescript@^7.0.2",
     "eslint": "^10.0.0",
     "eslint-plugin-solid": "^0.14.3",
     "husky": "^9.1.6",
     "lint-staged": "^17.0.0",
-    "typescript": "^7.0.0",
+    "typescript": "npm:@typescript/typescript6@^6.0.2",
     "vite": "^8.0.0",
     "vite-plugin-monkey": "^8.0.0",
     "vite-plugin-solid": "^2.10.2"
