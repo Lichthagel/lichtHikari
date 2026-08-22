@@ -32,7 +32,7 @@ importers:
         version: 21.2.0
       '@lichthagel/eslint-config':
         specifier: ^1.0.0
-        version: 1.0.43(@typescript/typescript6@6.0.2)(eslint-plugin-solid@0.15.0(@typescript/typescript6@6.0.2)(eslint@10.8.1(jiti@2.6.1)))(eslint@10.8.1(jiti@2.6.1))
+        version: 1.0.43(@typescript/typescript6@6.0.2)(eslint-plugin-solid@0.16.0(@typescript/typescript6@6.0.2)(eslint@10.8.1(jiti@2.6.1)))(eslint@10.8.1(jiti@2.6.1))
       '@types/node':
         specifier: ^24.0.0
         version: 24.13.3
@@ -43,8 +43,8 @@ importers:
         specifier: ^10.0.0
         version: 10.8.1(jiti@2.6.1)
       eslint-plugin-solid:
-        specifier: ^0.15.0
-        version: 0.15.0(@typescript/typescript6@6.0.2)(eslint@10.8.1(jiti@2.6.1))
+        specifier: ^0.16.0
+        version: 0.16.0(@typescript/typescript6@6.0.2)(eslint@10.8.1(jiti@2.6.1))
       husky:
         specifier: ^9.1.6
         version: 9.1.7
@@ -1062,8 +1062,8 @@ packages:
     peerDependencies:
       eslint: ^8.45.0 || ^9.0.0 || ^10.0.0
 
-  eslint-plugin-solid@0.15.0:
-    resolution: {integrity: sha512-IMSj0HK8zu4WuHMAeH38izG8ZBgOkwUqu0W2LrTyW0m/QPuOmrq8P2Y36HDAETIgDg9j6G+TJBdfpILTVPJkFQ==}
+  eslint-plugin-solid@0.16.0:
+    resolution: {integrity: sha512-q45VUvh3kv9ZHoVWZrep/KJFA7qqBH0khHuEEp0sCzEDuM3FtHFqK6fLWFIIIDGVQ8aFouUHROaOXVi8GgzShA==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
       eslint: ^9.0.0 || ^10.0.0
@@ -2233,7 +2233,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@lichthagel/eslint-config@1.0.43(@typescript/typescript6@6.0.2)(eslint-plugin-solid@0.15.0(@typescript/typescript6@6.0.2)(eslint@10.8.1(jiti@2.6.1)))(eslint@10.8.1(jiti@2.6.1))':
+  '@lichthagel/eslint-config@1.0.43(@typescript/typescript6@6.0.2)(eslint-plugin-solid@0.16.0(@typescript/typescript6@6.0.2)(eslint@10.8.1(jiti@2.6.1)))(eslint@10.8.1(jiti@2.6.1))':
     dependencies:
       '@eslint/js': 10.0.1(eslint@10.8.1(jiti@2.6.1))
       '@stylistic/eslint-plugin': 5.10.0(eslint@10.8.1(jiti@2.6.1))
@@ -2243,7 +2243,7 @@ snapshots:
       globals: 17.11.0
       typescript-eslint: 8.67.0(@typescript/typescript6@6.0.2)(eslint@10.8.1(jiti@2.6.1))
     optionalDependencies:
-      eslint-plugin-solid: 0.15.0(@typescript/typescript6@6.0.2)(eslint@10.8.1(jiti@2.6.1))
+      eslint-plugin-solid: 0.16.0(@typescript/typescript6@6.0.2)(eslint@10.8.1(jiti@2.6.1))
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -2791,7 +2791,7 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-solid@0.15.0(@typescript/typescript6@6.0.2)(eslint@10.8.1(jiti@2.6.1)):
+  eslint-plugin-solid@0.16.0(@typescript/typescript6@6.0.2)(eslint@10.8.1(jiti@2.6.1)):
     dependencies:
       '@typescript-eslint/utils': 8.67.0(@typescript/typescript6@6.0.2)(eslint@10.8.1(jiti@2.6.1))
       eslint: 10.8.1(jiti@2.6.1)
