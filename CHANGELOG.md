@@ -1,6 +1,13 @@
 # Changelog
 
 
+## [1.0.15](https://github.com/Lichthagel/lichtHikari/compare/v1.0.14...v1.0.15) (2026-09-12)
+
+
+### Bug Fixes
+
+* **deps:** update dependency unplugin-icons to v24 ([#677](https://github.com/Lichthagel/lichtHikari/issues/677)) ([8ae3dd3](https://github.com/Lichthagel/lichtHikari/commit/8ae3dd33db28747bcd91b896c3b9e8a25139f71c))
+
 ## [1.0.14](https://github.com/Lichthagel/lichtHikari/compare/v1.0.13...v1.0.14) (2026-04-03)
 
 
