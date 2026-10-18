@@ -60,15 +60,17 @@ const mangadexbutton: Module = {
 
     console.log(target.attributes);
 
-    if (mediaType === "manga") {
-      const elemMangadexButton = document.createElement("licht-mangadex-button");
-
-      elemMangadexButton.title = title;
-      elemMangadexButton.mediaId = mediaId;
-      elemMangadexButton.dataAttrName = dataAttrName;
-
-      target.append(elemMangadexButton);
+    if (mediaType !== "manga") {
+      return;
     }
+
+    const elemMangadexButton = document.createElement("licht-mangadex-button");
+
+    elemMangadexButton.title = title;
+    elemMangadexButton.mediaId = mediaId;
+    elemMangadexButton.dataAttrName = dataAttrName;
+
+    target.append(elemMangadexButton);
   },
 };
 

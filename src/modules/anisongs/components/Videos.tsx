@@ -17,11 +17,7 @@ const handleVolumeChange = (event: Event) => {
 const [activeVideo, setActiveVideo] = createSignal<Video | undefined>();
 
 const handleClick = (video: Video) => {
-  if (activeVideo() === video) {
-    setActiveVideo(undefined);
-  } else {
-    setActiveVideo(video);
-  }
+  setActiveVideo(activeVideo() === video ? undefined : video);
 };
 
 const Videos: Component<Props> = (props) => {

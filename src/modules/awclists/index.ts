@@ -15,30 +15,32 @@ const awclists: Module = {
 
     const matches = pathname.match(/(anime|manga)\/([0-9]+)\/[^/]*\/?(.*)/);
 
-    if (matches) {
-      const mediaType = matches[1];
-      const mediaId = matches[2];
-      // const loc = matches[3];
-
-      const target = await waitForElement((container) => container.querySelector(":scope .sidebar > .data"));
-      const targetChild = target.firstElementChild ?? target;
-      const dataAttrName = getDataAttrName(targetChild);
-
-      for (const e of target.querySelectorAll(":scope licht-awc-lists")) {
-        e.remove();
-      }
-
-      if (mediaType !== "anime") {
-        return;
-      }
-
-      const elemAwcLists = document.createElement("licht-awc-lists");
-
-      elemAwcLists.mediaId = mediaId;
-      elemAwcLists.dataAttrName = dataAttrName;
-
-      target.append(elemAwcLists);
+    if (!matches) {
+      return;
     }
+
+    const mediaType = matches[1];
+    const mediaId = matches[2];
+    // const loc = matches[3];
+
+    const target = await waitForElement((container) => container.querySelector(":scope .sidebar > .data"));
+    const targetChild = target.firstElementChild ?? target;
+    const dataAttrName = getDataAttrName(targetChild);
+
+    for (const e of target.querySelectorAll(":scope licht-awc-lists")) {
+      e.remove();
+    }
+
+    if (mediaType !== "anime") {
+      return;
+    }
+
+    const elemAwcLists = document.createElement("licht-awc-lists");
+
+    elemAwcLists.mediaId = mediaId;
+    elemAwcLists.dataAttrName = dataAttrName;
+
+    target.append(elemAwcLists);
   },
 };
 

@@ -16,21 +16,9 @@ type Props = {
 const MangadexButton: Component<Props> = (props) => {
   const extraAttrs = createMemo(() => getExtraAttrs(props.dataAttrName));
 
-  const [data] = createResource(async () => {
-    if (!props.title || !props.mediaId) {
-      return null;
-    }
+  const [data] = createResource(async () => props.title && props.mediaId ? getManga(props.title, props.mediaId) : null);
 
-    return getManga(props.title, props.mediaId);
-  });
-
-  const link = createMemo(() => {
-    if (data()) {
-      return `https://mangadex.org/title/${data()!.id}`;
-    }
-
-    return `https://mangadex.org/search?q=${props.title}`;
-  });
+  const link = createMemo(() => data() ? `https://mangadex.org/title/${data()!.id}` : `https://mangadex.org/search?q=${props.title}`);
 
   return (
     <a
