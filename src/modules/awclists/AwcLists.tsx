@@ -38,13 +38,7 @@ const AwcLists: Component<Props> = (props) => {
     return lists;
   });
 
-  const sortedData = createMemo(() => {
-    if (data()) {
-      return data()!.toSorted((a, b) => a.localeCompare(b));
-    }
-
-    return null;
-  });
+  const sortedData = createMemo(() => data() ? data()!.toSorted((a, b) => a.localeCompare(b)) : null);
 
   return (
     <div class="data-set data-list" {...extraAttrs()}>

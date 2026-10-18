@@ -12,23 +12,18 @@ const AnisongsAPI = {
     const data = await res.json();
 
     // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-    if (!data.anime || data.anime.length === 0) {
-      return [];
-    }
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-    return data.anime[0].animethemes as AnimeTheme[];
+    return !data.anime || data.anime.length === 0
+      ? []
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+      : data.anime[0].animethemes as AnimeTheme[];
   },
 
   parseArtist: (artistInfo: Artist) => artistInfo.as ? `${artistInfo.as} (${artistInfo.name})` : artistInfo.name,
 
-  parseArtists: (artistsInfo: Artist[]) => {
-    if (!artistsInfo || artistsInfo.length === 0) {
-      return "";
-    }
-
-    return artistsInfo.map((artistInfo) => AnisongsAPI.parseArtist(artistInfo))
-      .join(", ");
-  },
+  parseArtists: (artistsInfo: Artist[]) => !artistsInfo || artistsInfo.length === 0
+    ? ""
+    : artistsInfo.map((artistInfo) => AnisongsAPI.parseArtist(artistInfo))
+        .join(", "),
 
   parseSong: (songInfo: Song) => `${songInfo.title} by ${songInfo.artists ? AnisongsAPI.parseArtists(songInfo.artists) : "uknown artist"}`,
 
@@ -44,11 +39,10 @@ const AnisongsAPI = {
     if (entriesInfo.length === 0) {
       return [];
     }
-    if (entriesInfo.length === 1) {
-      return AnisongsAPI.parseVideos(entriesInfo[0].videos, "");
-    }
-    return entriesInfo.flatMap((entryInfo) =>
-      AnisongsAPI.parseVideos(entryInfo.videos, `v${entryInfo.version}_`));
+    return entriesInfo.length === 1
+      ? AnisongsAPI.parseVideos(entriesInfo[0].videos, "")
+      : entriesInfo.flatMap((entryInfo) =>
+          AnisongsAPI.parseVideos(entryInfo.videos, `v${entryInfo.version}_`));
   },
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

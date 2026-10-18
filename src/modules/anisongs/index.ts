@@ -16,26 +16,30 @@ const anisongs: Module = {
 
     const matches = pathname.match(/(anime|manga)\/([0-9]+)\/[^/]*\/?(.*)/);
 
-    if (matches) {
-      const mediaType = matches[1];
-      const mediaId = matches[2];
-      const loc = matches[3];
-
-      const target = await waitForElement((container) => container.querySelectorAll(":scope .grid-section-wrap")[2]);
-
-      for (const e of target.querySelectorAll(":scope licht-anisongs")) {
-        e.remove();
-      }
-
-      if (mediaType === "anime" && loc === "") {
-        const anisongsElement = document.createElement("licht-anisongs");
-
-        anisongsElement.mediaId = mediaId;
-        anisongsElement.style.gridColumn = "span 2";
-
-        target.insertBefore(anisongsElement, target.firstElementChild);
-      }
+    if (!matches) {
+      return;
     }
+
+    const mediaType = matches[1];
+    const mediaId = matches[2];
+    const loc = matches[3];
+
+    const target = await waitForElement((container) => container.querySelectorAll(":scope .grid-section-wrap")[2]);
+
+    for (const e of target.querySelectorAll(":scope licht-anisongs")) {
+      e.remove();
+    }
+
+    if (mediaType !== "anime" || loc !== "") {
+      return;
+    }
+
+    const anisongsElement = document.createElement("licht-anisongs");
+
+    anisongsElement.mediaId = mediaId;
+    anisongsElement.style.gridColumn = "span 2";
+
+    target.insertBefore(anisongsElement, target.firstElementChild);
   },
 };
 

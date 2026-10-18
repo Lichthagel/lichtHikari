@@ -14,11 +14,13 @@ const settings: Module = {
     const target = await waitForElement((container) =>
       container.querySelector(":scope .settings > .content"));
 
-    if (!target.querySelector(":scope licht-settings")) {
-      const elemSettings = document.createElement("licht-settings");
-
-      target.append(elemSettings);
+    if (target.querySelector(":scope licht-settings")) {
+      return;
     }
+
+    const elemSettings = document.createElement("licht-settings");
+
+    target.append(elemSettings);
   },
 };
 

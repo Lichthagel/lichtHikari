@@ -5,19 +5,19 @@ let oldUrl = "";
 
 const observer = new MutationObserver(() => {
   const pathname = globalThis.location.pathname;
-  if (pathname !== oldUrl) {
-    console.log(`lichtHikari: switched page ${pathname}`);
-
-    for (const module of modules) {
-      // eslint-disable-next-line unicorn/no-computed-property-existence-check
-      if (activeModules()[module.id] && module.urlMatch(pathname, oldUrl)) {
-        void module.code();
-      }
-    }
-
-    // eslint-disable-next-line unicorn/no-top-level-assignment-in-function
-    oldUrl = pathname;
+  if (pathname === oldUrl) {
+    return;
   }
+
+  console.log(`lichtHikari: switched page ${pathname}`);
+
+  for (const module of modules) {
+    if (activeModules()[module.id] && module.urlMatch(pathname, oldUrl)) {
+      void module.code();
+    }
+  }
+
+  oldUrl = pathname;
 });
 
 observer.observe(document.head, {
