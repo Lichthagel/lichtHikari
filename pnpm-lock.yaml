@@ -190,7 +190,7 @@ importers:
         version: 21.2.3
       '@lichthagel/eslint-config':
         specifier: ^1.0.0
-        version: 1.1.1(@typescript/typescript6@6.0.2)(eslint-plugin-solid@0.18.1(@typescript/typescript6@6.0.2)(eslint@10.14.0(jiti@2.7.0)))(eslint@10.14.0(jiti@2.7.0))
+        version: 1.1.2(@typescript/typescript6@6.0.2)(eslint-plugin-solid@0.18.1(@typescript/typescript6@6.0.2)(eslint@10.14.0(jiti@2.7.0)))(eslint@10.14.0(jiti@2.7.0))
       '@types/node':
         specifier: ^26.0.0
         version: 26.6.6
@@ -499,8 +499,8 @@ packages:
   '@keyv/serialize@1.1.1':
     resolution: {integrity: sha512-dXn3FZhPv0US+7dtJsIi2R+c7qWYiReoEh5zUntWCf4oSpMNib8FDhSoed6m3QyZdx5hK7iLFkYk3rNxwt8vTA==}
 
-  '@lichthagel/eslint-config@1.1.1':
-    resolution: {integrity: sha512-UWBgh+qxXdHzR2RPQybBgBGNcO56oe5WDVse/MxmuWBJ8FRSgaS1UvHnjFyPMRDz/jP80BzSWfVyaEVou0GE+w==}
+  '@lichthagel/eslint-config@1.1.2':
+    resolution: {integrity: sha512-gmy7gqfjvLZah1jK/AIs7DAPyAjcG8MY5GAIw3vZlIz7c/2XGLjJJqE7rWZt80UxrV2OAWARgeInhx7FAgerNA==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
       eslint: '>=8.40.0'
@@ -2525,7 +2525,7 @@ snapshots:
 
   '@keyv/serialize@1.1.1': {}
 
-  '@lichthagel/eslint-config@1.1.1(@typescript/typescript6@6.0.2)(eslint-plugin-solid@0.18.1(@typescript/typescript6@6.0.2)(eslint@10.14.0(jiti@2.7.0)))(eslint@10.14.0(jiti@2.7.0))':
+  '@lichthagel/eslint-config@1.1.2(@typescript/typescript6@6.0.2)(eslint-plugin-solid@0.18.1(@typescript/typescript6@6.0.2)(eslint@10.14.0(jiti@2.7.0)))(eslint@10.14.0(jiti@2.7.0))':
     dependencies:
       '@eslint/js': 10.0.1(eslint@10.14.0(jiti@2.7.0))
       '@stylistic/eslint-plugin': 5.10.0(eslint@10.14.0(jiti@2.7.0))
