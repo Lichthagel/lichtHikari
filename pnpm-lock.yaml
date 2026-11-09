@@ -190,7 +190,7 @@ importers:
         version: 21.2.3
       '@lichthagel/eslint-config':
         specifier: ^1.0.0
-        version: 1.1.2(@typescript/typescript6@6.0.2)(eslint-plugin-solid@0.18.1(@typescript/typescript6@6.0.2)(eslint@10.14.0(jiti@2.7.0)))(eslint@10.14.0(jiti@2.7.0))
+        version: 1.1.2(@typescript/typescript6@6.0.2)(eslint-plugin-solid@0.19.0(eslint@10.14.0(jiti@2.7.0)))(eslint@10.14.0(jiti@2.7.0))
       '@types/node':
         specifier: ^26.0.0
         version: 26.6.6
@@ -201,8 +201,8 @@ importers:
         specifier: ^10.0.0
         version: 10.14.0(jiti@2.7.0)
       eslint-plugin-solid:
-        specifier: ^0.18.0
-        version: 0.18.1(@typescript/typescript6@6.0.2)(eslint@10.14.0(jiti@2.7.0))
+        specifier: ^0.19.0
+        version: 0.19.0(eslint@10.14.0(jiti@2.7.0))
       husky:
         specifier: ^9.1.6
         version: 9.1.7
@@ -1249,12 +1249,14 @@ packages:
       eslint:
         optional: true
 
-  eslint-plugin-solid@0.18.1:
-    resolution: {integrity: sha512-zxGSWGEfaVCujuOT358UVrBWuKEf91RP6bRbEIQaoX2d3VVP6R2+4NchdSajtpwNliw7eAJDjYBviuyPuSwmUQ==}
+  eslint-plugin-solid@0.19.0:
+    resolution: {integrity: sha512-Is7Aj9bfce774C9B6ivc/S5HNmUpYwlzYx8bO13EIIF7JaY8c6OACxE0LTyhNLDeMR3VNBDn+a/k830dvYl4uQ==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
       eslint: ^9.0.0 || ^10.0.0
-      typescript: '>=4.8.4'
+    peerDependenciesMeta:
+      eslint:
+        optional: true
 
   eslint-plugin-unicorn@79.0.0:
     resolution: {integrity: sha512-k7MWrjoVTVCnjKpgaxBuScPNSPomLvDpsd9uADpWrIFzrnwiec27eWhGrmmyuTj1bC3xVNYP4QfG3MEzEw6ifg==}
@@ -2056,6 +2058,9 @@ packages:
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
 
+  validate-html-nesting@1.2.4:
+    resolution: {integrity: sha512-doQi7e8EJ2OWneSG1aZpJluS6A49aZM0+EICXWKm1i6WvqTLmq0tpUcImc4KTWG50mORO0C4YDBtOCSYvElftw==}
+
   verkit@0.5.0:
     resolution: {integrity: sha512-u4J1hr6Y+C/hit34GwL3eIcUf3wngT8TlYUjK7tk0jxydKLAq3sYvifjdTDA6U3KCKRcQCQDGf/srjxfZF3l7g==}
     engines: {node: '>=18.12.0'}
@@ -2522,7 +2527,7 @@ snapshots:
 
   '@keyv/serialize@1.1.1': {}
 
-  '@lichthagel/eslint-config@1.1.2(@typescript/typescript6@6.0.2)(eslint-plugin-solid@0.18.1(@typescript/typescript6@6.0.2)(eslint@10.14.0(jiti@2.7.0)))(eslint@10.14.0(jiti@2.7.0))':
+  '@lichthagel/eslint-config@1.1.2(@typescript/typescript6@6.0.2)(eslint-plugin-solid@0.19.0(eslint@10.14.0(jiti@2.7.0)))(eslint@10.14.0(jiti@2.7.0))':
     dependencies:
       '@eslint/js': 10.0.1(eslint@10.14.0(jiti@2.7.0))
       '@stylistic/eslint-plugin': 5.10.0(eslint@10.14.0(jiti@2.7.0))
@@ -2532,7 +2537,7 @@ snapshots:
       globals: 17.14.0
       typescript-eslint: 8.72.1(@typescript/typescript6@6.0.2)(eslint@10.14.0(jiti@2.7.0))
     optionalDependencies:
-      eslint-plugin-solid: 0.18.1(@typescript/typescript6@6.0.2)(eslint@10.14.0(jiti@2.7.0))
+      eslint-plugin-solid: 0.19.0(eslint@10.14.0(jiti@2.7.0))
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -3099,18 +3104,18 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-solid@0.18.1(@typescript/typescript6@6.0.2)(eslint@10.14.0(jiti@2.7.0)):
+  eslint-plugin-solid@0.19.0(eslint@10.14.0(jiti@2.7.0)):
     dependencies:
-      '@typescript-eslint/utils': 8.72.1(@typescript/typescript6@6.0.2)(eslint@10.14.0(jiti@2.7.0))
-      eslint: 10.14.0(jiti@2.7.0)
+      eslint-visitor-keys: 3.4.3
       estraverse: 5.3.0
       is-html: 2.0.0
       kebab-case: 1.0.2
       known-css-properties: 0.30.0
+      parse5: 7.3.0
       style-to-object: 1.0.14
-      typescript: '@typescript/typescript6@6.0.2'
-    transitivePeerDependencies:
-      - supports-color
+      validate-html-nesting: 1.2.4
+    optionalDependencies:
+      eslint: 10.14.0(jiti@2.7.0)
 
   eslint-plugin-unicorn@79.0.0(@typescript/typescript6@6.0.2)(eslint@10.14.0(jiti@2.7.0)):
     dependencies:
@@ -3952,6 +3957,8 @@ snapshots:
   uri-js@4.4.1:
     dependencies:
       punycode: 2.3.1
+
+  validate-html-nesting@1.2.4: {}
 
   verkit@0.5.0: {}
 
