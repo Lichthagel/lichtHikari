@@ -1,12 +1,12 @@
+import solid from "@solidjs/vite-plugin";
 import path from "node:path";
 import icons from "unplugin-icons/vite";
 import { defineConfig } from "vite";
 import monkey from "vite-plugin-monkey";
-import solidPlugin from "vite-plugin-solid";
 
 export default defineConfig({
   plugins: [
-    solidPlugin(),
+    solid(),
     monkey({
       entry: "src/index.user.ts",
       build: {

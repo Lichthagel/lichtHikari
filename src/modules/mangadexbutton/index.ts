@@ -2,7 +2,6 @@ import { type Module } from "../../module";
 import { getDataAttrName, waitForElement } from "../../utils";
 import { defineMangadexButtonElement } from "./MangadexButton";
 
-// eslint-disable-next-line unicorn/no-top-level-side-effects
 defineMangadexButtonElement();
 
 async function getNativeTitle(): Promise<string> {
@@ -66,7 +65,7 @@ const mangadexbutton: Module = {
 
     const elemMangadexButton = document.createElement("licht-mangadex-button");
 
-    elemMangadexButton.title = title;
+    elemMangadexButton.mediaTitle = title;
     elemMangadexButton.mediaId = mediaId;
     elemMangadexButton.dataAttrName = dataAttrName;
 

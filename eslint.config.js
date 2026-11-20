@@ -1,7 +1,9 @@
 // @ts-check
 import lichthagel from "@lichthagel/eslint-config";
 
-/** @type {import("@lichthagel/eslint-config").FlatConfigItem[]} */
+/**
+@type {import("@lichthagel/eslint-config").FlatConfigItem[]}
+*/
 export default [
   ...(await lichthagel({
     solid: true,

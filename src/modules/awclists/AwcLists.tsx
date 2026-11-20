@@ -1,6 +1,6 @@
-import { customElement, noShadowDOM } from "solid-element";
+import { customElement, noShadowDOM } from "@solidjs/element";
 import {
-  type Component, createMemo, createResource, For, Match, Switch,
+  type Component, createMemo, Errored, For, Loading, Show,
 } from "solid-js";
 
 import { getExtraAttrs } from "../../utils";
@@ -14,7 +14,8 @@ type Props = {
 const AwcLists: Component<Props> = (props) => {
   const extraAttrs = createMemo(() => getExtraAttrs(props.dataAttrName));
 
-  const [data] = createResource<string[] | null, string | null>(() => props.mediaId, async (mediaId) => {
+  const data = createMemo(async () => {
+    const mediaId = props.mediaId;
     if (!mediaId) {
       return null;
     }
@@ -38,29 +39,17 @@ const AwcLists: Component<Props> = (props) => {
     return lists;
   });
 
-  const sortedData = createMemo(() => data() ? data()!.toSorted((a, b) => a.localeCompare(b)) : null);
+  const sortedData = createMemo(() => data()?.toSorted((a, b) => a.localeCompare(b)));
 
   return (
     <div class="data-set data-list" {...extraAttrs()}>
       <div class="type" {...extraAttrs()}>AWC Lists</div>
-      <Switch>
-        <Match when={data.loading}>
-          <div class="value" {...extraAttrs()}>Loading...</div>
-        </Match>
-        <Match when={data.error as unknown}>
-          <div class="value" {...extraAttrs()}>
-            Error:
-            {data.error}
-          </div>
-        </Match>
-        <Match when={sortedData()}>
-          <div class="value" {...extraAttrs()}>
-            <Switch>
-              <Match when={sortedData()!.length === 0}>
-                <div>No lists</div>
-              </Match>
-              <Match when={sortedData()!.length > 0}>
-                <For each={sortedData()}>
+      <Errored fallback={(error) => <div class="value" {...extraAttrs()}>{`Error: ${String(error())}`}</div>}>
+        <Loading fallback={<div class="value" {...extraAttrs()}>Loading...</div>}>
+          <Show when={sortedData()}>
+            {(lists) => (
+              <div class="value" {...extraAttrs()}>
+                <For each={lists()} fallback={<div>No lists</div>}>
                   {(list) => (
                     <span>
                       {list}
@@ -68,11 +57,11 @@ const AwcLists: Component<Props> = (props) => {
                     </span>
                   )}
                 </For>
-              </Match>
-            </Switch>
-          </div>
-        </Match>
-      </Switch>
+              </div>
+            )}
+          </Show>
+        </Loading>
+      </Errored>
     </div>
   );
 };
@@ -82,10 +71,7 @@ export default AwcLists;
 export const defineAwcListsElement = () => {
   customElement<Props>("licht-awc-lists", { mediaId: null, dataAttrName: null }, (props) => {
     noShadowDOM();
-
-    return (
-      <AwcLists {...props} />
-    );
+    return <AwcLists {...props} />;
   });
 };
 
