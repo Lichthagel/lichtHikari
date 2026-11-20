@@ -228,7 +228,7 @@ importers:
         version: 21.2.3
       '@lichthagel/eslint-config':
         specifier: ^1.0.0
-        version: 1.1.2(@typescript/typescript6@6.0.2)(eslint-plugin-solid@0.19.0(eslint@10.15.0(jiti@2.7.0)))(eslint@10.15.0(jiti@2.7.0))
+        version: 1.1.2(@typescript/typescript6@6.0.2)(eslint-plugin-solid@0.20.0(eslint@10.15.0(jiti@2.7.0)))(eslint@10.15.0(jiti@2.7.0))
       '@solidjs/vite-plugin':
         specifier: ^3.0.1
         version: 3.0.1(@solidjs/web@2.0.3(solid-js@2.0.3))(solid-js@2.0.3)(vite@8.3.8(@types/node@26.6.6)(jiti@2.7.0)(yaml@2.9.1))
@@ -242,8 +242,8 @@ importers:
         specifier: ^10.0.0
         version: 10.15.0(jiti@2.7.0)
       eslint-plugin-solid:
-        specifier: ^0.19.0
-        version: 0.19.0(eslint@10.15.0(jiti@2.7.0))
+        specifier: ^0.20.0
+        version: 0.20.0(eslint@10.15.0(jiti@2.7.0))
       husky:
         specifier: ^9.1.6
         version: 9.1.7
@@ -1296,8 +1296,8 @@ packages:
       eslint:
         optional: true
 
-  eslint-plugin-solid@0.19.0:
-    resolution: {integrity: sha512-Is7Aj9bfce774C9B6ivc/S5HNmUpYwlzYx8bO13EIIF7JaY8c6OACxE0LTyhNLDeMR3VNBDn+a/k830dvYl4uQ==}
+  eslint-plugin-solid@0.20.0:
+    resolution: {integrity: sha512-+cA9Yz+ON+Sr3sfl2RJePrPDXZmIAleS3D6W5rRuP/BKRqnt2DcSXi2YMFi52oClWGoOfBl29FdtLere7qoJUQ==}
     engines: {node: '>=22.0.0'}
     peerDependencies:
       eslint: ^9.0.0 || ^10.0.0
@@ -2480,7 +2480,7 @@ snapshots:
 
   '@keyv/serialize@1.1.1': {}
 
-  '@lichthagel/eslint-config@1.1.2(@typescript/typescript6@6.0.2)(eslint-plugin-solid@0.19.0(eslint@10.15.0(jiti@2.7.0)))(eslint@10.15.0(jiti@2.7.0))':
+  '@lichthagel/eslint-config@1.1.2(@typescript/typescript6@6.0.2)(eslint-plugin-solid@0.20.0(eslint@10.15.0(jiti@2.7.0)))(eslint@10.15.0(jiti@2.7.0))':
     dependencies:
       '@eslint/js': 10.0.1(eslint@10.15.0(jiti@2.7.0))
       '@stylistic/eslint-plugin': 5.10.0(eslint@10.15.0(jiti@2.7.0))
@@ -2490,7 +2490,7 @@ snapshots:
       globals: 17.14.0
       typescript-eslint: 8.72.2(@typescript/typescript6@6.0.2)(eslint@10.15.0(jiti@2.7.0))
     optionalDependencies:
-      eslint-plugin-solid: 0.19.0(eslint@10.15.0(jiti@2.7.0))
+      eslint-plugin-solid: 0.20.0(eslint@10.15.0(jiti@2.7.0))
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -3101,7 +3101,7 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-solid@0.19.0(eslint@10.15.0(jiti@2.7.0)):
+  eslint-plugin-solid@0.20.0(eslint@10.15.0(jiti@2.7.0)):
     dependencies:
       eslint-visitor-keys: 3.4.3
       estraverse: 5.3.0
