@@ -1,6 +1,14 @@
 # Changelog
 
 
+## [1.0.16](https://github.com/Lichthagel/lichtHikari/compare/v1.0.15...v1.0.16) (2026-11-20)
+
+
+### Bug Fixes
+
+* **anisongs:** migrate to the AnimeThemes GraphQL API ([#749](https://github.com/Lichthagel/lichtHikari/issues/749)) ([3313b34](https://github.com/Lichthagel/lichtHikari/commit/3313b342aa869650451b6f079bec8d1ed07006d9))
+* **deps:** update dependency solid-js to v2 ([#745](https://github.com/Lichthagel/lichtHikari/issues/745)) ([54454b3](https://github.com/Lichthagel/lichtHikari/commit/54454b313ca9a173fffd24f88845e42b4cc63c14))
+
 ## [1.0.15](https://github.com/Lichthagel/lichtHikari/compare/v1.0.14...v1.0.15) (2026-09-12)
 
 
