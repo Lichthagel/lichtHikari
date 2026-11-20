@@ -1,11 +1,13 @@
-import { createSignal } from "solid-js";
+import { createEffect, createRoot, createSignal } from "solid-js";
 
 import modules from "./modules";
 
 type Config = { [key: string]: boolean };
 
+const storageKey = "lichtActiveModules";
+
 function loadActiveModules(): Config {
-  const stored = localStorage.getItem("lichtActiveModules");
+  const stored = localStorage.getItem(storageKey);
 
   const config: Config = stored ? JSON.parse(stored) as Config : {}; // TODO validate
 
@@ -15,13 +17,15 @@ function loadActiveModules(): Config {
     }
   }
 
-  localStorage.setItem("lichtActiveModules", JSON.stringify(config));
-
   return config;
 }
 
-export const [activeModules, setActiveModules] = createSignal(loadActiveModules());
+export const [activeModules, setActiveModules] = createRoot(() => {
+  const state = createSignal(loadActiveModules());
 
-export function saveActiveModules() {
-  localStorage.setItem("lichtActiveModules", JSON.stringify(activeModules()));
-}
+  createEffect(state[0], (config) => {
+    localStorage.setItem(storageKey, JSON.stringify(config));
+  });
+
+  return state;
+});

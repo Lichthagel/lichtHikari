@@ -1,4 +1,4 @@
-import { customElement, noShadowDOM } from "solid-element";
+import { customElement, noShadowDOM } from "@solidjs/element";
 import { type Component, createMemo } from "solid-js";
 
 import { getExtraAttrs } from "../../utils";
@@ -29,10 +29,7 @@ export default AwcButton;
 export const defineAwcButtonElement = () => {
   customElement<Props>("licht-awc-button", { username: "", dataAttrName: null }, (props) => {
     noShadowDOM();
-
-    return (
-      <AwcButton {...props} />
-    );
+    return <AwcButton {...props} />;
   });
 };
 

@@ -1,6 +1,6 @@
-import { customElement, noShadowDOM } from "solid-element";
+import { customElement, noShadowDOM } from "@solidjs/element";
 import {
-  type Component, createResource, Match, Switch,
+  type Component, createMemo, Errored, Loading, Show,
 } from "solid-js";
 
 import AnisongsAPI from "../api";
@@ -13,7 +13,12 @@ type Props = {
 };
 
 const Anisongs: Component<Props> = (props) => {
-  const [data] = createResource(() => props.mediaId, async (mediaId) => {
+  const data = createMemo(async () => {
+    const mediaId = props.mediaId;
+    if (!mediaId) {
+      return;
+    }
+
     const cache = sessionStorage.getItem(`lichtSong${mediaId}`);
 
     // check if request needed
@@ -38,23 +43,18 @@ const Anisongs: Component<Props> = (props) => {
   });
 
   return (
-    <Switch>
-      <Match when={data.loading}>
-        <div>Loading...</div>
-      </Match>
-      <Match when={data.error as unknown}>
-        <div>
-          Error:
-          {data.error}
-        </div>
-      </Match>
-      <Match when={data()}>
-        <div class={styles.anisongs}>
-          <Themes heading="Openings" themes={data()!.ops} />
-          <Themes heading="Endings" themes={data()!.eds} />
-        </div>
-      </Match>
-    </Switch>
+    <Errored fallback={(error) => <div>{`Error: ${String(error())}`}</div>}>
+      <Loading fallback={<div>Loading...</div>}>
+        <Show when={data()}>
+          {(result) => (
+            <div class={styles.anisongs}>
+              <Themes heading="Openings" themes={result().ops} />
+              <Themes heading="Endings" themes={result().eds} />
+            </div>
+          )}
+        </Show>
+      </Loading>
+    </Errored>
   );
 };
 

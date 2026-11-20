@@ -1,8 +1,8 @@
-import { customElement, noShadowDOM } from "solid-element";
+import { customElement, noShadowDOM } from "@solidjs/element";
 import { type Component, For, Show } from "solid-js";
 
 import modules from "..";
-import { activeModules, saveActiveModules, setActiveModules } from "../../global";
+import { activeModules, setActiveModules } from "../../global";
 import { type Module } from "../../module";
 import styles from "./style.module.css";
 
@@ -14,7 +14,6 @@ const toggleModule = (module: Module) => {
 
     [module.id]: !prev[module.id],
   }));
-  saveActiveModules();
 };
 
 const Settings: Component<Props> = () => (
@@ -24,9 +23,8 @@ const Settings: Component<Props> = () => (
       {(module) => (
         <Show when={module.id !== "settings"}>
           <div
-            class="button"
-            classList={{ danger: activeModules()[module.id] }}
-            on:click={() => toggleModule(module)}
+            class={["button", { danger: activeModules()[module.id] }]}
+            onClick={() => toggleModule(module)}
           >
             {module.id}
           </div>
@@ -39,10 +37,9 @@ const Settings: Component<Props> = () => (
 export default Settings;
 
 export const defineSettingsElement = () => {
-  customElement<Props>("licht-settings", { dataAttrName: null }, (props) => {
+  customElement("licht-settings", () => {
     noShadowDOM();
-
-    return <Settings {...props} />;
+    return <Settings />;
   });
 };
 

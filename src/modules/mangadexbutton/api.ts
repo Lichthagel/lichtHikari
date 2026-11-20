@@ -10,7 +10,8 @@ export const getManga = async (mediaTitle: string, mediaId: string): Promise<Man
         const body = resp.response as Result | null; // TODO verify
 
         if (!body || !body.data || body.data.length === 0) {
-          return null;
+          resolve(null);
+          return;
         }
 
         for (const manga of body.data) {

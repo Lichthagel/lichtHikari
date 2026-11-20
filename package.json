@@ -24,8 +24,9 @@
   "homepage": "https://github.com/Lichthagel/lichtHikari#readme",
   "dependencies": {
     "@iconify-json/lucide": "^1.2.16",
-    "solid-element": "^1.9.0",
-    "solid-js": "^2.0.0",
+    "@solidjs/element": "^2.0.1",
+    "@solidjs/web": "^2.0.3",
+    "solid-js": "^2.0.3",
     "unplugin-icons": "^24.0.0"
   },
   "devDependencies": {
@@ -33,6 +34,7 @@
     "@commitlint/config-conventional": "^21.0.0",
     "@commitlint/types": "^21.0.0",
     "@lichthagel/eslint-config": "^1.0.0",
+    "@solidjs/vite-plugin": "^3.0.1",
     "@types/node": "^26.0.0",
     "@typescript/native": "npm:typescript@^7.0.2",
     "eslint": "^10.0.0",
@@ -41,8 +43,7 @@
     "lint-staged": "^17.0.0",
     "typescript": "npm:@typescript/typescript6@^6.0.2",
     "vite": "^8.0.0",
-    "vite-plugin-monkey": "^8.0.0",
-    "vite-plugin-solid": "^2.10.2"
+    "vite-plugin-monkey": "^8.0.0"
   },
   "packageManager": "pnpm@12.21.0+sha512.66fd8278ee28935ce951792d34367ff3af5c432a2756445823029533835b8da529bbe0be5130afd56ed0713fb8789e47bad82d93bd5ae2fe54b15562d6276ef0"
 }
