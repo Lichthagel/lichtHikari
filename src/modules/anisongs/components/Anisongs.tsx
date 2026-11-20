@@ -30,11 +30,6 @@ const Anisongs: Component<Props> = (props) => {
 
     const themes = await AnisongsAPI.getThemes(mediaId);
 
-    if (!themes) {
-      console.log("lichtAnisongs: not found on AnimeThemes");
-      return;
-    }
-
     const data = themes_to_data(themes);
 
     sessionStorage.setItem(`lichtSong${mediaId}`, JSON.stringify(data));
