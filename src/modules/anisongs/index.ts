@@ -3,7 +3,6 @@ import type { Module } from "../../module";
 import { waitForElement } from "../../utils";
 import { defineAnisongsElement } from "./components/Anisongs";
 
-// eslint-disable-next-line unicorn/no-top-level-side-effects
 defineAnisongsElement();
 
 const anisongs: Module = {
@@ -14,7 +13,7 @@ const anisongs: Module = {
   code: async () => {
     const pathname = globalThis.location.pathname;
 
-    const matches = pathname.match(/(anime|manga)\/([0-9]+)\/[^/]*\/?(.*)/);
+    const matches = /(anime|manga)\/([0-9]+)\/[^/]*\/?(.*)/.exec(pathname);
 
     if (!matches) {
       return;

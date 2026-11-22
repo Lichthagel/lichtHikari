@@ -2,7 +2,6 @@ import { type Module } from "../../module";
 import { getDataAttrName, waitForElement } from "../../utils";
 import { defineAwcButtonElement } from "./AwcButton";
 
-// eslint-disable-next-line unicorn/no-top-level-side-effects
 defineAwcButtonElement();
 
 const awcbutton: Module = {
@@ -11,7 +10,7 @@ const awcbutton: Module = {
   isDefault: false,
   urlMatch: (currentUrl: string) => /\/user\/[^/]*\/?/.test(currentUrl),
   code: async () => {
-    const matches = globalThis.location.pathname.match(/\/user\/([^/]*)\/?/);
+    const matches = /\/user\/([^/]*)\/?/.exec(globalThis.location.pathname);
 
     if (!matches) {
       return;
