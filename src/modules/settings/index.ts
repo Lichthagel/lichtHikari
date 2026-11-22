@@ -2,7 +2,6 @@ import { type Module } from "../../module";
 import { waitForElement } from "../../utils";
 import { defineSettingsElement } from "./Settings";
 
-// eslint-disable-next-line unicorn/no-top-level-side-effects
 defineSettingsElement();
 
 const settings: Module = {

@@ -2,7 +2,6 @@ import { type Module } from "../../module";
 import { getDataAttrName, waitForElement } from "../../utils";
 import { defineAwcListsElement } from "./AwcLists";
 
-// eslint-disable-next-line unicorn/no-top-level-side-effects
 defineAwcListsElement();
 
 const awclists: Module = {
@@ -13,7 +12,7 @@ const awclists: Module = {
   code: async () => {
     const pathname = globalThis.location.pathname;
 
-    const matches = pathname.match(/(anime|manga)\/([0-9]+)\/[^/]*\/?(.*)/);
+    const matches = /(anime|manga)\/([0-9]+)\/[^/]*\/?(.*)/.exec(pathname);
 
     if (!matches) {
       return;

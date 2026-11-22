@@ -1,6 +1,11 @@
 import { customElement, noShadowDOM } from "@solidjs/element";
 import {
-  type Component, createMemo, Errored, For, Loading, Show,
+  type Component,
+  createMemo,
+  Errored,
+  For,
+  Loading,
+  Show,
 } from "solid-js";
 
 import { getExtraAttrs } from "../../utils";

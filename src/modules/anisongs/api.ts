@@ -1,5 +1,8 @@
 import type {
-  AnimeTheme, AnimeThemeEntry, Artist, Video,
+  AnimeTheme,
+  AnimeThemeEntry,
+  Artist,
+  Video,
 } from "./models";
 
 const endpoint = "https://rs.animethemes.moe/graphql";

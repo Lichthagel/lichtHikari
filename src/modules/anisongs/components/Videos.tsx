@@ -1,5 +1,10 @@
 import {
-  type Component, createMemo, createSignal, For, onSettled, Show,
+  type Component,
+  createMemo,
+  createSignal,
+  For,
+  onSettled,
+  Show,
 } from "solid-js";
 
 import { type Video, video_to_string } from "../models";

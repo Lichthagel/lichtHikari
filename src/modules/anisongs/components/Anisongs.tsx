@@ -1,6 +1,10 @@
 import { customElement, noShadowDOM } from "@solidjs/element";
 import {
-  type Component, createMemo, Errored, Loading, Show,
+  type Component,
+  createMemo,
+  Errored,
+  Loading,
+  Show,
 } from "solid-js";
 
 import AnisongsAPI from "../api";
