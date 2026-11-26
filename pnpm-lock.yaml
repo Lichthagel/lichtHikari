@@ -190,7 +190,7 @@ importers:
         version: 1.2.158
       '@solidjs/element':
         specifier: ^2.0.1
-        version: 2.0.1(@solidjs/web@2.0.4(solid-js@2.0.4))(solid-js@2.0.4)
+        version: 2.0.2(@solidjs/web@2.0.4(solid-js@2.0.4))(solid-js@2.0.4)
       '@solidjs/web':
         specifier: ^2.0.3
         version: 2.0.4(solid-js@2.0.4)
@@ -798,11 +798,11 @@ packages:
   '@solidjs/compiler@2.0.2':
     resolution: {integrity: sha512-z7ZlbBQaCeNt4wt12xLS86pdgwet2QwAjyB/+enhDkPL2LUF4jWt7Q8NIlLkXVxm6RJWvZRL5hwcVmrH6JZhZA==}
 
-  '@solidjs/element@2.0.1':
-    resolution: {integrity: sha512-IujusaCUpgY0sJiPtYEthXdNkspp0BoBzh2oDHMM/y8mWT4p8P7XADfQXNug+eS7LYTZWONkwmZBaogTNO5kPA==}
+  '@solidjs/element@2.0.2':
+    resolution: {integrity: sha512-/wFX17wC5BXwp7+y9MAbWOsXIHpO8EoHm66vvU82KdcB2KoVVuvRSxstLEKmlETX3Ge46cLM1+Wu9DSf6yWhIQ==}
     peerDependencies:
-      '@solidjs/web': ^2.0.3
-      solid-js: ^2.0.3
+      '@solidjs/web': ^2.0.4
+      solid-js: ^2.0.4
 
   '@solidjs/signals@2.0.4':
     resolution: {integrity: sha512-U/Z0DOsoJO18Wsw/5piSrJhtj85nMOOD/ldn8ZP+CCA5RVcu4GDheNTOECOZwxCS+l7BVIzIakToJC91Q6lMXQ==}
@@ -2589,7 +2589,7 @@ snapshots:
       '@solidjs/compiler-wasm32-wasi': 2.0.2
       '@solidjs/compiler-win32-x64-msvc': 2.0.2
 
-  '@solidjs/element@2.0.1(@solidjs/web@2.0.4(solid-js@2.0.4))(solid-js@2.0.4)':
+  '@solidjs/element@2.0.2(@solidjs/web@2.0.4(solid-js@2.0.4))(solid-js@2.0.4)':
     dependencies:
       '@solidjs/web': 2.0.4(solid-js@2.0.4)
       component-register: 0.8.8
